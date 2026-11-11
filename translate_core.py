@@ -1628,7 +1628,102 @@ def _ru_gloss_for_entry(entry, label, forced_case=None, agreement=None, subject_
     if "participles" in label or entry.get("w", "").endswith("uns"):
         p = morph.parse(gloss)[0]
         info = _label_grammar(label)
-        grammemes = {"PRTF", "past", "actv"}
+        # Определяем залог причастия. В override может быть несколько типов
+        # причастий (действительное наст./прош. и страдательное прош.), и все
+        # они дают одинаковый label 'participles.genders.masc.sg.akk'.
+        # Чтобы различить их, проверим саму форму слова: для каждой participle
+        # в override ищем, в парадигме какого из них встречается наша форма.
+        # Эвристика по форме:
+        # - формы на -nts (statinānts, ainants) — действительного наст. вр.
+        # - формы на -uns (aulaūwuns) — действительного прош. вр.
+        # - формы на -ts (statīnts, swentints) — страдательного прош. вр.
+        # Но у нас в этой точке нет самой формы (только entry и label).
+        # Поэтому: если в override есть participle с headword на '-ts' (но не
+        # '-nts'/'-uns'), и в его парадигме есть формы на '-tan'/'-tans'/...,
+        # считаем нашу форму страдательной.
+        is_passive = False
+        override_local = _override_by_id.get(entry.get("i"))
+        if override_local and "participles" in label:
+            parts = (override_local.get("conjugation") or {}).get("participles", [])
+            if isinstance(parts, list):
+                # Сравниваем headword причастия с инфинитивом (entry.w или
+                # override.word). В прусском:
+                # - statīntun (инфинитив) + -nts → statinānts (действительное наст. вр.)
+                # - statīntun + -uns → statīnuns (действительное прош. вр.)
+                # - statīntun + -ts → statīnts (страдательное прош. вр.)
+                # Эвристика: headword оканчивается на 'ts' (последние 2 символа),
+                # но НЕ оканчивается на 'nts' (последние 3 символа).
+                # Это работает, потому что:
+                # - statinānts → оканчивается на -nts (действительное наст.)
+                # - statīnuns → оканчивается на -uns (действительное прош.)
+                # - statīnts → оканчивается на -ts, но НЕ на -nts (только 2 символа 'ts')
+                #   (потому что в statīnts перед 'ts' стоит 'n' от основы, но 'nts' —
+                #   это последние 3 символа, и они совпадают с суффиксом действительного
+                #   наст. вр. -nts. Чтобы различить, нужно знать длину: у statinānts
+                #   (действительное наст.) длина = 10, у statīnts (страдательное) длина = 8.)
+                # Поэтому: страдательное причастие — это headword, который
+                # совпадает с инфинитивом (минус -tun/-twei) + 'ts' (короткая форма).
+                # Самый надёжный способ: headword заканчивается на 'ts' и его длина
+                # МЕНЬШЕ, чем у инфинитива, обрезанного до -tun/-twei, + 3 (для '-nts').
+                # Проще: если headword длиной ≤ длины инфинитива + 1, это страдательное.
+                # Для statīntun (9) → statīnts (8) ≤ 10 ✓
+                # Для statinānts (10) — здесь длина 10 = 9+1, но это действительное.
+                # Нужна другая эвристика: headword оканчивается на 'ts', но не на 'nts'
+                # (используя более точную проверку).
+                # 'statīnts'.endswith('ts') → True
+                # 'statīnts'.endswith('nts') → True (последние 3 символа: 'n','t','s')
+                # Но у 'statinānts' последние 4 символа: 'ā','n','t','s' — поэтому
+                # 'statinānts'.endswith('nts') → True.
+                # Решение: сравниваем длину headword и проверяем, что последние 2 символа
+                # 'ts', и что headword ДЛИННЕЕ, чем инфинитив минус 3 (если нет -nts).
+                # Самый надёжный способ: headword оканчивается на 'ts' (последние 2),
+                # но не содержит 'n' прямо перед 'ts' (т.е. headword[-2:] == 'ts' и
+                # (длина < 3 или headword[-3] не 'n') — это statīnts, потому что
+                # headword[-3] = 'n' (от statīn-). НЕ РАБОТАЕТ.
+                # ИТОГО: используем точное сравнение с инфинитивом.
+                inf_word = (entry.get("w") or "").lower()
+                # Убираем типичные окончания инфинитива
+                inf_stem = inf_word
+                for suffix in ("twei", "tun", "tuns"):
+                    if inf_stem.endswith(suffix):
+                        inf_stem = inf_stem[:-len(suffix)]
+                        break
+                for p_def in parts:
+                    hw = (p_def.get("headword") or "").lower()
+                    # Страдательное причастие = основа инфинитива + 'ts' (без 'n')
+                    # Действительное наст. = основа + 'ā' + 'nts' (или подобное)
+                    # Действительное прош. = основа + 'uns' (с усечением 'tun' → 'uns'?)
+                    # Для statīntun (основа 'statīn'):
+                    #   statīnts = statīn + ts → страдательное (hw[:-2] == inf_stem)
+                    #   statīnuns = statīn + uns → действительное прош.
+                    #   statinānts = statīn + ā + nts → действительное наст.
+                    # Эвристика: если hw == inf_stem + 'ts' (точно), это страдательное.
+                    if hw == inf_stem + "ts":
+                        is_passive = True
+                        break
+                    # Запасная эвристика: hw заканчивается на 'ts', длина = len(inf_stem)+2,
+                    # и hw[:len(inf_stem)] == inf_stem. Это работает для statīnts.
+                    if (hw.endswith("ts") and len(hw) == len(inf_stem) + 2
+                            and hw[:len(inf_stem)] == inf_stem):
+                        is_passive = True
+                        break
+        # Альтернативная эвристика по словарной форме entry.w (если article
+        # является самим заголовком причастия, например id=343 aulaūwuns).
+        word_lower = (entry.get("w") or "").lower()
+        if (len(word_lower) >= 2 and word_lower.endswith("ts")
+                and not (len(word_lower) >= 3 and word_lower[-3] == "n")):
+            is_passive = True
+        # Ещё одна эвристика: если форма - это сама статья cross-ref (x=true),
+        # и её базовая статья (b) оканчивается на -ts (но не -nts/-uns) — тоже
+        # страдательное причастие.
+        if not is_passive and entry.get("x") and entry.get("b"):
+            base = _headword_index.get((entry.get("b") or "").lower())
+            if base is not None:
+                bw = (base.get("w") or "").lower()
+                if (len(bw) >= 2 and bw.endswith("ts")
+                        and not (len(bw) >= 3 and bw[-3] == "n")):
+                    is_passive = True
+        grammemes = {"PRTF", "past", "pssv" if is_passive else "actv"}
         grammemes.add(info.get("number") or subject_number or "sing")
         grammemes.add(subject_gender or info.get("gender") or "masc")
         grammemes.add(forced_case or info.get("ru_case") or "nomn")
@@ -1638,6 +1733,19 @@ def _ru_gloss_for_entry(entry, label, forced_case=None, agreement=None, subject_
             inflected = None
         if inflected:
             return inflected.word, note_form
+        # Если страдательное не получилось (pymorphy не знает форму), попробуем
+        # действительный залог как фоллбэк (старое поведение).
+        if is_passive:
+            grammemes_fallback = {"PRTF", "past", "actv"}
+            grammemes_fallback.add(info.get("number") or subject_number or "sing")
+            grammemes_fallback.add(subject_gender or info.get("gender") or "masc")
+            grammemes_fallback.add(forced_case or info.get("ru_case") or "nomn")
+            try:
+                inflected = p.inflect(grammemes_fallback)
+            except Exception:
+                inflected = None
+            if inflected:
+                return inflected.word, note_form
 
     if pos == "VERB":
         verb = _ru_verb_form(gloss, label, subject_gender=subject_gender, override=override, subject_number=subject_number)
@@ -2677,13 +2785,43 @@ def translate_pr_sentence_json(sentence):
             continue
 
         agreement = None
-        if pos in ("ADJF", "PRTF"):
-            agreement = _next_pr_noun_agreement(tokens, i, forced_case=pending_ru_case)
+        # Контекстное правило для причастий после связки: если причастие
+        # (с меткой 'participles...') идёт после глагола-связки (ast, pastāi,
+        # bēi, etc.), оно является предикативом и должно переводиться в
+        # именительном падеже, а не в винительном (который даётся меткой akk).
+        # Пример: 'ni pastāi statīntan' = 'не был установлен' (statīntan
+        # имеет label masc.sg.akk, но в контексте pastāi должно быть nom).
+        # Важно: classify_pos для форм причастий возвращает VERB (потому что
+        # entry.w = инфинитив), поэтому проверяем не pos=='PRTF', а label.
+        is_participle_form = "participles" in (label or "")
+        # effective_case_for_participle будет передан как forced_case в _ru_gloss_for_entry
+        effective_case_for_participle = pending_ru_case
+        if is_participle_form or pos in ("ADJF", "PRTF"):
+            # Смотрим на 1-2 предыдущих содержательных токена
+            prev_words = []
+            for j in range(max(0, i - 3), i):
+                pt = tokens[j] if j < len(tokens) else ""
+                if PR_PUNCT_TOKEN_RE.match(pt):
+                    break
+                pclean = _clean_pr_token(pt)
+                if pclean:
+                    prev_words.append(pclean.lower())
+            # Если предыдущее слово — связка, форсируем nom для причастия
+            copula_words = {"ast", "bēi", "bīma", "bīmai", "astmai", "astei",
+                            "pastāi", "pastāimai", "pastāitei", "wīrst", "wīrstmai"}
+            if is_participle_form and any(w in copula_words for w in prev_words[-2:]):
+                # forced_case: nomn (если нет pending_ru_case от предлога)
+                if not pending_ru_case:
+                    effective_case_for_participle = "nomn"
+                agreement = {"case": effective_case_for_participle,
+                              "number": None, "gender": None}
+            else:
+                agreement = _next_pr_noun_agreement(tokens, i, forced_case=pending_ru_case)
 
         gloss, note = _ru_gloss_for_entry(
             entry,
             label,
-            forced_case=pending_ru_case,
+            forced_case=effective_case_for_participle,
             agreement=agreement,
             subject_gender=(subject_agreement or {}).get("gender"),
             subject_number=(subject_agreement or {}).get("number"),

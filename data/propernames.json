@@ -49986,5 +49986,129 @@
         "prl": "Урбсе"
       }
     }
+  },
+  {
+    "lemma": "Undinawa",
+    "aliases": [
+      "Undinawā",
+      "Undinawa"
+    ],
+    "gender": "fem",
+    "priority": 50,
+    "pr": {
+      "sg": {
+        "nom": "Undinawa",
+        "gen": "Undinawas",
+        "dat": "Undinawai",
+        "akk": "Undinawan"
+      },
+      "pl": {
+        "nom": "Undinawāi",
+        "gen": "Undinawān",
+        "dat": "Undinawāmans",
+        "akk": "Undinawāns"
+      }
+    },
+    "ru": {
+      "sg": {
+        "nom": "Ундинава",
+        "gen": "Ундинавы",
+        "dat": "Ундинаве",
+        "akk": "Ундинаву",
+        "ins": "Ундинавой",
+        "prl": "Ундинаве"
+      },
+      "pl": {
+        "nom": "Ундинавы",
+        "gen": "Ундинав",
+        "dat": "Ундинавам",
+        "akk": "Ундинавы",
+        "ins": "Ундинавами",
+        "prl": "Ундинавах"
+      }
+    },
+    "ru_aliases": [
+      "Одинва"
+    ]
+  },
+  {
+    "lemma": "Brandenburgas",
+    "aliases": [
+      "Brandenburg"
+    ],
+    "gender": "masc",
+    "priority": 50,
+    "pr": {
+      "sg": {
+        "nom": "Brandenburgas",
+        "gen": "Brandenburgas",
+        "dat": "Brandenburgasmu",
+        "akk": "Brandenburgan"
+      },
+      "pl": {
+        "nom": "Brandenburgai",
+        "gen": "Brandenburgan",
+        "dat": "Brandenburgamans",
+        "akk": "Brandenburgans"
+      }
+    },
+    "ru": {
+      "sg": {
+        "nom": "Бранденбург",
+        "gen": "Бранденбурга",
+        "dat": "Бранденбургу",
+        "akk": "Бранденбург",
+        "ins": "Бранденбургом",
+        "prl": "Бранденбурге"
+      },
+      "pl": {
+        "nom": "Бранденбурги",
+        "gen": "Бранденбургов",
+        "dat": "Бранденбургам",
+        "akk": "Бранденбурги",
+        "ins": "Бранденбургами",
+        "prl": "Бранденбургах"
+      }
+    }
+  },
+  {
+    "lemma": "Pakarwis",
+    "aliases": [
+      "Pokarwis"
+    ],
+    "gender": "masc",
+    "priority": 50,
+    "pr": {
+      "sg": {
+        "nom": "Pakarwis",
+        "gen": "Pakarwjas",
+        "dat": "Pakarwi",
+        "akk": "Pakarwin"
+      },
+      "pl": {
+        "nom": "Pakarwai",
+        "gen": "Pakarwan",
+        "dat": "Pakarwamans",
+        "akk": "Pakarwans"
+      }
+    },
+    "ru": {
+      "sg": {
+        "nom": "Покарвис",
+        "gen": "Покарвиса",
+        "dat": "Покарвису",
+        "akk": "Покарвис",
+        "ins": "Покарвисом",
+        "prl": "Покарвисе"
+      },
+      "pl": {
+        "nom": "Покарвисы",
+        "gen": "Покарвисов",
+        "dat": "Покарвисам",
+        "akk": "Покарвисы",
+        "ins": "Покарвисами",
+        "prl": "Покарвисах"
+      }
+    }
   }
 ]
