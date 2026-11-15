@@ -136,6 +136,51 @@
       "mode": "exact",
       "status": "required",
       "source": "правило времени, 2026-11-03"
+    },
+    {
+      "id": "pr-ru-pakarwis-attributive",
+      "dir": "pr->ru",
+      "in": "Pakarwjas walinsnā.",
+      "expect": "Покарвское сражение.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: топоним в родительном = определение, 2026-11-16"
+    },
+    {
+      "id": "pr-ru-giwa-adjective",
+      "dir": "pr->ru",
+      "in": "Giwā minisnā ezze Ērkun Māntan.",
+      "expect": "Живая память об Эркусе Мантасе.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: giwā «живая» — прилагательное, не имя собственное, 2026-11-16"
+    },
+    {
+      "id": "pr-ru-pakarwis-giwa-combined",
+      "dir": "pr->ru",
+      "in": "Pakarwjas walinsnā. Giwā minisnā ezze Ērkun Māntan.",
+      "expect": "Покарвское сражение. Живая память об Эркусе Мантасе.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: два предложения, состояние не должно протекать через точку"
+    },
+    {
+      "id": "ru-pr-pakarwis-attributive",
+      "dir": "ru->pr",
+      "in": "Покарвское сражение.",
+      "expect": "Pakarwjas walinsnā.",
+      "mode": "exact",
+      "status": "required",
+      "source": "обратная симметрия ru_adj (аудит), 2026-11-16"
+    },
+    {
+      "id": "pr-ru-possessive-maise",
+      "dir": "pr->ru",
+      "in": "Ērks ast māise brāti",
+      "expect": "Эркс есть мой брат",
+      "mode": "exact",
+      "status": "required",
+      "source": "притяжательный генитив māise перед существительным → «мой», 2026-11-16"
     }
   ]
 }

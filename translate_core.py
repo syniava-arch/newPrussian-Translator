@@ -2209,6 +2209,19 @@ def _build_propername_index(propernames_json_str):
             if form_lower and form_lower not in _ru_name_index:
                 _ru_name_index[form_lower] = (entry_l, "sg", case)
 
+        # ru_adj — русское прилагательное от топонима («Покарвский» для
+        # Pakarwis). Индексируем все его формы как «родительный атрибут»:
+        # в прусском такая конструкция выражается генитивом («Pakarwjas
+        # walinsnā»), поэтому любая форма прилагательного ведёт к pr-генитиву.
+        # Это делает обратный перевод симметричным: «Покарвское сражение» →
+        # 'Pakarwjas walinsnā' (аудит: симметрия обратного перевода).
+        ru_adj_lemma = (entry.get("ru_adj") or "").strip()
+        if ru_adj_lemma:
+            for adj_form in _decline_ru_adjective_forms(ru_adj_lemma):
+                adj_key = adj_form.lower()
+                if adj_key and adj_key not in _ru_name_index:
+                    _ru_name_index[adj_key] = (entry_l, "sg", "gen")
+
 
 
 def _closest_variant(lemma, variants):
@@ -2316,6 +2329,121 @@ def _render_propername(token, forced_case=None, agreement=None, prefer_nom=False
         "ru_case": target_ru_case,
         "consumes_case": True,
     }
+
+
+def _decline_ru_adjective_forms(ru_adj):
+    """Падежные формы русского прилагательного во всех родах и числах (pymorphy3).
+    Для прилагательных, которых нет в словаре pymorphy, используется угаданный
+    разбор (-ский/-ная и т.п.). Возвращает список словоформ (в нижнем регистре)."""
+    try:
+        parses = morph.parse(ru_adj)
+    except Exception:
+        return []
+    best = next((p for p in parses if p.tag.POS == "ADJF"), None)
+    if best is None:
+        return []
+    forms = []
+    for pym_case in ("nomn", "gent", "datv", "accs", "ablt", "loct"):
+        for extra in (("sing", "masc"), ("sing", "femn"), ("sing", "neut"), ("plur",)):
+            try:
+                f = best.inflect({pym_case} | set(extra))
+            except Exception:
+                f = None
+            if f and f.word:
+                forms.append(f.word.lower())
+    return forms
+
+
+def _inflect_ru_adjective(ru_adj, head_word, case="nomn", number=None):
+    """Согласует русское прилагательное с головным существительным.
+
+    Род берётся из pymorphy-разбора РУССКОГО слова, а не из прусской граммемы:
+    wālinsnā в прусском «женского» рода, а его русский перевод «сражение» —
+    среднего, и определение должно быть «Покарвское», а не «Покарвская»."""
+    target_case = case if case in ("nomn", "gent", "datv", "accs", "ablt", "loct") else "nomn"
+    target_number = "plur" if number in ("plur", "pl") else "sing"
+    gender = None
+    head = (head_word or "").strip().lower()
+    if head:
+        try:
+            hparses = morph.parse(head)
+            hnoun = next((p for p in hparses if p.tag.POS == "NOUN"), None)
+            if hnoun is not None:
+                if "plur" in hnoun.tag:
+                    target_number = "plur"
+                else:
+                    gender = hnoun.tag.gender
+        except Exception:
+            pass
+    grammemes = {target_number, target_case}
+    if target_number == "sing" and gender:
+        grammemes.add(gender)
+    try:
+        parses = morph.parse(ru_adj)
+        best = next((p for p in parses if p.tag.POS == "ADJF"), None)
+        if best is None:
+            return ru_adj
+        f = best.inflect(grammemes)
+        if f is None and gender:
+            f = best.inflect({target_number, target_case})
+        if f is None:
+            return ru_adj
+        out = f.word
+        if ru_adj[:1].isupper():
+            out = out[:1].upper() + out[1:]
+        return out
+    except Exception:
+        return ru_adj
+
+
+def _render_pn_adjective_ru(pn_entry, tokens, start_idx):
+    """Определение-прилагательное от топонима вместо родительного:
+    'Pakarwjas walinsnā' → «Покарвское сражение» (а не «сражение Покарвиса»).
+
+    Ищем головное существительное впереди (как _head_noun_ahead), берём его
+    русский глосс и склоняем entry.ru_adj по pymorphy-роду/числу/падежу.
+    Возвращает строку либо None (тогда сработает обычный родительный атрибут)."""
+    ru_adj = (pn_entry.get("ru_adj") or "").strip()
+    if not ru_adj:
+        return None
+    j = start_idx + 1
+    seen = 0
+    while j < len(tokens) and seen < 6:
+        tok = tokens[j]
+        if PR_PUNCT_TOKEN_RE.match(tok):
+            return None
+        clean = _clean_pr_token(tok)
+        if not clean:
+            j += 1
+            continue
+        seen += 1
+        if clean.isdigit():
+            j += 1
+            continue
+        if _lookup_propername(clean):
+            j += 1
+            continue
+        m = _select_pr_match(clean)
+        if not m:
+            return None
+        pos = _match_pos(m)
+        if pos in ("NOUN", "NPRO"):
+            info = _label_grammar(m[1])
+            if info.get("ru_case") not in (None, "nomn", "nom", "accs"):
+                return None
+            gloss, _note = _ru_gloss_for_entry(m[0], m[1])
+            head_word = re.split(r"[,;]+", (gloss or "").strip())[0].strip()
+            head_word = re.split(r"\s+", head_word)[0] if head_word else ""
+            ru_case = info.get("ru_case")
+            if ru_case == "nom":
+                ru_case = "nomn"
+            return _inflect_ru_adjective(ru_adj, head_word, ru_case or "nomn",
+                                         info.get("number"))
+        if pos in ("ADJF", "PRTF"):
+            j += 1
+            continue
+        return None
+    return None
 
 
 def _clean_pr_token(token):
@@ -2734,6 +2862,12 @@ def translate_pr_sentence_json(sentence):
     held = []                    # P1: отложенные принадлежательные родительные имена
     last_was_phrasebook = False  # последний токен был частью фразбуковой пары
     prev_was_subject_name = False  # предыдущий токен — имя в именительном (субъект)
+    # Аудит (протекание состояния): признак «ещё не выведено ни одного слова
+    # текущего предложения». Раньше для этого проверяли пустой out_words,
+    # и после точки во втором предложении слово ошибочно считалось
+    # дополнением предыдущего («живая память» теряла согласование).
+    # Точка снова делает начало предложения началом предложения.
+    sentence_start_pending = True
     i = 0
     n = len(tokens)
     while i < n:
@@ -2751,6 +2885,7 @@ def translate_pr_sentence_json(sentence):
             # Запятая часто отделяет приложение: подлежащее сохраняем, точка — нет.
             if tok in ".!?":
                 subject_agreement = None
+                sentence_start_pending = True
             i += 1
             continue
 
@@ -2763,6 +2898,7 @@ def translate_pr_sentence_json(sentence):
             pending_number = True
             last_was_phrasebook = False
             prev_was_subject_name = False
+            sentence_start_pending = False
             i += 1
             continue
         if clean.lower() in PR_GEN_PL_QUANTIFIERS:
@@ -2776,6 +2912,7 @@ def translate_pr_sentence_json(sentence):
             debug.append({"src": phrase["src"], "out": phrase["out"], "note": phrase["note"]})
             i = phrase["end"]
             last_was_phrasebook = True
+            sentence_start_pending = False
             continue
 
         # Однословные статьи корпуса (Ahā, Jā, ēngliskai, Kwēi, Prawerru) имеют
@@ -2791,6 +2928,7 @@ def translate_pr_sentence_json(sentence):
             i += 1
             last_was_phrasebook = False
             prev_was_subject_name = False
+            sentence_start_pending = False
             continue
 
         prefer_pos = None
@@ -2804,16 +2942,37 @@ def translate_pr_sentence_json(sentence):
         # существительным («Ērkus Māntas prūsisks pass»), откладываем и выводим
         # его после существительного: «паспорт Эрка Мантаса». Субъекты — имена в
         # именительном падеже в начале предложения — не трогаем.
+        # Если же у формы есть словарный кандидат-прилагательное (gīwā «живая»),
+        # согласующийся со следующим существительным, это определение, а не имя:
+        # прилагательное выигрывает (аудит: имена, совпадающие с обычными словами).
         if (pending_ru_case is None
                 and pn_name_hit is not None
                 and _head_noun_ahead(tokens, i)
-                and not (subject_agreement is None and not out_words and not held
-                         and pn_name_hit[2] == "nom")
+                and not (subject_agreement is None and sentence_start_pending
+                         and not held and pn_name_hit[2] == "nom")
                 and not last_was_phrasebook
-                and not prev_was_subject_name):
+                and not prev_was_subject_name
+                and prefer_pos != "ADJF"):
+            pn_entry, _pn_num, pn_case = pn_name_hit
+            # Именная группа как единый блок (аудит, П.2.2): топоним в родительном
+            # перед существительным и с полем ru_adj — согласованное определение:
+            # 'Pakarwjas walinsnā' → «Покарвское сражение», а не
+            # «сражение Покарвиса».
+            if pn_case == "gen" and (pn_entry.get("ru_adj") or "").strip():
+                adj = _render_pn_adjective_ru(pn_entry, tokens, i)
+                if adj:
+                    out_words.append(adj)
+                    debug.append({"src": tok, "out": adj,
+                                  "note": f"{pn_entry.get('lemma')}: определение от топонима ({adj})"})
+                    sentence_start_pending = False
+                    i += 1
+                    last_was_phrasebook = False
+                    prev_was_subject_name = False
+                    continue
             pn = _render_propername(tok, forced_case="gent")
             if pn and pn.get("out"):
                 held.append({"src": tok, "out": pn["out"], "note": pn["note"]})
+                sentence_start_pending = False
                 i += 1
                 last_was_phrasebook = False
                 prev_was_subject_name = False
@@ -2835,10 +2994,13 @@ def translate_pr_sentence_json(sentence):
             #    всего, подлежащее, и даже если pr-форма в propernames записана
             #    как gen-вариант (Hērkus как gen от Ērks), оно должно переводиться
             #    через nom-форму (Эркс). prefer_nom=True форсирует это в _render_propername.
-            is_sentence_start = not out_words or (
+            is_sentence_start = (sentence_start_pending or not out_words or (
                 len(out_words) == 1 and out_words[0] in ("«", '"', "(", "[", "—", "–", "-")
-            )
-            if pn_hit and (pn_hit[2] == "nom" or pending_ru_case or is_sentence_start):
+            ))
+            # prefer_pos == "ADJF" означает: у этой формы есть словарное
+            # прилагательное, согласующееся со следующим существительным
+            # (атрибутивное «живая память»). Тогда имя собственное пропускаем.
+            if pn_hit and prefer_pos != "ADJF" and (pn_hit[2] == "nom" or pending_ru_case or is_sentence_start):
                 pn = _render_propername(tok, forced_case=pending_ru_case,
                                         prefer_nom=is_sentence_start and not pending_ru_case)
                 if pn:
@@ -2846,6 +3008,7 @@ def translate_pr_sentence_json(sentence):
                         _flush_held(out_words, debug, held)
                     out_words.append(pn["out"])
                     debug.append({"src": tok, "out": pn["out"], "note": pn["note"]})
+                    sentence_start_pending = False
                     if pending_ru_case:
                         # удерживаем падеж, если имя ещё не кончилось
                         if not _prep_phrase_continues(tokens, i):
@@ -2906,6 +3069,7 @@ def translate_pr_sentence_json(sentence):
                     _flush_held(out_words, debug, held)
                 out_words.append(tok)
                 debug.append({"src": tok, "out": tok, "note": "вероятно, имя собственное; слово отсутствует в словаре"})
+                sentence_start_pending = False
                 if not pending_ru_case:
                     subject_agreement = {"person": "3per", "number": "sing", "gender": "masc"}
             else:
@@ -2913,6 +3077,7 @@ def translate_pr_sentence_json(sentence):
                 # пометка — только в диагностической таблице.
                 out_words.append(tok)
                 debug.append({"src": tok, "out": tok, "note": "слово отсутствует в словаре"})
+                sentence_start_pending = False
             i += 1
             continue
 
@@ -2975,6 +3140,22 @@ def translate_pr_sentence_json(sentence):
             else:
                 agreement = _next_pr_noun_agreement(tokens, i, forced_case=pending_ru_case)
 
+        # Аудит-паттерн «mans/māise»: притяжательное («мой/твой/наш/ваш/свой»)
+        # в прусском часто стоит в родительной форме перед существительным,
+        # но по-русски требует именительного: «мой брат», а не «моего брат».
+        # Согласуем с родом/числом головного существительного. При генитиве
+        # от квантора (delli...) и после предлога правило не применяется.
+        if (pos in ("NOUN", "NPRO") and not pending_number and not pending_ru_case
+                and not agreement):
+            first_gloss = _clean_ru_chunk(
+                (_split_ru_field(entry.get("ru") or ""))[0]) if entry.get("ru") else ""
+            info0 = _label_grammar(label)
+            if (first_gloss in ("мой", "твой", "наш", "ваш", "свой")
+                    and info0.get("ru_case") == "gent"):
+                nxt = _next_pr_noun_agreement(tokens, i, forced_case=None)
+                if nxt and nxt.get("case") in ("nomn", "accs"):
+                    agreement = nxt
+
         gloss, note = _ru_gloss_for_entry(
             entry,
             label,
@@ -2986,6 +3167,7 @@ def translate_pr_sentence_json(sentence):
         )
         out_words.append(gloss)
         debug.append({"src": tok, "out": gloss, "note": f"{entry.get('w')}: {note}"})
+        sentence_start_pending = False
 
         info = _label_grammar(label)
         if pos in ("NOUN", "NPRO"):

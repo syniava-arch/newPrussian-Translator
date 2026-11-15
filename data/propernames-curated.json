@@ -172,32 +172,6 @@
   }
  },
  {
-  "lemma": "Gīwa",
-  "aliases": [],
-  "gender": "fem",
-  "priority": 1,
-  "pr": {
-   "sg": {
-    "nom": "Gīwa",
-    "gen": "Gīwas",
-    "dat": "Gīwai",
-    "akk": "Gīwam",
-    "ins": "Gīwu",
-    "prl": "Gīwā"
-   }
-  },
-  "ru": {
-   "sg": {
-    "nom": "Жиая",
-    "gen": "Жиаи",
-    "dat": "Жиае",
-    "acc": "Жиаю",
-    "ins": "Жиа",
-    "prl": "Жиа"
-   }
-  }
- },
- {
   "lemma": "Ebwarē",
   "aliases": [],
   "gender": "fem",
@@ -220,6 +194,47 @@
     "acc": "Победу",
     "ins": "Победой",
     "prl": "Победе"
+   }
+  }
+ },
+ {
+  "lemma": "Pakarwis",
+  "aliases": [
+   "Pokarwis"
+  ],
+  "gender": "masc",
+  "ru_adj": "Покарвский",
+  "priority": 1,
+  "pr": {
+   "sg": {
+    "nom": "Pakarwis",
+    "gen": "Pakarwjas",
+    "dat": "Pakarwi",
+    "akk": "Pakarwin"
+   },
+   "pl": {
+    "nom": "Pakarwai",
+    "gen": "Pakarwan",
+    "dat": "Pakarwamans",
+    "akk": "Pakarwans"
+   }
+  },
+  "ru": {
+   "sg": {
+    "nom": "Покарвис",
+    "gen": "Покарвиса",
+    "dat": "Покарвису",
+    "akk": "Покарвис",
+    "ins": "Покарвисом",
+    "prl": "Покарвисе"
+   },
+   "pl": {
+    "nom": "Покарвисы",
+    "gen": "Покарвисов",
+    "dat": "Покарвисам",
+    "akk": "Покарвисы",
+    "ins": "Покарвисами",
+    "prl": "Покарвисах"
    }
   }
  }
