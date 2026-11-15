@@ -235,6 +235,60 @@
    "mode": "exact",
    "status": "required",
    "source": "пользователь: полный текст про Pakarwjas walinsnā, 2026-11-16"
+  },
+  {
+   "id": "pr-ru-undinawa-monument",
+   "dir": "pr->ru",
+   "in": "En 2016 m. raggas 23 d. Undinawas (Brandenburgas) pillis etteikāsnas fōnds (swentintjai Undinawas pillis 755 m. gruntinsnan), en Pakarwjas wālinsnas laūku, statinna dēlin sen nōpeisan, kāi en stesmu deīktu wīrstats statīntan Ērkus Māntas pamīntlan (stabs sen nōpeisan). Adder stan pamīntlan ni pastāi statīntan ērgi teinū.",
+   "expect": "В 2016 г. Январь 23 д. фонд воссоздания замка Ундинавы (Бранденбург) (празднующий 755-летие основания замка Ундинавы), на поле Покарвского сражения, поставил доску с надписью, что в этом месте будет установлен памятник Эркусу Мантасу (камень с надписью). Но тот памятник не установлен до сих пор.",
+   "mode": "exact",
+   "status": "required",
+   "source": "пользователь: памятник Эркусу Мантасу у замка Ундинава, 2026-11-16"
+  },
+  {
+   "id": "pr-ru-gen-chain-reorder",
+   "dir": "pr->ru",
+   "in": "Undinawas pillis etteikāsnas fōnds",
+   "expect": "Фонд воссоздания замка Ундинавы",
+   "mode": "exact",
+   "status": "required",
+   "source": "механизм: генитивная цепочка [GEN…GEN] HEAD → HEAD GEN… (реверс групп)"
+  },
+  {
+   "id": "pr-ru-monument-dat",
+   "dir": "pr->ru",
+   "in": "Ērkus Māntas pamīntlan",
+   "expect": "Памятник Эркусу Мантасу",
+   "mode": "exact",
+   "status": "required",
+   "source": "механизм: памятник + род. имя → датив (русское управление)"
+  },
+  {
+   "id": "pr-ru-en-lauku-na",
+   "dir": "pr->ru",
+   "in": "en Pakarwjas wālinsnas laūku",
+   "expect": "На поле Покарвского сражения",
+   "mode": "exact",
+   "status": "required",
+   "source": "механизм: en + laūks → «на», атрибутив топонима в родительном"
+  },
+  {
+   "id": "pr-ru-ni-pastai-statintan",
+   "dir": "pr->ru",
+   "in": "Stan pamīntlan ni pastāi statīntan.",
+   "expect": "Тот памятник не установлен.",
+   "mode": "exact",
+   "status": "required",
+   "source": "механизм: pastāi + страд. причастие → краткое причастие, связка опущена"
+  },
+  {
+   "id": "pr-ru-wirstats-future",
+   "dir": "pr->ru",
+   "in": "wīrstats statīntan Ērkus Māntas pamīntlan",
+   "expect": "Будет установлен памятник Эркусу Мантасу",
+   "mode": "exact",
+   "status": "required",
+   "source": "механизм: wīrstats = «будет», краткое причастие-предикатив"
   }
  ]
 }

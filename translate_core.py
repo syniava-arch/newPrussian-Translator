@@ -1563,6 +1563,14 @@ def translate_sentence_json(sentence):
 # «город Покарвис», а не «Покарвская деревня».
 PN_APPOSITION_HEADS = {"kāiman", "kāims", "mēstan", "mēstas", "laūks"}
 
+# Русское управление: после этих головных слов родительная группа переводится
+# дативом («памятник Эркусу Мантасу», а не «памятник Эркуса Мантаса»).
+RU_GEN_CHAIN_DAT_GOVERNORS = {"памятник"}
+
+# Русский предлог выбирается по головному существительному за родительной
+# цепочкой: 'en ... laūku' = «на поле», а не «в поле».
+PR_PREP_RU_GLOSS_BY_HEAD = {"en": {"laūks": "на"}}
+
 _S_CASE_MAP = {"nom": "nomn", "gen": "gent", "dat": "datv", "acc": "accs",
                "loc": "loct", "ins": "ablt"}
 _S_GENDER_MAP = {"m": "masc", "f": "femn", "n": "neut"}
@@ -1695,7 +1703,8 @@ def _ru_pronoun_form(entry, label):
         return {"nomn": "ты", "gent": "тебя", "datv": "тебе", "accs": "тебя", "ablt": "тобой", "loct": "тебе"}.get(case, "ты")
 
     if word in {"tāns", "tenā", "tennan", "dis", "di"}:
-        gender = info.get("gender") or "masc"
+        # tenā — форма женского рода («она»): без метки не считаем её мужской
+        gender = info.get("gender") or ("femn" if word == "tenā" else "masc")
         if number == "plur":
             return {"nomn": "они", "gent": "их", "datv": "им", "accs": "их", "ablt": "ими", "loct": "них"}.get(case, "они")
         if gender == "femn":
@@ -1733,8 +1742,11 @@ def _ru_verb_form(gloss, label, subject_gender=None, override=None, subject_numb
         indic = ((override.get("conjugation") or {}).get("indicative") or {})
         candidates = []
         if tense and TENSE_MAP.get(tense):
+            # явное время: только его строки (фоллбэк в past при present-метке
+            # читал «statinna ставлю» как «поставил» через ru-строки past)
             candidates.append(TENSE_MAP.get(tense))
-        candidates.append("past")
+        else:
+            candidates.append("past")
         for tk in candidates:
             rows = indic.get(tk)
             if not isinstance(rows, list) or not rows:
@@ -1747,6 +1759,15 @@ def _ru_verb_form(gloss, label, subject_gender=None, override=None, subject_numb
             form = rows[idx]
             ru = form.get("ru") if isinstance(form, dict) else form
             if ru:
+                # явная форма из override согласуется с родом подлежащего:
+                # «фонд поставил», «tenā statinna» → «она поставила»
+                if tense == "past" and number == "sing" and subject_gender:
+                    try:
+                        fin = morph.parse(ru)[0].inflect({"past", subject_gender})
+                        if fin:
+                            ru = fin.word
+                    except Exception:
+                        pass
                 return ru
 
     grammemes = set()
@@ -1765,14 +1786,26 @@ def _ru_verb_form(gloss, label, subject_gender=None, override=None, subject_numb
         inflected = p.inflect(grammemes)
     except Exception:
         inflected = None
+    if inflected is None and tense in ("pres", "futr"):
+        # совершенный вид в pymorphy не имеет «pres»-форм: русское будущее
+        # совпадает с настоящим («установлю», «установит») — пробуем его
+        alt_grammemes = (grammemes - {"pres", "futr"}) | {
+            "futr" if tense == "pres" else "pres"}
+        try:
+            inflected = p.inflect(alt_grammemes)
+        except Exception:
+            inflected = None
     return inflected.word if inflected else None
 
 
-def _ru_gloss_for_entry(entry, label, forced_case=None, agreement=None, subject_gender=None, subject_number=None, num_government=False):
+def _ru_gloss_for_entry(entry, label, forced_case=None, agreement=None, subject_gender=None, subject_number=None, num_government=False, short_participle=False):
     """Возвращает (русское_слово, заметку) для статьи словаря, по
     возможности согласовав русское слово с распознанной грамматической
     формой. В отличие от ранней версии, не переносит прусский род на русские
-    существительные: buttan neut, но русский "дом" masc."""
+    существительные: buttan neut, но русский "дом" masc.
+
+    short_participle — страдательное причастие-предикатив после связки
+    («будет установлен», «не установлен»): краткая форма вместо полной."""
     manual_gloss = (
         _pr_to_ru_priority.get(str(entry.get("i")).lower()) or
         _pr_to_ru_priority.get((entry.get("w") or "").lower())
@@ -1795,6 +1828,11 @@ def _ru_gloss_for_entry(entry, label, forced_case=None, agreement=None, subject_
 
     note_form = label.replace(".", "/") if label else "словарная форма"
     pos = classify_pos(entry, override)
+
+    # Готовая форма-связка будущего времени: gloss и есть нужная русская
+    # словоформа, инфлексия по пустой метке ломает её ('будет' → 'бывший').
+    if (entry.get("w") or "").lower() == "wīrstats" and gloss == "будет":
+        return gloss, note_form
 
     pronoun = _ru_pronoun_form(entry, label)
     if pronoun:
@@ -1930,6 +1968,21 @@ def _ru_gloss_for_entry(entry, label, forced_case=None, agreement=None, subject_
                 if (len(bw) >= 2 and bw.endswith("ts")
                         and not (len(bw) >= 3 and bw[-3] == "n")):
                     is_passive = True
+        # Краткая форма страдательного причастия-предикатива после связки:
+        # 'wīrstats statīntan' → «будет установлен», 'ni pastāi statīntan' →
+        # «не установлен» (а не «установленный»).
+        if short_participle and is_passive:
+            short_num = info.get("number") or subject_number or "sing"
+            grammemes_short = {"PRTS", short_num}
+            if short_num == "sing":
+                grammemes_short.add(subject_gender or info.get("gender") or "masc")
+            try:
+                inflected = p.inflect(grammemes_short)
+            except Exception:
+                inflected = None
+            if inflected:
+                return inflected.word, note_form
+            # краткая не получилась — падаем в полную форму ниже
         grammemes = {"PRTF", "past", "pssv" if is_passive else "actv"}
         grammemes.add(info.get("number") or subject_number or "sing")
         grammemes.add(subject_gender or info.get("gender") or "masc")
@@ -2104,6 +2157,21 @@ def _select_pr_match(clean_key, prefer_pos=None, verb_agreement=None, next_pos_h
             prefer_possessive
             and first_gloss in ("мой", "твой", "наш", "ваш", "свой")
         )
+        # Вырожденная парадигма: одна и та же прусская форма стоит и в present,
+        # и в past (statinna = и «ставлю», и «поставил» в данных statīntun).
+        # Если у past-строк автор указал русские формы, при подлежащем в 3-м
+        # лице читаем форму как прошедшее время: «fōnds ... statinna» =
+        # «фонд поставил», а не «фонд ставит».
+        degenerate_past = 0
+        if (prefer_pos == "VERB" and verb_agreement
+                and verb_agreement.get("person") == "3per"
+                and (label or "").startswith("indicative.")
+                and "present" in label):
+            ov = _override_by_id.get(entry.get("i"))
+            past_rows = (((ov or {}).get("conjugation") or {}).get("indicative") or {}).get("past") or []
+            if isinstance(past_rows, list) and any(
+                    isinstance(r, dict) and r.get("ru") for r in past_rows):
+                degenerate_past = 1
         # В словаре бывают дублеты: сначала cross-ref без русского gloss, затем
         # полноценная статья с переводом (например, aulaūwuns). Для обратного
         # перевода выбираем статью, из которой реально можно получить русский
@@ -2124,6 +2192,7 @@ def _select_pr_match(clean_key, prefer_pos=None, verb_agreement=None, next_pos_h
             verb_miss,
             0 if is_participle_bonus else 1,
             label == "" if prefer_pos == "VERB" else label != "",
+            degenerate_past,                    # вырожденная парадигма: 3 л. → past
         )
 
     return sorted(matches, key=score)[0]
@@ -2687,6 +2756,13 @@ def _subject_agreement_from_pr(entry, label, output_word=None):
                 "ты": {"person": "2per", "number": "sing", "gender": "masc"},
                 "вы": {"person": "2per", "number": "plur", "gender": None},
             }[output_word]
+    # 3-е лицо: род нужен для согласования сказуемого («она поставила»)
+    if output_word in ("он", "она", "оно", "они"):
+        return {
+            "person": "3per",
+            "number": "plur" if output_word == "они" else "sing",
+            "gender": {"он": "masc", "она": "femn", "оно": "neut", "они": None}.get(output_word),
+        }
     if info.get("ru_case") in (None, "nomn"):
         number = info.get("number")
         if not number and output_word:
@@ -2915,6 +2991,323 @@ def _head_noun_ahead(tokens, start, limit=6):
     return _head_noun_entry_ahead(tokens, start, limit) is not None
 
 
+def _passive_participle_forms(entry):
+    """Множество форм страдательного причастия глагола (headword = основа
+    инфинитива + 'ts'), либо None, если парадигмы причастий нет."""
+    override = _override_by_id.get(entry.get("i"))
+    if not override:
+        return None
+    inf_word = (entry.get("w") or "").lower()
+    inf_stem = inf_word
+    for suffix in ("twei", "tun", "tuns"):
+        if inf_stem.endswith(suffix):
+            inf_stem = inf_stem[:-len(suffix)]
+            break
+    parts = ((override.get("conjugation") or {}).get("participles") or [])
+    if not isinstance(parts, list):
+        return None
+    for p_def in parts:
+        if not isinstance(p_def, dict):
+            continue
+        hw = (p_def.get("headword") or "").lower()
+        if hw and hw == inf_stem + "ts":
+            return {f.lower() for f, _l in _collect_forms(p_def) if f}
+    return None
+
+
+def _is_passive_participle_form(entry, label, clean):
+    """True, если найденная форма — страдательное причастие ('statīntan',
+    'papeisātan'): определяем по парадигме причастия с headword на -ts."""
+    if "participles" not in (label or ""):
+        return False
+    forms = _passive_participle_forms(entry)
+    if forms is None:
+        # без override-парадигмы — эвристика по форме
+        return clean.endswith(("tan", "tans", "tas", "tasmu", "ts", "tā"))
+    return clean in forms
+
+
+def _noun_gen_match(clean_key):
+    """Статья существительного/местоимения в родительном падеже, либо None."""
+    # притяжательные ('māise brāti' = «мой брат») ведёт отдельное правило;
+    # проверяем по ВСЕМ кандидатам формы: у омонима māise выбранная статья
+    # может иметь глосс «я», а притяжательное «мой» — рядом
+    for _entry, _label in _lookup_pr_matches(clean_key):
+        _g = _clean_ru_chunk(
+            (_split_ru_field(_entry.get("ru") or ""))[0]) if _entry.get("ru") else ""
+        if _g in ("мой", "твой", "наш", "ваш", "свой"):
+            return None
+    found = _select_pr_match(clean_key, prefer_pos="NOUN")
+    if not found or _match_pos(found) not in ("NOUN", "NPRO"):
+        return None
+    if _label_grammar(found[1]).get("ru_case") != "gent":
+        return None
+    return found
+
+
+def _try_genitive_chain(tokens, start, pending_ru_case=None,
+                        sentence_start_pending=True, subject_agreement=None):
+    """Генитивная цепочка перед головным существительным (pr→ru).
+
+    В прусском родительные определения стоят ПЕРЕД определяемым словом:
+    'Undinawas pillis etteikāsnas fōnds' = «фонд воссоздания замка Ундинавы».
+    По-русски головное существительное выходит первым, а родительные группы —
+    в обратном порядке. Цепочка из одних имён (без существительного в
+    генитиве) здесь не забирается — ею ведёт P1-механизм отложенных имён,
+    кроме случая дативного управления («памятник Эркусу Мантасу»).
+
+    Число с «m.» перед головным словом сливается с ним в «N-летие + род. падеж»
+    ('755 m. gruntinsnan' → «755-летие основания»).
+
+    Возвращает {"end": idx, "items": [(out, src, note), ...],
+    "subject": {...}|None} либо None, если шаблон не распознан."""
+    n = len(tokens)
+    j = start
+    units = []            # [{'kind': 'pn'|'noun', 'idxs': [...], 'match': tuple}]
+    has_noun_gen = False
+    numeral_idx = None    # позиция «755» перед «m.» и головным словом
+    head = None
+
+    # у омонима-прилагательного, согласующегося со следующим существительным,
+    # приоритет перед именем (как в PN-ветке: 'gīwā minisnā' = «живая память»)
+    first_clean = _clean_pr_token(tokens[start])
+    if _candidate_has_pos(first_clean, "ADJF") and _next_pr_noun_agreement(
+            tokens, start, forced_case=pending_ru_case):
+        return None
+
+    while j < n:
+        tok = tokens[j]
+        if PR_PUNCT_TOKEN_RE.match(tok):
+            if (tok == "(" and units and units[-1]["kind"] == "pn"
+                    and not units[-1].get("paren") and not units[-1].get("paren_closed")):
+                units[-1]["paren"] = True
+                units[-1]["idxs"].append(j)
+                j += 1
+                continue
+            if tok == ")" and units and units[-1].get("paren"):
+                units[-1]["paren"] = False
+                units[-1]["paren_closed"] = True
+                units[-1]["idxs"].append(j)
+                j += 1
+                continue
+            return None
+        clean = _clean_pr_token(tok)
+        if not clean:
+            j += 1
+            continue
+        if clean.isdigit():
+            # «755 m. gruntinsnan» → «755-летие основания»
+            if units and numeral_idx is None and j + 1 < n:
+                nxt = _clean_pr_token(tokens[j + 1])
+                if nxt in ("m", "mettan", "mettans"):
+                    numeral_idx = j
+                    j += 2
+                    if j < n and tokens[j] == ".":
+                        j += 1
+                    continue
+            return None
+        if tok[:1].isupper():
+            pn = _lookup_propername(clean)
+            if pn:
+                if units and units[-1].get("paren"):
+                    # приложение в скобках: (Brandenburgas) при Undinawas
+                    units[-1]["idxs"].append(j)
+                    j += 1
+                    continue
+                if (units and units[-1]["kind"] == "pn"
+                        and not units[-1].get("paren_closed")):
+                    # имя из нескольких слов: Ērkus Māntas
+                    units[-1]["idxs"].append(j)
+                    j += 1
+                    continue
+                if pn[2] == "gen" or (
+                        pn[2] == "nom" and not (sentence_start_pending
+                                                and subject_agreement is None)):
+                    units.append({"kind": "pn", "idxs": [j]})
+                    j += 1
+                    continue
+                return None
+        found = _noun_gen_match(clean)
+        if found:
+            units.append({"kind": "noun", "idxs": [j], "match": found})
+            has_noun_gen = True
+            j += 1
+            continue
+        # кандидат в головное существительное
+        head_found = _select_pr_match(clean, prefer_pos="NOUN")
+        if head_found and _match_pos(head_found) in ("NOUN", "NPRO"):
+            head_info = _label_grammar(head_found[1])
+            if head_info.get("ru_case") != "gent":
+                head = (head_found, j)
+                break
+        return None
+    if head is None or not units:
+        return None
+
+    (h_entry, h_label), head_idx = head
+    first_ru = _split_ru_field(h_entry.get("ru") or "")[0] if h_entry.get("ru") else ""
+    head_words = _clean_ru_chunk(first_ru).split()
+    head_first_word = head_words[0] if head_words else ""
+    # родительный-атрибут при «деревня/город/поле» ведёт P1-механизм приложений
+    if not has_noun_gen and numeral_idx is None \
+            and head_first_word not in RU_GEN_CHAIN_DAT_GOVERNORS:
+        return None
+    # и головное слово должно существовать
+    if not _entry_has_ru_gloss(h_entry) and not (h_entry.get("ru") or "").strip():
+        return None
+
+    dat_units = head_first_word in RU_GEN_CHAIN_DAT_GOVERNORS
+    head_forced = "gent" if numeral_idx is not None else pending_ru_case
+    head_gloss, head_note = _ru_gloss_for_entry(h_entry, h_label,
+                                                forced_case=head_forced)
+    if not head_gloss:
+        return None
+
+    # определение-прилагательное от топонима: [Pakarwjas][wālinsnas] →
+    # «Покарвского сражения» — единая родительная группа
+    merged = []
+    k = 0
+    while k < len(units):
+        u = units[k]
+        nxt = units[k + 1] if k + 1 < len(units) else None
+        if (u["kind"] == "pn" and not u.get("paren_closed") and nxt is not None
+                and nxt["kind"] == "noun"):
+            pn_hit = _lookup_propername(_clean_pr_token(tokens[u["idxs"][0]]))
+            ru_adj = ((pn_hit[0].get("ru_adj") or "").strip() if pn_hit else "")
+            if ru_adj:
+                entry_n, label_n = nxt["match"]
+                base_gloss, _n = _ru_gloss_for_entry(entry_n, label_n)
+                head_word = re.split(r"\s+", (base_gloss or "").strip())[0] if base_gloss else ""
+                adj = _inflect_ru_adjective(ru_adj, head_word, "gent",
+                                            _label_grammar(label_n).get("number"))
+                noun_g, _n2 = _ru_gloss_for_entry(entry_n, label_n, forced_case="gent")
+                if adj and noun_g:
+                    merged.append({
+                        "kind": "adjnoun", "out": f"{adj} {noun_g}",
+                        "src": f"{tokens[u['idxs'][0]]} {tokens[nxt['idxs'][0]]}",
+                    })
+                    k += 2
+                    continue
+        merged.append(u)
+        k += 1
+    units = merged
+
+    items = []
+    if numeral_idx is not None:
+        items.append((
+            f"{tokens[numeral_idx]}-летие",
+            f"{tokens[numeral_idx]} {tokens[numeral_idx + 1]}",
+            "число + m. перед существительным → «N-летие» + род. падеж",
+        ))
+    items.append((head_gloss, tokens[head_idx],
+                  f"{h_entry.get('w')}: головное существительное генитивной цепочки; {head_note}"))
+    unit_case = "datv" if dat_units else "gent"
+    for unit in reversed(units):
+        if unit["kind"] == "adjnoun":
+            items.append((unit["out"], unit["src"],
+                          f"{unit['src']}: определение от топонима, переставлено после «{head_first_word}»"))
+        elif unit["kind"] == "noun":
+            entry_n, label_n = unit["match"]
+            g, _note = _ru_gloss_for_entry(entry_n, label_n, forced_case=unit_case)
+            if not g:
+                return None
+            items.append((g, tokens[unit["idxs"][0]],
+                          f"{entry_n.get('w')}: генитив переставлен после «{head_first_word}»"))
+        else:  # цепочка имён, возможно с приложением в скобках
+            in_paren = False
+            for idx in unit["idxs"]:
+                tok = tokens[idx]
+                if not PR_WORD_TOKEN_RE.match(tok):
+                    items.append((tok, tok, "приложение в скобках"))
+                    if tok == "(":
+                        in_paren = True
+                    elif tok == ")":
+                        in_paren = False
+                    continue
+                pn = _render_propername(tok, forced_case=None if in_paren else unit_case,
+                                        prefer_nom=bool(in_paren))
+                if not pn:
+                    return None
+                tail = "; приложение к имени" if in_paren else \
+                    f"; генитив переставлен после «{head_first_word}»"
+                items.append((pn["out"], tok, f"{pn['note']}{tail}"))
+
+    subject = None
+    if pending_ru_case is None and numeral_idx is None:
+        head_info = _label_grammar(h_label)
+        if head_info.get("ru_case") in (None, "nomn"):
+            number = head_info.get("number") or "sing"
+            subject = {"person": "3per", "number": number,
+                       "gender": _ru_word_gender(head_gloss)
+                       or head_info.get("gender") or "masc"}
+    return {"end": head_idx + 1, "items": items, "subject": subject}
+
+
+def _head_noun_beyond_genitives(tokens, start, limit=8):
+    """Лемма головного существительного за родительными зависимыми (для выбора
+    русского предлога: 'en Pakarwjas wālinsnas laūku' → голова laūks → «на»).
+    Пропускает имена, числа и родительные существительные."""
+    j = start + 1
+    seen = 0
+    while j < len(tokens) and seen < limit:
+        tok = tokens[j]
+        if PR_PUNCT_TOKEN_RE.match(tok):
+            if tok in ("(", ")"):
+                j += 1
+                continue
+            return None
+        clean = _clean_pr_token(tok)
+        if not clean:
+            j += 1
+            continue
+        seen += 1
+        if clean.isdigit():
+            j += 1
+            continue
+        if tok[:1].isupper() and _lookup_propername(clean):
+            j += 1
+            continue
+        found = _select_pr_match(clean, prefer_pos="NOUN")
+        if found and _match_pos(found) in ("NOUN", "NPRO"):
+            if _label_grammar(found[1]).get("ru_case") == "gent":
+                j += 1
+                continue
+            return (found[0].get("w") or "").lower()
+        return None
+    return None
+
+
+def _ru_sentence_capitalize(text):
+    """Заглавная в начале и после границ предложения.
+
+    Сокращения даты «г.»/«д.» границей не считаются: «…23 д. фонд поставил…»
+    продолжается со строчной, если дальше идёт не сказуемое-глагол, а
+    «…22 д. Произошло сражение» получает заглавную (глагол начинает новое
+    предложение). После «г.» ведём себя по-старому: «г. Январь 22 д.» —
+    с заглавной, как в принятых примерах корпуса."""
+    if not text:
+        return text
+    out = [text[0].upper()]
+    pos = 1
+    for m in re.finditer(r"([.!?])(\s+)(\w)", text):
+        start = m.start()
+        prev = text[start - 1].lower() if start >= 1 else ""
+        word = m.group(3)
+        cap = True
+        if prev in ("г", "д"):
+            word_full = re.match(r"\w+", text[m.end() - 1:]).group(0).lower()
+            parse0 = morph.parse(word_full)[0] if word_full else None
+            tags = str(parse0.tag) if parse0 else ""
+            is_finite_verb = ("VERB" in tags and not any(
+                t in tags for t in ("INFN", "PRTF", "GRND", "PRTS")))
+            cap = is_finite_verb if prev == "д" else True
+        out.append(text[pos:start + 1 + len(m.group(2))])
+        out.append(word.upper() if cap else word)
+        pos = m.end()
+    out.append(text[pos:])
+    return "".join(out)
+
+
 def translate_pr_sentence_json(sentence):
     # Готовая пара из корпуса перекрывает пословный разбор: иначе длинная
     # прусская реплика собирается из отдельных глосс и читается как набор слов.
@@ -3040,6 +3433,30 @@ def translate_pr_sentence_json(sentence):
             prev_was_subject_name = False
             prev_was_subject_noun = False
             sentence_start_pending = False
+            continue
+
+        # Генитивная цепочка перед головным существительным: 'Undinawas pillis
+        # etteikāsnas fōnds' → «фонд воссоздания замка Ундинавы» (порядок
+        # родительных групп в русском обратен прусскому).
+        gen_chain = _try_genitive_chain(tokens, i, pending_ru_case=pending_ru_case,
+                                        sentence_start_pending=sentence_start_pending,
+                                        subject_agreement=subject_agreement)
+        if gen_chain:
+            if held:
+                _flush_held(out_words, debug, held)
+            for out, src, note in gen_chain["items"]:
+                out_words.append(out)
+                debug.append({"src": src, "out": out, "note": note})
+            if gen_chain.get("subject"):
+                subject_agreement = gen_chain["subject"]
+                prev_was_subject_noun = True
+            else:
+                prev_was_subject_noun = False
+            prev_was_subject_name = False
+            last_was_phrasebook = False
+            pending_number = False
+            sentence_start_pending = False
+            i = gen_chain["end"]
             continue
 
         prefer_pos = None
@@ -3225,12 +3642,36 @@ def translate_pr_sentence_json(sentence):
         if held and pos not in ("NOUN", "NPRO", "ADJF", "PRTF"):
             _flush_held(out_words, debug, held)
 
+        # «ni pastāi statīntan» = «не установлен»: связка «стал» перед кратким
+        # страдательным причастием по-русски опускается (причастие-предикатив).
+        if clean == "pastāi":
+            nxt_idx = _next_content_idx(tokens, i)
+            if nxt_idx is not None:
+                nxt_clean = _clean_pr_token(tokens[nxt_idx])
+                nxt_match = _select_pr_match(nxt_clean)
+                if (nxt_match and "participles" in (nxt_match[1] or "")
+                        and _is_passive_participle_form(nxt_match[0], nxt_match[1], nxt_clean)):
+                    debug.append({"src": tok, "out": "",
+                                  "note": "pastāi: связка опущена перед кратким страдательным причастием"})
+                    finite_verb_seen = True
+                    prev_was_subject_noun = False
+                    sentence_start_pending = False
+                    i += 1
+                    continue
+
         if pos == "PREP":
             next_case = _next_pr_case(tokens, i)
             entry, label = _select_pr_preposition_sense(clean, next_case, (entry, label))
             pending_ru_case = _ru_case_after_pr_preposition(clean, next_case)
             pending_number = False
             gloss, note = _ru_gloss_for_entry(entry, label)
+            # Русский предлог выбирается по головному существительному за
+            # родительной цепочкой: 'en ... laūku' = «на поле», а не «в поле».
+            by_head = PR_PREP_RU_GLOSS_BY_HEAD.get(clean)
+            head_w = _head_noun_beyond_genitives(tokens, i)
+            if by_head and head_w and by_head.get(head_w):
+                gloss = by_head[head_w]
+                note = f"перед «{head_w}» → «{gloss}»"
             if not next_case:
                 # нет следующего слова (или его падеж не определить) - значит,
                 # контекстно сузить смысл нечем; показываем все известные
@@ -3254,6 +3695,7 @@ def translate_pr_sentence_json(sentence):
         is_participle_form = "participles" in (label or "")
         # effective_case_for_participle будет передан как forced_case в _ru_gloss_for_entry
         effective_case_for_participle = pending_ru_case
+        short_participle = False
         if is_participle_form or pos in ("ADJF", "PRTF"):
             # Смотрим на 1-2 предыдущих содержательных токена
             prev_words = []
@@ -3266,11 +3708,16 @@ def translate_pr_sentence_json(sentence):
                     prev_words.append(pclean.lower())
             # Если предыдущее слово — связка, форсируем nom для причастия
             copula_words = {"ast", "bēi", "bīma", "bīmai", "astmai", "astei",
-                            "pastāi", "pastāimai", "pastāitei", "wīrst", "wīrstmai"}
+                            "pastāi", "pastāimai", "pastāitei", "wīrst", "wīrstmai",
+                            "wīrstats"}
+            short_participle = False
             if is_participle_form and any(w in copula_words for w in prev_words[-2:]):
                 # forced_case: nomn (если нет pending_ru_case от предлога)
                 if not pending_ru_case:
                     effective_case_for_participle = "nomn"
+                # страдательное причастие-предикатив после связки — краткая форма:
+                # «будет установлен», «не установлен» (а не «установленный»)
+                short_participle = _is_passive_participle_form(entry, label, clean)
                 agreement = {"case": effective_case_for_participle,
                               "number": None, "gender": None}
             else:
@@ -3341,6 +3788,7 @@ def translate_pr_sentence_json(sentence):
             subject_gender=(subject_agreement or {}).get("gender"),
             subject_number=(subject_agreement or {}).get("number"),
             num_government=pending_number,
+            short_participle=short_participle,
         )
         out_words.append(gloss)
         debug.append({"src": tok, "out": gloss, "note": f"{entry.get('w')}: {note}"})
@@ -3387,7 +3835,7 @@ def translate_pr_sentence_json(sentence):
     result = result.replace("( ", "(").replace(" )", ")")
     # Русское предложение: первая буква заглавная и после .!? (собственные имена
     # уже пришли с заглавной из словаря — .upper() к ним не меняет букву).
-    result = re.sub(r"(^|[.!?]\s+)(\w)", lambda m: m.group(1) + m.group(2).upper(), result)
+    result = _ru_sentence_capitalize(result)
     # «о» -> «об» перед гласной (о/об, предлог).
     result = re.sub(r"(?<![а-яёА-ЯЁ])о ([ЭюяЁэюя])", lambda m: "об " + m.group(1), result)
     return json.dumps({"translation": result, "words": debug}, ensure_ascii=False)
