@@ -23,12 +23,19 @@ def read(name):
     return open(os.path.join(ROOT, "data", name), encoding="utf-8").read()
 
 
+def _optional(name, default):
+    p = os.path.join(ROOT, "data", name)
+    return read(name) if os.path.exists(p) else default
+
+
 tc.load_data(
     read("dictionary.json"),
     read("overrides.json"),
     read("phrasebook.json"),
     read("priorities.json"),
     read("propernames.json"),
+    verb_frames_json_str=_optional("verb_frames.json", "{}"),
+    sentence_memory_json_str=_optional("sentence_memory.json", "[]"),
 )
 
 

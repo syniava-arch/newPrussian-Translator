@@ -1,4 +1,4 @@
-"""Регресс по корпусу phrasebook.json.
+"""Регресс по корпусу phrasebook.json + sentence_memory.json.
 
 Проверяет, что каждая готовая пара находится в ОБОИХ направлениях и
 возвращает ровно свой перевод/оригинал, а не пословную сборку.
@@ -21,16 +21,27 @@ def read(name):
     return open(os.path.join(ROOT, "data", name), encoding="utf-8").read()
 
 
+# sentence_memory.json появился после разделения (аудит, П.2.1);
+# для старых окружений файл опционален.
+_sm_path = os.path.join(ROOT, "data", "sentence_memory.json")
+_sm_text = read("sentence_memory.json") if os.path.exists(_sm_path) else "[]"
+_vf_path = os.path.join(ROOT, "data", "verb_frames.json")
+_vf_text = read("verb_frames.json") if os.path.exists(_vf_path) else "{}"
+
 stats = tc.load_data(
     read("dictionary.json"),
     read("overrides.json"),
     read("phrasebook.json"),
     read("priorities.json"),
     read("propernames.json"),
+    verb_frames_json_str=_vf_text,
+    sentence_memory_json_str=_sm_text,
 )
 print("словарь:", stats)
 
 items = json.loads(read("phrasebook.json"))
+if os.path.exists(_sm_path):
+    items = items + json.loads(_sm_text)
 
 pairs = []
 for item in items:

@@ -2,6 +2,10 @@
    Вся переводческая логика находится в translate_core.py и не меняется
    для работы в браузере — только источники данных заменены на fetch(). */
 
+// Аудит: фиксированные версии пакетов — чтобы обновления PyPI не ломали сайт.
+const PKG_VERSIONS = ["pymorphy3==2.0.6", "pymorphy3-dicts-ru==2.4.417150.4580142"];
+const DATA_CACHE = "prussian-translator-data-v1";
+
 const statusText = document.getElementById("status-text");
 const loadingPanel = document.getElementById("loading");
 const appPanel = document.getElementById("app");
@@ -9,10 +13,17 @@ const errorPanel = document.getElementById("error");
 const errorText = document.getElementById("error-text");
 const readyNote = document.getElementById("ready-note");
 const translateBtn = document.getElementById("translate-btn");
+const reloadBtn = document.getElementById("reload-btn");
+const progressBar = document.getElementById("progress-bar");
+const progressFill = document.getElementById("progress-fill");
+const progressLabel = document.getElementById("progress-label");
 const input = document.getElementById("input");
 const resultWrap = document.getElementById("result-wrap");
 const resultText = document.getElementById("result-text");
 const breakdownBody = document.getElementById("breakdown-body");
+const breakdownDetails = document.getElementById("breakdown-details");
+const viewPlainBtn = document.getElementById("view-plain");
+const viewBreakdownBtn = document.getElementById("view-breakdown");
 const dirRuPrBtn = document.getElementById("dir-ru-pr");
 const dirPrRuBtn = document.getElementById("dir-pr-ru");
 const inputLabel = document.getElementById("input-label");
@@ -63,6 +74,52 @@ function setStatus(msg) {
   statusText.textContent = msg;
 }
 
+// Аудит: отображение прогресса по этапам загрузки.
+function setProgress(pct, label) {
+  if (!progressBar) return;
+  if (pct >= 100) {
+    progressBar.classList.add("hidden");
+    return;
+  }
+  progressBar.classList.remove("hidden");
+  if (progressFill) progressFill.style.width = pct + "%";
+  if (progressLabel && label) progressLabel.textContent = label;
+  if (statusText) statusText.textContent = label || statusText.textContent;
+}
+
+// Аудит: собственное кэширование данных проекта через Cache API.
+// Сообщение «дальше браузер кэширует» раньше было обещанием без реализации —
+// теперь файлы данных реально сохраняются в кэш и берутся оттуда при
+// повторных заходах (работает в https, в т.ч. на GitHub Pages).
+async function fetchCached(url) {
+  if (typeof caches === "undefined") return fetchText(url); // http/file без кэша
+  try {
+    const cache = await caches.open(DATA_CACHE);
+    const hit = await cache.match(url);
+    if (hit) return hit.text();
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error(`${url}: HTTP ${resp.status}`);
+    const text = await resp.text();
+    try { await cache.put(url, new Response(text)); } catch (e) { /* квота — не критично */ }
+    return text;
+  } catch (err) {
+    // Кэш недоступен (приватный режим, квота) — просто fetch
+    return fetchText(url);
+  }
+}
+
+// Аудит: кнопка «Обновить данные» — сброс кэша и перезагрузка.
+async function resetDataCacheAndReload() {
+  if (typeof caches !== "undefined") {
+    try { await caches.delete(DATA_CACHE); } catch (e) { /* ignore */ }
+  }
+  location.reload();
+}
+if (reloadBtn) {
+  reloadBtn.addEventListener("click", resetDataCacheAndReload);
+  reloadBtn.classList.remove("hidden");
+}
+
 function showFatalError(msg) {
   loadingPanel.classList.add("hidden");
   errorPanel.classList.remove("hidden");
@@ -73,6 +130,10 @@ async function fetchText(url) {
   const response = await fetch(url);
   if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
   return response.text();
+}
+
+async function fetchCachedText(url) {
+  return fetchCached(url);
 }
 
 async function fetchOptionalText(url, fallback = "[]") {
@@ -106,21 +167,20 @@ async function loadShardedSection(manifest, sectionName) {
   }
   const shardTexts = await Promise.all(section.shards.map((shard) => {
     if (!shard.path) throw new Error(`manifest: bad ${sectionName} shard path`);
-    return fetchText(`data/shards/${shard.path}`);
+    return fetchCached(`data/shards/${shard.path}`);
   }));
   return joinJsonArrayShards(shardTexts);
 }
 
 async function loadDictionaryData() {
   try {
-    const manifestResponse = await fetch("data/shards/manifest.json", { cache: "no-cache" });
-    if (!manifestResponse.ok) throw new Error("manifest.json: HTTP " + manifestResponse.status);
-    const manifest = await manifestResponse.json();
+    const manifestResponse = await fetchCached("data/shards/manifest.json");
+    const manifest = JSON.parse(manifestResponse);
     if (manifest.schema !== 1) throw new Error("manifest.json: unsupported schema");
 
     const dictCount = manifest.dictionary?.shards?.length || 0;
     const overrideCount = manifest.overrides?.shards?.length || 0;
-    setStatus(`Загружаю индексированные части словаря (${dictCount + overrideCount} файлов)…`);
+    setProgress(72, `Загружаю индексированные части словаря (${dictCount + overrideCount} файлов)…`);
     const [dictText, overridesText] = await Promise.all([
       loadShardedSection(manifest, "dictionary"),
       loadShardedSection(manifest, "overrides"),
@@ -130,8 +190,8 @@ async function loadDictionaryData() {
     console.warn("Sharded dictionary load failed; falling back to legacy JSON files", err);
     setStatus("Индексы не найдены, загружаю большие JSON-файлы словаря…");
     const [dictText, overridesText] = await Promise.all([
-      fetchText("data/dictionary.json"),
-      fetchText("data/overrides.json"),
+      fetchCached("data/dictionary.json"),
+      fetchCached("data/overrides.json"),
     ]);
     return { dictText, overridesText, manifest: null, mode: "legacy" };
   }
@@ -139,30 +199,41 @@ async function loadDictionaryData() {
 
 async function boot() {
   try {
-    setStatus("Загружаю Pyodide (python в браузере)…");
+    setProgress(5, "Загружаю Pyodide (python в браузере)…");
     const pyodide = await loadPyodide();
 
-    setStatus("Устанавливаю pymorphy3 и русский словарь форм (~10 МБ, один раз)…");
+    setProgress(30, "Устанавливаю pymorphy3 и русский словарь форм (~10 МБ, один раз)…");
     await pyodide.loadPackage("micropip");
     const micropip = pyodide.pyimport("micropip");
-    await micropip.install(["pymorphy3", "pymorphy3-dicts-ru"]);
+    // Аудит: фиксированные версии — обновления PyPI не ломают сайт внезапно.
+    await micropip.install(PKG_VERSIONS);
 
-    setStatus("Загружаю данные словаря Prūsiska bilā…");
-    const [dataFiles, phrasebookText, prioritiesText, propernamesText, coreCode] = await Promise.all([
+    setProgress(65, "Загружаю данные словаря Prūsiska bilā…");
+    const [dataFiles, phrasebookText, prioritiesText, propernamesText, verbFramesText, sentenceMemoryText, coreCode] = await Promise.all([
       loadDictionaryData(),
       fetchOptionalText("data/phrasebook.json", "[]"),
       fetchOptionalText("data/priorities.json", "{}"),
       fetchOptionalText("data/propernames.json", "{}"),
+      fetchOptionalText("data/verb_frames.json", "{}"),
+      fetchOptionalText("data/sentence_memory.json", "[]"),
       fetchText("translate_core.py"),
     ]);
 
-    setStatus("Строю индексы (словоформы, предлоги, парадигмы)…");
+    setProgress(90, "Строю индексы (словоформы, предлоги, парадигмы)…");
     await pyodide.runPythonAsync(coreCode);
     const loadData = pyodide.globals.get("load_data");
-    const stats = loadData(dataFiles.dictText, dataFiles.overridesText, phrasebookText, prioritiesText, propernamesText).toJs({ dict_converter: Object.fromEntries });
+    const stats = loadData(
+      dataFiles.dictText,
+      dataFiles.overridesText,
+      phrasebookText,
+      prioritiesText,
+      propernamesText,
+      verbFramesText,
+      sentenceMemoryText
+    ).toJs({ dict_converter: Object.fromEntries });
 
     const dataMode = dataFiles.mode === "shards" ? "индексы" : "большие JSON";
-    readyNote.textContent = `Слов: ${stats.words} · с парадигмами: ${stats.overrides} · предлогов: ${stats.prepositions} · фраз: ${stats.phrases || 0} · имен: ${stats.propernames || 0} · данные: ${dataMode}`;
+    readyNote.textContent = `Слов: ${stats.words} · с парадигмами: ${stats.overrides} · фраз: ${stats.phrases || 0} · предложений корпуса: ${stats.sentence_memory || 0} · глаг. моделей: ${stats.verb_frames || 0} · имен: ${stats.propernames || 0} · данные: ${dataMode}`;
 
     const translateSentenceJson = pyodide.globals.get("translate_sentence_json");
     const translatePrSentenceJson = pyodide.globals.get("translate_pr_sentence_json");
@@ -171,6 +242,7 @@ async function boot() {
       "pr-ru": (text) => JSON.parse(translatePrSentenceJson(text)),
     };
 
+    setProgress(100, "Готово");
     loadingPanel.classList.add("hidden");
     appPanel.classList.remove("hidden");
     input.focus();
@@ -182,6 +254,32 @@ async function boot() {
     );
   }
 }
+
+// Аудит, П.3.5: режим отображения — «Перевод» (по умолчанию) или
+// «Перевод с разбором». Выбор сохраняется между заходами.
+let viewMode = "plain";
+try {
+  const saved = localStorage.getItem("view-mode");
+  if (saved === "plain" || saved === "breakdown") viewMode = saved;
+} catch (e) { /* localStorage недоступен — не критично */ }
+
+function applyViewMode() {
+  if (viewPlainBtn) viewPlainBtn.classList.toggle("active", viewMode === "plain");
+  if (viewBreakdownBtn) viewBreakdownBtn.classList.toggle("active", viewMode === "breakdown");
+  if (breakdownDetails) breakdownDetails.classList.toggle("hidden", viewMode !== "breakdown");
+}
+
+if (viewPlainBtn) viewPlainBtn.addEventListener("click", () => {
+  viewMode = "plain";
+  try { localStorage.setItem("view-mode", viewMode); } catch (e) { /* ignore */ }
+  applyViewMode();
+});
+if (viewBreakdownBtn) viewBreakdownBtn.addEventListener("click", () => {
+  viewMode = "breakdown";
+  try { localStorage.setItem("view-mode", viewMode); } catch (e) { /* ignore */ }
+  applyViewMode();
+});
+applyViewMode();
 
 function renderResult(data) {
   resultText.textContent = data.translation || "—";
@@ -198,6 +296,7 @@ function renderResult(data) {
     breakdownBody.appendChild(tr);
   }
   resultWrap.classList.remove("hidden");
+  applyViewMode();
 }
 
 function doTranslate() {

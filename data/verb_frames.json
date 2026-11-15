@@ -1,0 +1,8717 @@
+{
+ "absōrbitun": {
+  "ru": "впитать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "abōnitun": {
+  "ru": "подписаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "adressitun": {
+  "ru": "адресовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aikātun": {
+  "ru": "штопать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ainawīdintun": {
+  "ru": "унифицировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "akkintwei": {
+  "ru": "ахать",
+  "transitive": false,
+  "object_case": null
+ },
+ "aktualizītun": {
+  "ru": "актуализировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aktīwitun": {
+  "ru": "активизировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "alkautwei": {
+  "ru": "голодать",
+  "transitive": false,
+  "object_case": null
+ },
+ "alktwei": {
+  "ru": "голодать",
+  "transitive": false,
+  "object_case": null
+ },
+ "amputītun": {
+  "ru": "ампутировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "analizītun": {
+  "ru": "анализировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "anktwei": {
+  "ru": "скулить",
+  "transitive": false,
+  "object_case": null
+ },
+ "anzitun": {
+  "ru": "суживать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "anztwei": {
+  "ru": "суживаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "apkintwei": {
+  "ru": "обезьянничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "apperautun": {
+  "ru": "жертвовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aprōbitun": {
+  "ru": "апробировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "arestītun": {
+  "ru": "арестовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "arkīwitun": {
+  "ru": "заархивировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "artun": {
+  "ru": "пахать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "arāikintun": {
+  "ru": "ограничивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "asimilītun": {
+  "ru": "ассимилировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "atakkitun": {
+  "ru": "атаковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aubilītwei": {
+  "ru": "проговорить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aubārwintun si": {
+  "ru": "вылинять",
+  "transitive": false,
+  "object_case": null
+ },
+ "aubīrgtun": {
+  "ru": "сварить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "audegtwei": {
+  "ru": "загореть",
+  "transitive": false,
+  "object_case": null
+ },
+ "audraztun": {
+  "ru": "стереть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "audribbintun si": {
+  "ru": "избавиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "audumtun": {
+  "ru": "задуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "audussintun": {
+  "ru": "задушить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "audāi": {
+  "ru": "происходить",
+  "transitive": false,
+  "object_case": null
+ },
+ "audātun si": {
+  "ru": "произойти",
+  "transitive": false,
+  "object_case": null
+ },
+ "audētun": {
+  "ru": "препятствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "augaūtun": {
+  "ru": "приобрести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "augertun": {
+  "ru": "проглотить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "augraūstun": {
+  "ru": "разрушить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "augrābtun": {
+  "ru": "похитить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "augīntun": {
+  "ru": "растить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aujātwei": {
+  "ru": "уезжать",
+  "transitive": false,
+  "object_case": null
+ },
+ "aukabīntun": {
+  "ru": "снять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aukanstun": {
+  "ru": "откусить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aukaīnintun": {
+  "ru": "уценить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aukjaūtautun": {
+  "ru": "облупливать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auklaūtun": {
+  "ru": "запереть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aukliptun": {
+  "ru": "скрыть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aukliptun si": {
+  "ru": "спрятаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "auklìptintun": {
+  "ru": "утаить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aukūmpintun": {
+  "ru": "оттолкнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aulaūtwei": {
+  "ru": "умирать",
+  "transitive": false,
+  "object_case": null
+ },
+ "aulemtun": {
+  "ru": "отломать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aulānktun": {
+  "ru": "избегать",
+  "transitive": false,
+  "object_case": null
+ },
+ "aumadlītun": {
+  "ru": "умолять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aumestun": {
+  "ru": "потерять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auminītwei": {
+  "ru": "унывать",
+  "transitive": false,
+  "object_case": null
+ },
+ "aumūtun": {
+  "ru": "смыть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aupaikītun": {
+  "ru": "сманить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aupaltun": {
+  "ru": "находить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aupeisātun": {
+  "ru": "списать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aupjaūtun": {
+  "ru": "отрезать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auplūstwei": {
+  "ru": "спасть",
+  "transitive": false,
+  "object_case": null
+ },
+ "auplūtwei": {
+  "ru": "уплыть",
+  "transitive": false,
+  "object_case": null
+ },
+ "auprestun": {
+  "ru": "подразумевать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aupūstun": {
+  "ru": "сдуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ausadīntun": {
+  "ru": "высадить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ausegtun": {
+  "ru": "отстегнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ausegtun si": {
+  "ru": "расстегнуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "auskandīntun": {
+  "ru": "утопить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auskrāistwei": {
+  "ru": "улететь",
+  "transitive": false,
+  "object_case": null
+ },
+ "auskēnstwei": {
+  "ru": "утонуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "auskīpatun": {
+  "ru": "ощипать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ausmittintwei": {
+  "ru": "выскользнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "auspānstun": {
+  "ru": "отнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "austabbintun": {
+  "ru": "удивить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "austebtwei": {
+  "ru": "удивиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "austātun": {
+  "ru": "потерять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auswajjintun": {
+  "ru": "отчуждать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ausàkstintun": {
+  "ru": "очистить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ausītun": {
+  "ru": "отсоединить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "autengīntun": {
+  "ru": "отослать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "autustwei": {
+  "ru": "замолчать",
+  "transitive": false,
+  "object_case": null
+ },
+ "autēnstun": {
+  "ru": "прервать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auwaitjātwei": {
+  "ru": "заговориться",
+  "transitive": false,
+  "object_case": null
+ },
+ "auwaldītun": {
+  "ru": "завладеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "auwartintun si": {
+  "ru": "отвернуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "auwertun": {
+  "ru": "закрывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auwijātun": {
+  "ru": "распаковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auwippintun": {
+  "ru": "обрезать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auwirtwei": {
+  "ru": "накипеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "auwērbtun": {
+  "ru": "развинтить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auwērptun": {
+  "ru": "расслабить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auwīlktun": {
+  "ru": "утащить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auwīlktun si": {
+  "ru": "раздеться",
+  "transitive": false,
+  "object_case": null
+ },
+ "auwīngtwei": {
+  "ru": "избегать",
+  "transitive": false,
+  "object_case": null
+ },
+ "auzmānintun": {
+  "ru": "дискредитировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "auēitwei": {
+  "ru": "уйти",
+  "transitive": false,
+  "object_case": null
+ },
+ "auīmtun": {
+  "ru": "убрать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aušaudītwei": {
+  "ru": "доверять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aušaūtun": {
+  "ru": "одолжить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "awwautun": {
+  "ru": "носить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aīsintun": {
+  "ru": "накалять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aūgtwei": {
+  "ru": "расти",
+  "transitive": false,
+  "object_case": null
+ },
+ "aūktwei": {
+  "ru": "укать",
+  "transitive": false,
+  "object_case": null
+ },
+ "aūsintun": {
+  "ru": "золотить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aūstun": {
+  "ru": "ткать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aūtun": {
+  "ru": "обуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "aūtun si": {
+  "ru": "обуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "bajjintun": {
+  "ru": "пугать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "bangaūtwei": {
+  "ru": "волноваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "bangīntun": {
+  "ru": "шевелить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "bankrōtitwei": {
+  "ru": "обанкротиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "bartun si": {
+  "ru": "буйствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "bastun": {
+  "ru": "вонзать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "bastītun": {
+  "ru": "латать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "baudīntun": {
+  "ru": "будить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "bebīntun": {
+  "ru": "осмеивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "bebītwei": {
+  "ru": "блеять",
+  "transitive": false,
+  "object_case": null
+ },
+ "bedēlenikautwei": {
+  "ru": "бездельничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "begātwei": {
+  "ru": "бегать",
+  "transitive": false,
+  "object_case": null
+ },
+ "belztwei": {
+  "ru": "набухать",
+  "transitive": false,
+  "object_case": null
+ },
+ "bezdītwei": {
+  "ru": "бздеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "bijātun": {
+  "ru": "бояться",
+  "transitive": false,
+  "object_case": null
+ },
+ "bilancītwei": {
+  "ru": "балансировать",
+  "transitive": false,
+  "object_case": null
+ },
+ "bilītun": {
+  "ru": "говорить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "bilītun si": {
+  "ru": "называться",
+  "transitive": false,
+  "object_case": null
+ },
+ "birbintwei": {
+  "ru": "играть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "blandātun si": {
+  "ru": "заблуждаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "blandātwei": {
+  "ru": "блуждать",
+  "transitive": false,
+  "object_case": null
+ },
+ "blānditun si": {
+  "ru": "ошибаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "blīngintwei": {
+  "ru": "блестеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "blōkitun": {
+  "ru": "преграждать",
+  "transitive": false,
+  "object_case": null
+ },
+ "bombardītun": {
+  "ru": "бомбардировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "bremzintun": {
+  "ru": "тормозить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "brenstwei": {
+  "ru": "тяжелеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "brestwei": {
+  "ru": "брести",
+  "transitive": false,
+  "object_case": null
+ },
+ "brewīntun": {
+  "ru": "способствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "brewīntwei": {
+  "ru": "способствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "brjaūtun si": {
+  "ru": "ломиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "bruktun": {
+  "ru": "ударить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "buccautun": {
+  "ru": "целовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "buccautun si": {
+  "ru": "целоваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "budītwei": {
+  "ru": "бдеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "buksautwei": {
+  "ru": "буксовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "buksīritun": {
+  "ru": "буксировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "burbelautwei": {
+  "ru": "бормотать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "burtautwei": {
+  "ru": "гадать",
+  "transitive": false,
+  "object_case": null
+ },
+ "burtwei": {
+  "ru": "колдовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "bustwei": {
+  "ru": "просыпаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "buwātwei": {
+  "ru": "бывать",
+  "transitive": false,
+  "object_case": null
+ },
+ "buwīntwei": {
+  "ru": "обитать",
+  "transitive": false,
+  "object_case": null
+ },
+ "bāndātwei": {
+  "ru": "пытаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "bārwintun": {
+  "ru": "окрасить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "bāukautwei": {
+  "ru": "шататься",
+  "transitive": false,
+  "object_case": null
+ },
+ "bēgtwei": {
+  "ru": "бежать",
+  "transitive": false,
+  "object_case": null
+ },
+ "bīrgintun": {
+  "ru": "кипятить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "bīrgtwei": {
+  "ru": "кипеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "būtwei": {
+  "ru": "быть",
+  "transitive": false,
+  "object_case": null
+ },
+ "citītun": {
+  "ru": "цитировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ciwilizītun": {
+  "ru": "цивилизировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "daddarintwei": {
+  "ru": "гоготать",
+  "transitive": false,
+  "object_case": null
+ },
+ "dajātun": {
+  "ru": "дарить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dalbtun": {
+  "ru": "долбить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dalljautun": {
+  "ru": "разделять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dalljautwei": {
+  "ru": "разделять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "definītun": {
+  "ru": "определять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "degenerītwei": {
+  "ru": "выродиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "deggintun": {
+  "ru": "жечь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "degtwei": {
+  "ru": "гореть",
+  "transitive": false,
+  "object_case": null
+ },
+ "dejātun": {
+  "ru": "раскладывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "deklarītun": {
+  "ru": "декларировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "deklinītun": {
+  "ru": "склонять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dekōncentritun": {
+  "ru": "рассредоточивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "delegītun": {
+  "ru": "делегировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "delītun": {
+  "ru": "делить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dergītun": {
+  "ru": "осквернять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "detōnitwei": {
+  "ru": "детонировать",
+  "transitive": false,
+  "object_case": null
+ },
+ "dezertītwei": {
+  "ru": "дезертировать",
+  "transitive": false,
+  "object_case": null
+ },
+ "deīgtun": {
+  "ru": "дробить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "deīktan pertreptun": {
+  "ru": "замещать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "diferencītun": {
+  "ru": "дифференцировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "diktītun": {
+  "ru": "диктовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "diltwei": {
+  "ru": "стираться",
+  "transitive": false,
+  "object_case": null
+ },
+ "dirtwei": {
+  "ru": "отлупляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "dirītwei": {
+  "ru": "смотреть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "diskriminītun": {
+  "ru": "дискриминировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "diskutītwei": {
+  "ru": "дискутировать",
+  "transitive": false,
+  "object_case": null
+ },
+ "dizītwei": {
+  "ru": "промышлять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "draztun": {
+  "ru": "тереть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "drebtun": {
+  "ru": "тряхнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dreztun": {
+  "ru": "рвать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dreztun si": {
+  "ru": "лопнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "dribbintun": {
+  "ru": "трясти",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dribbintwei": {
+  "ru": "трясти",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dribtwei": {
+  "ru": "опадать",
+  "transitive": false,
+  "object_case": null
+ },
+ "drjāuditun": {
+  "ru": "запрещать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "drukkautun": {
+  "ru": "печатать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "druwītwei": {
+  "ru": "верить",
+  "transitive": false,
+  "object_case": null
+ },
+ "drāugautwei": {
+  "ru": "общаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "drāztun": {
+  "ru": "строгать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dubtwei": {
+  "ru": "ввалиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "duktwei": {
+  "ru": "вонять",
+  "transitive": false,
+  "object_case": null
+ },
+ "dulkautun si": {
+  "ru": "драться",
+  "transitive": false,
+  "object_case": null
+ },
+ "dumtwei": {
+  "ru": "дуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "duplikātun": {
+  "ru": "удваивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "durītwei": {
+  "ru": "торчать",
+  "transitive": false,
+  "object_case": null
+ },
+ "dussintun": {
+  "ru": "душить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dustwei": {
+  "ru": "задыхаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "dwassautwei": {
+  "ru": "зевать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dwassilitwei": {
+  "ru": "слоняться",
+  "transitive": false,
+  "object_case": null
+ },
+ "dwejjintun si": {
+  "ru": "раздвоиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "dwestwei": {
+  "ru": "дышать",
+  "transitive": false,
+  "object_case": null
+ },
+ "dwidabbingautwei": {
+  "ru": "лицемерить",
+  "transitive": false,
+  "object_case": null
+ },
+ "dwigubbintun": {
+  "ru": "удвоить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dwigubātwei": {
+  "ru": "сомневаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "dāktwei": {
+  "ru": "щебетать",
+  "transitive": false,
+  "object_case": null
+ },
+ "dāncautwei": {
+  "ru": "танцевать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dātun": {
+  "ru": "дать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dātun si": {
+  "ru": "поддаваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "dātwei": {
+  "ru": "позволить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dēiwintun": {
+  "ru": "обожествлять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dēlatwei": {
+  "ru": "действовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "dēlbtun": {
+  "ru": "бить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dēlintun": {
+  "ru": "воздействовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "dēngtun": {
+  "ru": "выгнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dērgtun": {
+  "ru": "загрязнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dētun": {
+  "ru": "деть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dīgtwei": {
+  "ru": "прорастать",
+  "transitive": false,
+  "object_case": null
+ },
+ "dīnkautwei": {
+  "ru": "благодарить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dīrsintun": {
+  "ru": "ободрять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dīrsintun si": {
+  "ru": "осмелиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "dītun": {
+  "ru": "сосать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dīwintun": {
+  "ru": "ускорять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dīztun": {
+  "ru": "трамбовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "dūmautwei": {
+  "ru": "дымить",
+  "transitive": false,
+  "object_case": null
+ },
+ "dūnītwei": {
+  "ru": "жужжать",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebaūgtwei": {
+  "ru": "обрастать",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebaūtun": {
+  "ru": "обуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebdajātun": {
+  "ru": "одарить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebdirītun": {
+  "ru": "оглядеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebdēlatun": {
+  "ru": "обработать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebewārgintun": {
+  "ru": "страховать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebgalwātwei": {
+  "ru": "утверждать",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebglabtun": {
+  "ru": "зажать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebglābtun": {
+  "ru": "окутывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebgraudīntun": {
+  "ru": "обжаловать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebgrjaūztun": {
+  "ru": "обгрызть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebgrāisintun si": {
+  "ru": "заиндеветь",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebgrēnztun": {
+  "ru": "обернуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebjadātwei": {
+  "ru": "объездить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebkandātun": {
+  "ru": "покусать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebkaīlintun": {
+  "ru": "приветствовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebkektun": {
+  "ru": "поносить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebklantītun": {
+  "ru": "заговаривать",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebladītwei": {
+  "ru": "оледенеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebmēntitun": {
+  "ru": "оболгать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebmīglintun": {
+  "ru": "омрачить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebmīlintun": {
+  "ru": "запачкать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebmīlintun si": {
+  "ru": "пачкаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebnāgintun": {
+  "ru": "обнажать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebpattintun": {
+  "ru": "женить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebpeisātun": {
+  "ru": "описать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebperōnintun": {
+  "ru": "обобщать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebplatītwei": {
+  "ru": "оплатить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebraudātun": {
+  "ru": "оплакивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebrazgītun": {
+  "ru": "опутать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebrekkenautun": {
+  "ru": "вычислять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebsergītun": {
+  "ru": "охранять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebsirāblintun": {
+  "ru": "посеребрить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebskīpatun": {
+  "ru": "ощипать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebspēgtun": {
+  "ru": "окропить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebstalītwei": {
+  "ru": "настоять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebstegtun": {
+  "ru": "покрыть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebtarītun": {
+  "ru": "обсудить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebtiktun": {
+  "ru": "встречать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebtiktun si": {
+  "ru": "встретиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebtiktwei": {
+  "ru": "попасть",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebtrīnktun": {
+  "ru": "контузить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebtuldītun": {
+  "ru": "обрадовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebtuldītun si": {
+  "ru": "обрадоваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebtīrintun": {
+  "ru": "вытереть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebtīrintun si": {
+  "ru": "утереться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebwaidilītun": {
+  "ru": "очаровывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebwaitjātun": {
+  "ru": "обсудить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebwartīntun": {
+  "ru": "перевернуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebwarītun": {
+  "ru": "побеждать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebwarīwusis": {
+  "ru": "побеждать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebwijātun": {
+  "ru": "обертывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebwijātun si": {
+  "ru": "обвиваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebwinūtun": {
+  "ru": "обвинить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebwīlktun": {
+  "ru": "одеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebwīlktun si": {
+  "ru": "одеться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebzentlitun": {
+  "ru": "пометить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebzentlitun si": {
+  "ru": "отличаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ebzignātun": {
+  "ru": "благословить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebzūrgintun": {
+  "ru": "окружить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebēitun": {
+  "ru": "обойти",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebēnrankintun": {
+  "ru": "вооружать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebīmtun": {
+  "ru": "охватывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ebšlūzitwei": {
+  "ru": "обслуживать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "eiskītwei": {
+  "ru": "проясняться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ekspōrtitun": {
+  "ru": "экспортировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ekzistītwei": {
+  "ru": "существовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "eliminītun": {
+  "ru": "удалять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "embastun": {
+  "ru": "вонзить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "embastun si": {
+  "ru": "застрять",
+  "transitive": false,
+  "object_case": null
+ },
+ "empakkintun": {
+  "ru": "упаковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "empjaūtun": {
+  "ru": "врезать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "emprīkibilītwei": {
+  "ru": "противоречить",
+  "transitive": false,
+  "object_case": null
+ },
+ "emprīkistalītwei": {
+  "ru": "противостоять",
+  "transitive": false,
+  "object_case": null
+ },
+ "emprīkistatintun": {
+  "ru": "противопоставить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "empērintun": {
+  "ru": "собирать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enartun": {
+  "ru": "вспахать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enbewārgintun": {
+  "ru": "предохранять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enbilancītun": {
+  "ru": "сбалансировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enbuttintun": {
+  "ru": "приручать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enbālgnintun": {
+  "ru": "седлать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enbūwintun": {
+  "ru": "заселить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "endegtun": {
+  "ru": "зажечь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "endegtwei": {
+  "ru": "загореться",
+  "transitive": false,
+  "object_case": null
+ },
+ "endirītun": {
+  "ru": "разглядеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "endrūwintun": {
+  "ru": "убедить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "endrūwintun si": {
+  "ru": "убедиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "endwestun": {
+  "ru": "вдыхать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "endātun": {
+  "ru": "вручить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "endāusintun": {
+  "ru": "воодушевить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "endēlbtun": {
+  "ru": "вбить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "endētun": {
+  "ru": "вложить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "endītun": {
+  "ru": "всосать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "engabtun": {
+  "ru": "хватать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "engardautwei": {
+  "ru": "смаковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "engaūtun": {
+  "ru": "обрести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "engillintun si": {
+  "ru": "углубляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "engnestun": {
+  "ru": "втиснуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "engnāstun": {
+  "ru": "замесить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "engraudītwei": {
+  "ru": "пожалеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "engrumītwei": {
+  "ru": "загрохотать",
+  "transitive": false,
+  "object_case": null
+ },
+ "engrustwei": {
+  "ru": "загрустить",
+  "transitive": false,
+  "object_case": null
+ },
+ "engurīnintun": {
+  "ru": "обеднять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "engurīnintun si": {
+  "ru": "беднеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "engērdautun": {
+  "ru": "говорить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "eninteressintun": {
+  "ru": "заинтересовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "eninteressitun": {
+  "ru": "заинтересовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkaitīntun": {
+  "ru": "подстрекать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkaitītwei": {
+  "ru": "раскалиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enkalsīntun": {
+  "ru": "озвучивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkaltun": {
+  "ru": "заковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkanstun": {
+  "ru": "укусить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkaīnintun": {
+  "ru": "оценить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enklaūtun": {
+  "ru": "включить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enklìptintun": {
+  "ru": "засекретить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkraūtun": {
+  "ru": "загрузить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkruwwintun": {
+  "ru": "окровавить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkrāmptintun": {
+  "ru": "пригвождать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkāistwei": {
+  "ru": "накалиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enkāptun": {
+  "ru": "закопать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkāuptun": {
+  "ru": "закупить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkāusintun": {
+  "ru": "коснуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enkērmenintun": {
+  "ru": "воплотить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enkīntwei": {
+  "ru": "напрячься",
+  "transitive": false,
+  "object_case": null
+ },
+ "enlaikātun": {
+  "ru": "поддерживать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enlaipīntun": {
+  "ru": "желать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enlaukītun": {
+  "ru": "исследовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enleītun": {
+  "ru": "влить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enlēztwei": {
+  "ru": "влезть",
+  "transitive": false,
+  "object_case": null
+ },
+ "enlīgtwei": {
+  "ru": "заложить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enlōgintun si": {
+  "ru": "войти",
+  "transitive": false,
+  "object_case": null
+ },
+ "enmigtwei": {
+  "ru": "заснуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "enminītun": {
+  "ru": "запомнить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enmēritwei": {
+  "ru": "подозревать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enmīlītun si": {
+  "ru": "влюбляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ennaseīlintun": {
+  "ru": "одухотворить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enpaltwei": {
+  "ru": "попасть",
+  "transitive": false,
+  "object_case": null
+ },
+ "enpeisātun": {
+  "ru": "вписать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enpeisātun si": {
+  "ru": "записываться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enperōnintun": {
+  "ru": "социализировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enplatītwei": {
+  "ru": "уплатить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enplikkintun": {
+  "ru": "обеднять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enprābutintun": {
+  "ru": "увековечить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enpūlautwei": {
+  "ru": "загноиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enrikaūtwei": {
+  "ru": "воцариться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enristun": {
+  "ru": "переплести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enrāmbintun": {
+  "ru": "надрубать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enrūditwei": {
+  "ru": "ржаветь",
+  "transitive": false,
+  "object_case": null
+ },
+ "ensadīntun": {
+  "ru": "установить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ensaltwei": {
+  "ru": "вмерзнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "ensegītun": {
+  "ru": "занять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ensentwei": {
+  "ru": "застареть",
+  "transitive": false,
+  "object_case": null
+ },
+ "enskajjintun": {
+  "ru": "поселить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enskajjintun si": {
+  "ru": "поселяться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enskattintun": {
+  "ru": "включить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ensklāwintun": {
+  "ru": "поработить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enskēiptun": {
+  "ru": "ущипнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ensmittintwei": {
+  "ru": "шмыгнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "enspārtintun": {
+  "ru": "укрепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enstabbitwei": {
+  "ru": "окаменеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "enstatīntun": {
+  "ru": "вставить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enstebbulautun": {
+  "ru": "восхищаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enstebtwei": {
+  "ru": "окаменеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "enswajjintun": {
+  "ru": "освоить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ensàknintun": {
+  "ru": "укоренить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ensàknintwei": {
+  "ru": "укорениться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ensālintun": {
+  "ru": "солить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ensīrzdintun": {
+  "ru": "уплотнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ensūrintun": {
+  "ru": "солить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ensūtwei": {
+  "ru": "впитаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "entataūtun": {
+  "ru": "татуировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enteikātun": {
+  "ru": "установить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "entensītun": {
+  "ru": "втянуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "entikrōmintun": {
+  "ru": "узаконить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "entikīntun": {
+  "ru": "возделывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "entrentun": {
+  "ru": "угрожать",
+  "transitive": false,
+  "object_case": null
+ },
+ "entìkrintun": {
+  "ru": "выпрямить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwaidīntun": {
+  "ru": "показывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwaidīntun si": {
+  "ru": "оказаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enwaitjātun": {
+  "ru": "говорить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwakītun": {
+  "ru": "звать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwaldītun": {
+  "ru": "завладеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "enwargītun": {
+  "ru": "обижать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwartīntun": {
+  "ru": "отклонить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwarīntun": {
+  "ru": "уполномочить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enweisīntun": {
+  "ru": "оплодотворять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enweltun": {
+  "ru": "раскрутить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwesselintun": {
+  "ru": "развеселить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwesselintun si": {
+  "ru": "развеселиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enwestun": {
+  "ru": "ввести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwijātun": {
+  "ru": "заворачивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwundintun": {
+  "ru": "орошать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwānsintun": {
+  "ru": "зацепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enwārgtwei": {
+  "ru": "заболеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "enwērbtun": {
+  "ru": "вкрутить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enāistwei": {
+  "ru": "нагреться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enēitwei": {
+  "ru": "входить",
+  "transitive": false,
+  "object_case": null
+ },
+ "enēizwintun": {
+  "ru": "ранить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enēizwintun si": {
+  "ru": "оскорбиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "enīmtun": {
+  "ru": "принять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "enšpriccintun": {
+  "ru": "впрыснуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "eraūgtwei": {
+  "ru": "вырасти",
+  "transitive": false,
+  "object_case": null
+ },
+ "erbilītun": {
+  "ru": "назначить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "erdērgtun": {
+  "ru": "испачкать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ergalīntun": {
+  "ru": "убивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "erkarjaūtun": {
+  "ru": "завоевать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "erkīnintun": {
+  "ru": "освободить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "erkīntwei": {
+  "ru": "решиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "erlaikātun": {
+  "ru": "сохранить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "erlaikātun si": {
+  "ru": "сохраниться",
+  "transitive": false,
+  "object_case": null
+ },
+ "erlāngintun": {
+  "ru": "поднимать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "erlāngtun": {
+  "ru": "возвысить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ermēritun": {
+  "ru": "придумать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ernaunīntun": {
+  "ru": "обновить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ernertītun": {
+  "ru": "гневать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ernērstwei": {
+  "ru": "рассердиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "erpilnintun": {
+  "ru": "наполнить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ersadīntun": {
+  "ru": "заместить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ersaltwei": {
+  "ru": "простудиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "erswāikstintun": {
+  "ru": "осветить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ertreptun": {
+  "ru": "переступить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ertrēmptun": {
+  "ru": "растоптать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ertwei": {
+  "ru": "грести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "erzinātun": {
+  "ru": "познать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "erzinātun si": {
+  "ru": "познакомиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "eršaūtun": {
+  "ru": "расстрелять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "eskōrtitun": {
+  "ru": "эскортировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etbaudīntun": {
+  "ru": "разбудить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etbilītwei": {
+  "ru": "соответствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "etbirbintun": {
+  "ru": "проиграть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etblōkitun": {
+  "ru": "разблокировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etbruktun": {
+  "ru": "отбить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etbustwei": {
+  "ru": "проснуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etdwestun si": {
+  "ru": "отдыхать",
+  "transitive": false,
+  "object_case": null
+ },
+ "etdātun": {
+  "ru": "отдать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etgadātun": {
+  "ru": "отгадать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etgiwītwei": {
+  "ru": "отжить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etgnestun": {
+  "ru": "оттиснуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etgnestun si": {
+  "ru": "отпечататься",
+  "transitive": false,
+  "object_case": null
+ },
+ "etgrēnztun": {
+  "ru": "повернуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etgērbtun": {
+  "ru": "отречься",
+  "transitive": false,
+  "object_case": null
+ },
+ "etgērdautun si": {
+  "ru": "отказаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etgērdautwei si": {
+  "ru": "отказаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etkabīntun": {
+  "ru": "отцепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etkedītwei": {
+  "ru": "разойтись",
+  "transitive": false,
+  "object_case": null
+ },
+ "etkestun": {
+  "ru": "раздвинуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etklaūtun": {
+  "ru": "отпереть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etkraūtun": {
+  "ru": "сбросить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etkūmpitwei": {
+  "ru": "откинуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etkūmptwei": {
+  "ru": "выпрямиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etlaikātun": {
+  "ru": "сдерживать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etlaikātun si": {
+  "ru": "удерживаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etmestun": {
+  "ru": "отбросить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etminītun": {
+  "ru": "напоминать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etminītun si": {
+  "ru": "припоминать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etmīntun": {
+  "ru": "вспоминать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etmīntun si": {
+  "ru": "припомниться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etnītwei": {
+  "ru": "отойти",
+  "transitive": false,
+  "object_case": null
+ },
+ "etprēskintun": {
+  "ru": "обновить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etrazgītun": {
+  "ru": "расплести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etrjaūgitun": {
+  "ru": "срыгнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etrātwei": {
+  "ru": "отвечать",
+  "transitive": false,
+  "object_case": null
+ },
+ "etrīnktun": {
+  "ru": "отобрать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etsegtun": {
+  "ru": "отстегнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etskajjintun": {
+  "ru": "приподнимать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etskītwei": {
+  "ru": "вставать",
+  "transitive": false,
+  "object_case": null
+ },
+ "etsparātun": {
+  "ru": "подпирать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etsparātun si": {
+  "ru": "опереться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etspertwei": {
+  "ru": "упереться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etspertwei si": {
+  "ru": "устоять",
+  "transitive": false,
+  "object_case": null
+ },
+ "etswāikstitun": {
+  "ru": "отразить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etswāikstitun si": {
+  "ru": "отражаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etswērtun": {
+  "ru": "уравновесить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ettapīntun": {
+  "ru": "отогреть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ettapītwei": {
+  "ru": "потеплеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "etteikātun": {
+  "ru": "воссоздать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ettikrōmintun": {
+  "ru": "оправдывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ettreptwei": {
+  "ru": "отступать",
+  "transitive": false,
+  "object_case": null
+ },
+ "ettìkrintun": {
+  "ru": "возместить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etwaidīntun": {
+  "ru": "отображать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etwakītun": {
+  "ru": "отозвать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etwartīntun si": {
+  "ru": "возвратиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etwertun": {
+  "ru": "открывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etwijātun": {
+  "ru": "развивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etwijātun si": {
+  "ru": "развиваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etwinūtun": {
+  "ru": "прощать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etwinūtun si": {
+  "ru": "извиняться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etwippjautwei": {
+  "ru": "ответвиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etwirītun": {
+  "ru": "отворять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etwārtai wartīntun": {
+  "ru": "возвращать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etwērbtun": {
+  "ru": "отвинтить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etwērptun": {
+  "ru": "прощать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etwērstun": {
+  "ru": "отогнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "etzignātun": {
+  "ru": "прощаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "etīmtun": {
+  "ru": "отобрать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ewōlwitwei": {
+  "ru": "эволюционировать",
+  "transitive": false,
+  "object_case": null
+ },
+ "eīskintun": {
+  "ru": "объяснять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "falšintun": {
+  "ru": "подделать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "falšintwei": {
+  "ru": "фальшивить",
+  "transitive": false,
+  "object_case": null
+ },
+ "fiksītun": {
+  "ru": "фиксировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "filtrītun": {
+  "ru": "фильтровать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "finansītun": {
+  "ru": "финансировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "fōrmatitun": {
+  "ru": "форматировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gabātun": {
+  "ru": "грести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gadātun": {
+  "ru": "гадать",
+  "transitive": false,
+  "object_case": null
+ },
+ "gadīntun": {
+  "ru": "портить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gadīntun si": {
+  "ru": "портиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "gaiwīntun": {
+  "ru": "оживлять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "galbtwei": {
+  "ru": "помогать",
+  "transitive": false,
+  "object_case": null
+ },
+ "galīntun": {
+  "ru": "убивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gamīntun": {
+  "ru": "родить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "garantītun": {
+  "ru": "обеспечить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gardautun": {
+  "ru": "пробовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gasīntun": {
+  "ru": "гасить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gattawintun": {
+  "ru": "готовить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gattawintun si": {
+  "ru": "готовиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "gaīlautwei": {
+  "ru": "белеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "gaūdrautwei": {
+  "ru": "мудрствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "gaūtun": {
+  "ru": "получать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gedītun": {
+  "ru": "жаждать",
+  "transitive": false,
+  "object_case": null
+ },
+ "gedītwei": {
+  "ru": "скорбеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "generītun": {
+  "ru": "генерировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gertun": {
+  "ru": "жрать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gestwei": {
+  "ru": "гаснуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "gewīntwei": {
+  "ru": "трудиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "gilaūtwei": {
+  "ru": "действовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "gillintun": {
+  "ru": "углублять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "giltun": {
+  "ru": "жалить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ginjautwei": {
+  "ru": "дружить",
+  "transitive": false,
+  "object_case": null
+ },
+ "girtun": {
+  "ru": "хвалить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "glabtun": {
+  "ru": "жать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "glabātun": {
+  "ru": "обнимать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "glabātun si": {
+  "ru": "обниматься",
+  "transitive": false,
+  "object_case": null
+ },
+ "glandīntun": {
+  "ru": "утешать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "glaubātun": {
+  "ru": "чертить",
+  "transitive": false,
+  "object_case": null
+ },
+ "glaudātwei": {
+  "ru": "шутить",
+  "transitive": false,
+  "object_case": null
+ },
+ "glābtun": {
+  "ru": "обнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "glābtun si": {
+  "ru": "обняться",
+  "transitive": false,
+  "object_case": null
+ },
+ "glāstun": {
+  "ru": "точить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "glāubtun": {
+  "ru": "чиркать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gnestun": {
+  "ru": "угнетать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gnjaūztun": {
+  "ru": "душить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gnāstun": {
+  "ru": "месить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "graudīntun": {
+  "ru": "разжалобить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "graudīntun si": {
+  "ru": "жаловаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "graudītwei": {
+  "ru": "грустить",
+  "transitive": false,
+  "object_case": null
+ },
+ "grazzintun": {
+  "ru": "украшать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "graūstun": {
+  "ru": "валить",
+  "transitive": false,
+  "object_case": null
+ },
+ "grekaūtwei": {
+  "ru": "исповедоваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "gremtun": {
+  "ru": "петь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "grjaūzintun": {
+  "ru": "натравить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "grjaūztun": {
+  "ru": "грызть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "grjaūztun si": {
+  "ru": "грызться",
+  "transitive": false,
+  "object_case": null
+ },
+ "grumītwei": {
+  "ru": "грохотать",
+  "transitive": false,
+  "object_case": null
+ },
+ "gruntintun": {
+  "ru": "основывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gruppautwei": {
+  "ru": "группироваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "gruppintun": {
+  "ru": "группировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "grustwei": {
+  "ru": "рухнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "grābtun": {
+  "ru": "грабить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "grāmatun": {
+  "ru": "переваривать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "grāmbintun": {
+  "ru": "скрести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "grāmbintun si": {
+  "ru": "чесаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "grānztun": {
+  "ru": "сверлить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "grēkitwei": {
+  "ru": "грешить",
+  "transitive": false,
+  "object_case": null
+ },
+ "grēnztun": {
+  "ru": "скрутить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "grīmztwei": {
+  "ru": "вязнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "grīnstun": {
+  "ru": "мостить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gulgullintwei": {
+  "ru": "булькать",
+  "transitive": false,
+  "object_case": null
+ },
+ "gultwei": {
+  "ru": "болеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "gunnawintun": {
+  "ru": "побуждать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gunātun": {
+  "ru": "гонять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gurgītwei": {
+  "ru": "скрипеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "gurtwei": {
+  "ru": "устать",
+  "transitive": false,
+  "object_case": null
+ },
+ "gēdintun": {
+  "ru": "стыдить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gēdintun si": {
+  "ru": "стыдиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "gēistwei": {
+  "ru": "ждать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gērbtun": {
+  "ru": "рассказывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gērdautun": {
+  "ru": "сказать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gīmtwei": {
+  "ru": "родиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "gīntun": {
+  "ru": "защищать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gīrbautun": {
+  "ru": "считать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gīritun": {
+  "ru": "дубить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gītwei": {
+  "ru": "зажить",
+  "transitive": false,
+  "object_case": null
+ },
+ "gīwītwei": {
+  "ru": "жить",
+  "transitive": false,
+  "object_case": null
+ },
+ "gūntun": {
+  "ru": "гнать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "gūztun": {
+  "ru": "вылить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "idealizītun": {
+  "ru": "идеализировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "identificītun": {
+  "ru": "идентифицировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ignōritun": {
+  "ru": "игнорировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ikkautwei": {
+  "ru": "икать",
+  "transitive": false,
+  "object_case": null
+ },
+ "implementītun": {
+  "ru": "внедрять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "impōrtitun": {
+  "ru": "импортировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "indeksītun": {
+  "ru": "индексировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "indicītun": {
+  "ru": "индексировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "infektītun": {
+  "ru": "заразить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "infektītun si": {
+  "ru": "заразиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "infōrmitun": {
+  "ru": "информировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ingtwei": {
+  "ru": "хныкать",
+  "transitive": false,
+  "object_case": null
+ },
+ "instalītun": {
+  "ru": "устанавливать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "instrautwei": {
+  "ru": "жиреть",
+  "transitive": false,
+  "object_case": null
+ },
+ "integrītun": {
+  "ru": "интегрировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "interessitun": {
+  "ru": "интересовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "interessitun si": {
+  "ru": "интересоваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "irtun": {
+  "ru": "грести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "irtwei": {
+  "ru": "разрушаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "izaūgtwei": {
+  "ru": "вырасти",
+  "transitive": false,
+  "object_case": null
+ },
+ "izbilītun": {
+  "ru": "выразить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izbāndātun": {
+  "ru": "испытывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izdeggintun": {
+  "ru": "сжечь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izdegtwei": {
+  "ru": "сгореть",
+  "transitive": false,
+  "object_case": null
+ },
+ "izdreztun": {
+  "ru": "разодрать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izdrukkautun": {
+  "ru": "напечатать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izdrāztun": {
+  "ru": "выстругать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izdumtun": {
+  "ru": "раздуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izdwestun": {
+  "ru": "выдыхать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izdētun": {
+  "ru": "разобрать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izeīskintun": {
+  "ru": "выяснять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izglāubtun": {
+  "ru": "вычеркнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izgraūstun": {
+  "ru": "разрушить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izgrābtun": {
+  "ru": "ограбить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izgrēnztun": {
+  "ru": "выкручивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izgūntun": {
+  "ru": "изгнать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izgūztun": {
+  "ru": "извергать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izgūztwei": {
+  "ru": "испражняться",
+  "transitive": false,
+  "object_case": null
+ },
+ "izjātwei": {
+  "ru": "выехать",
+  "transitive": false,
+  "object_case": null
+ },
+ "izkabīntun": {
+  "ru": "вывесить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izkaptun": {
+  "ru": "выкопать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izklaūtun": {
+  "ru": "выключить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izklìptintun": {
+  "ru": "рассекретить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izknēiptun": {
+  "ru": "исчерпать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izkraūtun": {
+  "ru": "скачать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izkāuptun": {
+  "ru": "выкупить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izkīnintun": {
+  "ru": "требовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izkūmpintun": {
+  "ru": "вытолкнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izlaikātun": {
+  "ru": "поддерживать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izlaukītun": {
+  "ru": "допрашивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izlaīstun": {
+  "ru": "испускать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izlemtun": {
+  "ru": "выломать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izleītun": {
+  "ru": "вылить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izlāiktwei": {
+  "ru": "выжить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izlīgintun": {
+  "ru": "выровнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izlīgintun si": {
+  "ru": "выравниваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "izlīnktwei": {
+  "ru": "изогнуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "izlīstwei": {
+  "ru": "выскользнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "izlōgintun si": {
+  "ru": "выходить",
+  "transitive": false,
+  "object_case": null
+ },
+ "izmakīntun": {
+  "ru": "выучить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izmakīntun si": {
+  "ru": "выучить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izmigītwei": {
+  "ru": "засыпать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izmāitintun": {
+  "ru": "погубить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izmīntun": {
+  "ru": "разгадать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izmīrstun": {
+  "ru": "забывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "iznirtwei": {
+  "ru": "вынырнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "iznīktwei": {
+  "ru": "пропадать",
+  "transitive": false,
+  "object_case": null
+ },
+ "izpaltwei": {
+  "ru": "удаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "izparītwei": {
+  "ru": "испариться",
+  "transitive": false,
+  "object_case": null
+ },
+ "izpiĺnintun": {
+  "ru": "выполнить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izpjaūtun": {
+  "ru": "вырезать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izprestun": {
+  "ru": "понять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izpāustintun": {
+  "ru": "опустошать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izpūtun": {
+  "ru": "выпить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izrankītun": {
+  "ru": "спасти",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izraūtun": {
+  "ru": "выкорчевать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izrīnktun": {
+  "ru": "выбрать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izsadīntun": {
+  "ru": "выставить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izskajjintun": {
+  "ru": "выселить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izsklaitīntun": {
+  "ru": "отделить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izsklaitīntun si": {
+  "ru": "развестись",
+  "transitive": false,
+  "object_case": null
+ },
+ "izskrāistwei": {
+  "ru": "вылететь",
+  "transitive": false,
+  "object_case": null
+ },
+ "izskītwei": {
+  "ru": "переехать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izspīltun": {
+  "ru": "разбить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izstalītun": {
+  "ru": "выдержать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izsuptun": {
+  "ru": "высыпать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izsuptun si": {
+  "ru": "высыпаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "izsāktwei": {
+  "ru": "выброситься",
+  "transitive": false,
+  "object_case": null
+ },
+ "iztarītun": {
+  "ru": "произнести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "iztengīntun": {
+  "ru": "выслать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "iztēnstun": {
+  "ru": "вытянуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "iztēnstun si": {
+  "ru": "вытянуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "izwakītun": {
+  "ru": "вызвать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izwańgintun": {
+  "ru": "совершенствовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izwektun": {
+  "ru": "выкрикнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izwestun": {
+  "ru": "вывести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izweztun": {
+  "ru": "вывезти",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izwiddautun": {
+  "ru": "вышивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izwippjautwei": {
+  "ru": "разветвляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "izwāndrautwei": {
+  "ru": "эмигрировать",
+  "transitive": false,
+  "object_case": null
+ },
+ "izwērbtun": {
+  "ru": "вывинтить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izwērptun": {
+  "ru": "распустить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izwērptun si": {
+  "ru": "распуститься",
+  "transitive": false,
+  "object_case": null
+ },
+ "izwīlktun": {
+  "ru": "вытянуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izwīngtwei": {
+  "ru": "выкручиваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "izēitwei": {
+  "ru": "выйти",
+  "transitive": false,
+  "object_case": null
+ },
+ "izīmtun": {
+  "ru": "извлечь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izōlitun": {
+  "ru": "изолировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "izšaūtun": {
+  "ru": "вышвырнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "iĺgitun si": {
+  "ru": "тосковать",
+  "transitive": false,
+  "object_case": null
+ },
+ "jadātwei": {
+  "ru": "ездить",
+  "transitive": false,
+  "object_case": null
+ },
+ "jaukīntun": {
+  "ru": "приучать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "juktwei": {
+  "ru": "привыкнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "justun": {
+  "ru": "чувствовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "jāstun": {
+  "ru": "опоясывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "jātwei": {
+  "ru": "ехать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kabīntun": {
+  "ru": "вешать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kabītwei": {
+  "ru": "висеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "kadakkintwei": {
+  "ru": "кудахтать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kailūstintwei": {
+  "ru": "выздоравливать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kailūstitun": {
+  "ru": "лечить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kainaūtun": {
+  "ru": "стоить",
+  "transitive": false,
+  "object_case": null
+ },
+ "kaitīntun": {
+  "ru": "накалять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kaitītwei": {
+  "ru": "раскаляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kakīnslintwei": {
+  "ru": "метить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kakīntun": {
+  "ru": "достать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kalbītwei": {
+  "ru": "спорить",
+  "transitive": false,
+  "object_case": null
+ },
+ "kalibrītun": {
+  "ru": "калибровать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kalkītwei": {
+  "ru": "обызвествляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kallintun": {
+  "ru": "стучать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kalsātwei": {
+  "ru": "звучать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kalsītwei": {
+  "ru": "звучать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kaltun": {
+  "ru": "ковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kalātun": {
+  "ru": "рубить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kammintun": {
+  "ru": "тупить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kammintun si": {
+  "ru": "затупиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kandātun": {
+  "ru": "кусать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kanibālautwei": {
+  "ru": "людоедствовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kanstun": {
+  "ru": "кусать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kaptun": {
+  "ru": "клевать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "karakterizītun": {
+  "ru": "характеризовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "karjaūtwei": {
+  "ru": "воевать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kartun": {
+  "ru": "вешать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kartwei": {
+  "ru": "висеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "karwaūtwei": {
+  "ru": "скандалить",
+  "transitive": false,
+  "object_case": null
+ },
+ "karwintun": {
+  "ru": "складировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kastun": {
+  "ru": "рыть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kastun si": {
+  "ru": "рыться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kasītun": {
+  "ru": "приходовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kaupaūtwei": {
+  "ru": "торговать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kaštūtwei": {
+  "ru": "стоить",
+  "transitive": false,
+  "object_case": null
+ },
+ "kedītwei": {
+  "ru": "расходиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kektwei": {
+  "ru": "ругаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kerrautwei": {
+  "ru": "разрастаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kestun": {
+  "ru": "раздвигать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kibikkintun": {
+  "ru": "дразнить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kinstwei": {
+  "ru": "терпеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kitawīdintun": {
+  "ru": "изменять",
+  "transitive": false,
+  "object_case": null
+ },
+ "klabbintwei": {
+  "ru": "стучать",
+  "transitive": false,
+  "object_case": null
+ },
+ "klantītun": {
+  "ru": "поносить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "klantītwei": {
+  "ru": "клясться",
+  "transitive": false,
+  "object_case": null
+ },
+ "klausītun": {
+  "ru": "слушать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "klaūtun": {
+  "ru": "запирать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "klekstātun": {
+  "ru": "подмести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kliptautwei": {
+  "ru": "секретничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kliptun": {
+  "ru": "прятать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kliptun si": {
+  "ru": "прятаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "klumbītwei": {
+  "ru": "хромать",
+  "transitive": false,
+  "object_case": null
+ },
+ "klumstintwei": {
+  "ru": "стучать",
+  "transitive": false,
+  "object_case": null
+ },
+ "klìptintun": {
+  "ru": "утаивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "klānkintwei": {
+  "ru": "хромать",
+  "transitive": false,
+  "object_case": null
+ },
+ "klīmptwei": {
+  "ru": "вязнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "klūmbintun": {
+  "ru": "калечить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kniptwei": {
+  "ru": "затопиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "knēiptun": {
+  "ru": "черпать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kolōnizītun": {
+  "ru": "колонизировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "komentītun": {
+  "ru": "комментировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "komprōmisautwei": {
+  "ru": "соглашательствовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kontrōlitun": {
+  "ru": "контролировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "koōrdinitun": {
+  "ru": "координировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "krakātwei": {
+  "ru": "каркать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kraūtun": {
+  "ru": "грузить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "krektwei": {
+  "ru": "свертываться",
+  "transitive": false,
+  "object_case": null
+ },
+ "krikstītun": {
+  "ru": "крестить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kritizītun": {
+  "ru": "критиковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "krāktwei": {
+  "ru": "храпеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "krāmstun": {
+  "ru": "жевать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "krīkstwei": {
+  "ru": "кричать",
+  "transitive": false,
+  "object_case": null
+ },
+ "krūtwei": {
+  "ru": "падать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kudkudakšintwei": {
+  "ru": "кудахтать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kukudaksintwei": {
+  "ru": "кудахтать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kumprōmititun": {
+  "ru": "компромитировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kurrintwei": {
+  "ru": "ворковать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kurtun": {
+  "ru": "создать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kurtītwei": {
+  "ru": "ошибаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kurwintun": {
+  "ru": "долбить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kwaitītun": {
+  "ru": "желать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kwakkintwei": {
+  "ru": "крякать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kwaktwei": {
+  "ru": "квакать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kwalificītun": {
+  "ru": "квалифицировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kweitātwei": {
+  "ru": "цвести",
+  "transitive": false,
+  "object_case": null
+ },
+ "kwistwei": {
+  "ru": "расцвести",
+  "transitive": false,
+  "object_case": null
+ },
+ "kwīktwei": {
+  "ru": "визжать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kwīrktwei": {
+  "ru": "чирикать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kāimalukitun": {
+  "ru": "посещать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kāimawartintun si": {
+  "ru": "возвратиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kāistun": {
+  "ru": "чесать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kāistwei": {
+  "ru": "нагреваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kālsītwei": {
+  "ru": "звонить",
+  "transitive": false,
+  "object_case": null
+ },
+ "kānkstintun": {
+  "ru": "дисциплинировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kānktun": {
+  "ru": "ограничивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kāsitwei": {
+  "ru": "кашлять",
+  "transitive": false,
+  "object_case": null
+ },
+ "kāuktwei": {
+  "ru": "выть",
+  "transitive": false,
+  "object_case": null
+ },
+ "kāuptun": {
+  "ru": "покупать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kāusintun": {
+  "ru": "касаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kīnintun si": {
+  "ru": "затянуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kīntwei": {
+  "ru": "рваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kīrdītun": {
+  "ru": "слышать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kīrptun": {
+  "ru": "царапать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kīrsa pratreptun": {
+  "ru": "превосходить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kīrslintun": {
+  "ru": "препятствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kīrsnautwei": {
+  "ru": "чернеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "kīrstun": {
+  "ru": "рубить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kōditun": {
+  "ru": "кодировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kōekzistītwei": {
+  "ru": "сосуществовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kōmbinautun": {
+  "ru": "комбинировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kōmplicitun": {
+  "ru": "усложнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kōnfiguritun": {
+  "ru": "конфигурировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kōnfiscitun": {
+  "ru": "конфисковывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kōnfliktitwei": {
+  "ru": "конфликтовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "kōnstruitun": {
+  "ru": "конструировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kōnwertitun": {
+  "ru": "конвертировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kōpitun": {
+  "ru": "копировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kūmpintun": {
+  "ru": "оттолкнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kūmpintun si": {
+  "ru": "нарушиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kūmptwei": {
+  "ru": "кривиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "kūnstun": {
+  "ru": "охранять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "kūrstwei": {
+  "ru": "глохнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "laibītwei": {
+  "ru": "худеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "laikātun": {
+  "ru": "выполнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "laikātun si": {
+  "ru": "держаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "lailītwei": {
+  "ru": "утончаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "laipīntwei": {
+  "ru": "велеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "lakkintun": {
+  "ru": "лакировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "langītwei": {
+  "ru": "кружить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lasātun": {
+  "ru": "собирать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lasīntun": {
+  "ru": "капнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lasītwei": {
+  "ru": "капать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "laukstītwei": {
+  "ru": "сверкать",
+  "transitive": false,
+  "object_case": null
+ },
+ "laukītun": {
+  "ru": "искать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "laukītwei": {
+  "ru": "светлеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "laztwei": {
+  "ru": "ложиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "lazīntun": {
+  "ru": "класть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "laīstun": {
+  "ru": "пустить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lejjintun": {
+  "ru": "плавить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lektwei": {
+  "ru": "колыхаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "lemtun": {
+  "ru": "ломать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "leītun": {
+  "ru": "лить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ligzdautwei": {
+  "ru": "гнездиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "likwidītun": {
+  "ru": "ликвидировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "liptwei": {
+  "ru": "липнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "lipīntun": {
+  "ru": "лепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "listun": {
+  "ru": "лепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lunkintun si": {
+  "ru": "угодничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "lāiditun": {
+  "ru": "гладить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lāilintun": {
+  "ru": "утончать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lāilintun si": {
+  "ru": "страдать",
+  "transitive": false,
+  "object_case": null
+ },
+ "lāimitwei": {
+  "ru": "богатеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "lāistun": {
+  "ru": "замазывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lāizitun": {
+  "ru": "лизать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lāngintun": {
+  "ru": "облегчать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lānktun": {
+  "ru": "гнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lānktun si": {
+  "ru": "кланяться",
+  "transitive": false,
+  "object_case": null
+ },
+ "lānzītwei": {
+  "ru": "лежать",
+  "transitive": false,
+  "object_case": null
+ },
+ "lāpautwei": {
+  "ru": "пылать",
+  "transitive": false,
+  "object_case": null
+ },
+ "lātwei": {
+  "ru": "лаять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lāukintun": {
+  "ru": "светлить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lāustingintun": {
+  "ru": "усмирять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lāustintun": {
+  "ru": "унижать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lāustintun si": {
+  "ru": "унижаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "lēztwei": {
+  "ru": "лезть",
+  "transitive": false,
+  "object_case": null
+ },
+ "līgintun": {
+  "ru": "судить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "līgtwei": {
+  "ru": "договариваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "līkutintun": {
+  "ru": "умалять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "līnkatwei": {
+  "ru": "кивать",
+  "transitive": false,
+  "object_case": null
+ },
+ "līnktwei": {
+  "ru": "гнуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "līstwei": {
+  "ru": "скользить",
+  "transitive": false,
+  "object_case": null
+ },
+ "lītwei": {
+  "ru": "литься",
+  "transitive": false,
+  "object_case": null
+ },
+ "lōdintun": {
+  "ru": "паять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "lōkalizitun": {
+  "ru": "локализовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "madlinātwei": {
+  "ru": "умолять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "madlītun": {
+  "ru": "молить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "maigīntun": {
+  "ru": "усыпить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mainātun": {
+  "ru": "менять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "maisātun": {
+  "ru": "мешать",
+  "transitive": false,
+  "object_case": null
+ },
+ "maitātun": {
+  "ru": "кормить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "maitātun si": {
+  "ru": "питаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "majātwei": {
+  "ru": "махать",
+  "transitive": false,
+  "object_case": null
+ },
+ "makinnewautwei": {
+  "ru": "учительствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "maksimītun": {
+  "ru": "максимизировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "makīntun": {
+  "ru": "учить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "makīntun si": {
+  "ru": "учиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "makītun": {
+  "ru": "уметь",
+  "transitive": false,
+  "object_case": null
+ },
+ "mallautwei": {
+  "ru": "бредить",
+  "transitive": false,
+  "object_case": null
+ },
+ "maltun": {
+  "ru": "молоть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "marātwei": {
+  "ru": "мерцать",
+  "transitive": false,
+  "object_case": null
+ },
+ "mattautun": {
+  "ru": "мерить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mazzintun": {
+  "ru": "уменьшать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "maūtwei": {
+  "ru": "мычать",
+  "transitive": false,
+  "object_case": null
+ },
+ "medjātun": {
+  "ru": "охотиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "mekanizītun": {
+  "ru": "механизировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "meldjaūtwei": {
+  "ru": "сверкать",
+  "transitive": false,
+  "object_case": null
+ },
+ "mersītun": {
+  "ru": "забывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mestun": {
+  "ru": "бросать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "metītun": {
+  "ru": "разбросать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "meīgtun": {
+  "ru": "угнетать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "meītwei": {
+  "ru": "блеять",
+  "transitive": false,
+  "object_case": null
+ },
+ "migtwei": {
+  "ru": "дремать",
+  "transitive": false,
+  "object_case": null
+ },
+ "migītwei": {
+  "ru": "спать",
+  "transitive": false,
+  "object_case": null
+ },
+ "miksintun": {
+  "ru": "онемечивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "miksītwei": {
+  "ru": "заикаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "milztun": {
+  "ru": "доить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "minimalizītun": {
+  "ru": "минимализировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "minimītun": {
+  "ru": "минимизировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "minītun": {
+  "ru": "помнить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mitātun": {
+  "ru": "метать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mitātun si": {
+  "ru": "метаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "mjāukintwei": {
+  "ru": "мяукать",
+  "transitive": false,
+  "object_case": null
+ },
+ "mjāutwei": {
+  "ru": "мяукать",
+  "transitive": false,
+  "object_case": null
+ },
+ "muktwei": {
+  "ru": "спадать",
+  "transitive": false,
+  "object_case": null
+ },
+ "murrautwei": {
+  "ru": "ворчать",
+  "transitive": false,
+  "object_case": null
+ },
+ "muzikītwei": {
+  "ru": "музицировать",
+  "transitive": false,
+  "object_case": null
+ },
+ "mìrkintun si": {
+  "ru": "мигнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "mìrkintwei": {
+  "ru": "моргать",
+  "transitive": false,
+  "object_case": null
+ },
+ "māisesintun": {
+  "ru": "увеличивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "māitarautwei": {
+  "ru": "шалить",
+  "transitive": false,
+  "object_case": null
+ },
+ "mālarautun": {
+  "ru": "писать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mārkintun": {
+  "ru": "мочить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "māslintun": {
+  "ru": "клеить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mātwei": {
+  "ru": "махать",
+  "transitive": false,
+  "object_case": null
+ },
+ "māuktun": {
+  "ru": "надеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mēnstun": {
+  "ru": "мутить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mēntitun": {
+  "ru": "лгать",
+  "transitive": false,
+  "object_case": null
+ },
+ "mēritun": {
+  "ru": "мерить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mēritwei": {
+  "ru": "думать",
+  "transitive": false,
+  "object_case": null
+ },
+ "mēslintun": {
+  "ru": "удобрять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mīlītun": {
+  "ru": "любить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mīrktwei": {
+  "ru": "мокнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "mīrstun": {
+  "ru": "забывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mīztwei": {
+  "ru": "мочиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "mōdernizītun": {
+  "ru": "модернизировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mōdificītun": {
+  "ru": "модифицировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "mūrksintwei": {
+  "ru": "мурлыкнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "mūrksitwei": {
+  "ru": "мурлыкать",
+  "transitive": false,
+  "object_case": null
+ },
+ "mūtun": {
+  "ru": "мыть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nadirītun": {
+  "ru": "наблюдать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nadruwītwei": {
+  "ru": "надеяться",
+  "transitive": false,
+  "object_case": null
+ },
+ "nadwestwei": {
+  "ru": "вздыхать",
+  "transitive": false,
+  "object_case": null
+ },
+ "nadātun": {
+  "ru": "предлагать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nagīrbautun": {
+  "ru": "перечислять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "naikīntun": {
+  "ru": "ликвидировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nakabīntun": {
+  "ru": "навесить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "naktautwei": {
+  "ru": "ночевать",
+  "transitive": false,
+  "object_case": null
+ },
+ "nalazīntun": {
+  "ru": "накладывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "namestun": {
+  "ru": "задать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "napintun": {
+  "ru": "натянуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "narīntun": {
+  "ru": "погрузить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "neikaūtwei": {
+  "ru": "ходить",
+  "transitive": false,
+  "object_case": null
+ },
+ "nikilītun": {
+  "ru": "никелировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nikkintun": {
+  "ru": "презирать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nipakkajautwei": {
+  "ru": "беспокоиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "nirtwei": {
+  "ru": "нырнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "nisātautwei": {
+  "ru": "недоставать",
+  "transitive": false,
+  "object_case": null
+ },
+ "nummeritun": {
+  "ru": "нумеровать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nurgitwei": {
+  "ru": "урчать",
+  "transitive": false,
+  "object_case": null
+ },
+ "nērstwei": {
+  "ru": "сердиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "nērwitun": {
+  "ru": "нервировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nēutralizītun": {
+  "ru": "нейтрализовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nīktwei": {
+  "ru": "исчезать",
+  "transitive": false,
+  "object_case": null
+ },
+ "nītitun": {
+  "ru": "заклепывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nōmatun": {
+  "ru": "нанять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nōpaltwei": {
+  "ru": "напасть",
+  "transitive": false,
+  "object_case": null
+ },
+ "nōwaitjātun": {
+  "ru": "оговорить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "nōwaitjātwei": {
+  "ru": "сплетничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "nūnītwei": {
+  "ru": "напевать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paaugīntun": {
+  "ru": "выращивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pabajjintun": {
+  "ru": "наказывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pabalwintun": {
+  "ru": "подкупить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pabangīntun": {
+  "ru": "пошевелить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pabelztwei": {
+  "ru": "раздуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pabilītun": {
+  "ru": "назвать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pabrandīntun": {
+  "ru": "обременить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "padelītun": {
+  "ru": "разделить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "padrūktintun": {
+  "ru": "подтвердить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "padātun": {
+  "ru": "подать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "padātun si": {
+  "ru": "отдаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "padīngautun si": {
+  "ru": "наслаждаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "padīngtwei": {
+  "ru": "нравиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pagabtun": {
+  "ru": "захватить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pagadīntun": {
+  "ru": "испортить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pagalbtwei": {
+  "ru": "помочь",
+  "transitive": false,
+  "object_case": null
+ },
+ "pagattawintun": {
+  "ru": "подготовить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pagaūtun": {
+  "ru": "получать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pagaūtun si": {
+  "ru": "начаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pagirtun": {
+  "ru": "хвалить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paglabātun": {
+  "ru": "ласкать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paglaubātun": {
+  "ru": "подчеркнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pagnestun": {
+  "ru": "нажать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pagruntintun": {
+  "ru": "обосновать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pagār līstun": {
+  "ru": "сопровождать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pagērdautun": {
+  "ru": "оглашать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pagūntun": {
+  "ru": "подключить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paikītun": {
+  "ru": "обманывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pakaptun": {
+  "ru": "подкопать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pakawīngintun": {
+  "ru": "умиротворять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paklausītun": {
+  "ru": "выслушать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paklustwei": {
+  "ru": "подчиниться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pakwaitītun": {
+  "ru": "пожелать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pakīwintun": {
+  "ru": "успокаивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pakūnstun": {
+  "ru": "хранить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "palaikātun": {
+  "ru": "поддерживать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "palaipsītun": {
+  "ru": "вожделеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "palaipīntwei": {
+  "ru": "приказывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "palaīstun": {
+  "ru": "освободить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paliktwei": {
+  "ru": "остаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "palāiktwei": {
+  "ru": "остаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "palāizitun": {
+  "ru": "поцеловать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "palāngintun": {
+  "ru": "облегчать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "palēitun": {
+  "ru": "разлить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "palīgintun": {
+  "ru": "сравнивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "palīkitun": {
+  "ru": "выделять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "palīstun": {
+  "ru": "проводить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "palīstwei": {
+  "ru": "поскользнуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pamaitātun": {
+  "ru": "покормить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pamakīntun": {
+  "ru": "поучать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pamestun": {
+  "ru": "подчинить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pametītun": {
+  "ru": "подбросить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paminītun": {
+  "ru": "помнить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pamārkintun": {
+  "ru": "обмакнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pamēritwei": {
+  "ru": "подумать",
+  "transitive": false,
+  "object_case": null
+ },
+ "pamīntun": {
+  "ru": "припомнить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "panirtwei": {
+  "ru": "осесть",
+  "transitive": false,
+  "object_case": null
+ },
+ "papaltwei": {
+  "ru": "достаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "papeisātun": {
+  "ru": "написать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "papeisātun si": {
+  "ru": "подписаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "papilnintun": {
+  "ru": "дополнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paplattintun": {
+  "ru": "распространить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paplattintun si": {
+  "ru": "распространяться",
+  "transitive": false,
+  "object_case": null
+ },
+ "paprestun": {
+  "ru": "понимать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "papāikītun": {
+  "ru": "обманывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paralizītun": {
+  "ru": "парализовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "parazītautwei": {
+  "ru": "паразитировать",
+  "transitive": false,
+  "object_case": null
+ },
+ "parfēmitun si": {
+  "ru": "душиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "parkautwei": {
+  "ru": "парковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "parītwei": {
+  "ru": "испаряться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pasallintun": {
+  "ru": "заморозить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pasaltwei": {
+  "ru": "замерзнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "pasiwītwei": {
+  "ru": "поседеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "paskalītun": {
+  "ru": "побуждать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paskītwei": {
+  "ru": "приподняться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pasprangtun": {
+  "ru": "взнуздать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paspārtintun": {
+  "ru": "укрепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paspētun": {
+  "ru": "догнать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paspētwei": {
+  "ru": "успеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "passautwei": {
+  "ru": "совпадать",
+  "transitive": false,
+  "object_case": null
+ },
+ "pastatīntun": {
+  "ru": "заказать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pastaūtwei": {
+  "ru": "поститься",
+  "transitive": false,
+  "object_case": null
+ },
+ "pastātwei": {
+  "ru": "стать",
+  "transitive": false,
+  "object_case": null
+ },
+ "pasuptwei": {
+  "ru": "покачиваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "paswāikstintwei": {
+  "ru": "светить",
+  "transitive": false,
+  "object_case": null
+ },
+ "pasāktwei": {
+  "ru": "подскочить",
+  "transitive": false,
+  "object_case": null
+ },
+ "pataukīntun": {
+  "ru": "обещать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pateikātun": {
+  "ru": "создать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "patikīntun": {
+  "ru": "сделать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "patirtun": {
+  "ru": "потереть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pattintun": {
+  "ru": "жениться",
+  "transitive": false,
+  "object_case": null
+ },
+ "patìkrintun": {
+  "ru": "уточнить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "patīrintun si": {
+  "ru": "обтереться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pawaidīntun": {
+  "ru": "показывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pawaitjātwei": {
+  "ru": "советовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "pawakītun": {
+  "ru": "объявить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pawartīntun": {
+  "ru": "вращать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pawartīntun si": {
+  "ru": "повернуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pawārgautun": {
+  "ru": "искупить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pawārgautwei": {
+  "ru": "каяться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pawārgtwei": {
+  "ru": "горевать",
+  "transitive": false,
+  "object_case": null
+ },
+ "pawērptun": {
+  "ru": "оставить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pawērtintun": {
+  "ru": "ценить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pawīrpintun": {
+  "ru": "освободить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pazentlitun": {
+  "ru": "отметить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pazinātun": {
+  "ru": "признать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paāntrintun": {
+  "ru": "повторить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "paāntrintun si": {
+  "ru": "повториться",
+  "transitive": false,
+  "object_case": null
+ },
+ "peisātun": {
+  "ru": "писать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "peldītun": {
+  "ru": "приобрести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pelītwei": {
+  "ru": "плесневеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "per drimmeljan lāikātun": {
+  "ru": "презирать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "peraīnintun": {
+  "ru": "объединять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "peraīnintun si": {
+  "ru": "объединяться",
+  "transitive": false,
+  "object_case": null
+ },
+ "perbartautwei": {
+  "ru": "помешаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "perbilītun": {
+  "ru": "отклонить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perbilītun si": {
+  "ru": "отговариваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "perbāndātun": {
+  "ru": "испытывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perdeggintun": {
+  "ru": "обжечь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perdeggintun si": {
+  "ru": "обжечься",
+  "transitive": false,
+  "object_case": null
+ },
+ "perdātun": {
+  "ru": "продавать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pergrēnztun": {
+  "ru": "завинтить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pergērbtun": {
+  "ru": "пересказать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perjātwei": {
+  "ru": "приехать",
+  "transitive": false,
+  "object_case": null
+ },
+ "perkabīntun": {
+  "ru": "зацепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perklantītun": {
+  "ru": "предавать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perklausītun": {
+  "ru": "опросить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perklaūtun": {
+  "ru": "переключить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perlazīntun": {
+  "ru": "издать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perlaīstun": {
+  "ru": "передать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perlemtun": {
+  "ru": "преступить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perlānktwei": {
+  "ru": "зависеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "perlīgintun": {
+  "ru": "сравнивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perlūbitun": {
+  "ru": "помолвить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "permaisātun": {
+  "ru": "перемешать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "permaisātun si": {
+  "ru": "смущаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "permīntun": {
+  "ru": "загадать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pernaikīntun": {
+  "ru": "уничтожить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perpiľnintun": {
+  "ru": "переполнить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perpiľnintun si": {
+  "ru": "переполняться",
+  "transitive": false,
+  "object_case": null
+ },
+ "perpēstun": {
+  "ru": "принести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perristun": {
+  "ru": "завязать",
+  "transitive": false,
+  "object_case": null
+ },
+ "perrēptun": {
+  "ru": "преследовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "persadīntun": {
+  "ru": "пересадить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "persentwei": {
+  "ru": "устареть",
+  "transitive": false,
+  "object_case": null
+ },
+ "persirzdautwei": {
+  "ru": "посредничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "perskajjintun": {
+  "ru": "поселить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perskrāistwei": {
+  "ru": "прилететь",
+  "transitive": false,
+  "object_case": null
+ },
+ "perskītwei": {
+  "ru": "вселиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "perspētun": {
+  "ru": "обогнать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perstalītwei": {
+  "ru": "руководить",
+  "transitive": false,
+  "object_case": null
+ },
+ "perswērtun": {
+  "ru": "перевесить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "persātwintun": {
+  "ru": "пресытить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perteikātun": {
+  "ru": "обрабатывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pertengīntun": {
+  "ru": "прислать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pertenītwei": {
+  "ru": "задержаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pertiktwei": {
+  "ru": "происходить",
+  "transitive": false,
+  "object_case": null
+ },
+ "pertraūktun": {
+  "ru": "затянуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pertreptun": {
+  "ru": "представлять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pertrīnktun": {
+  "ru": "сбить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perwaidīntun si": {
+  "ru": "казаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "perwaidīntwei": {
+  "ru": "выглядеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perwaldītun": {
+  "ru": "управлять",
+  "transitive": false,
+  "object_case": null
+ },
+ "perwartīntun": {
+  "ru": "превратить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perwedātun": {
+  "ru": "совращать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perwektun": {
+  "ru": "пренебрегать",
+  "transitive": false,
+  "object_case": null
+ },
+ "perwestun": {
+  "ru": "привести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perweztun": {
+  "ru": "привезти",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perwākautun": {
+  "ru": "призвать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perwāndrautwei": {
+  "ru": "иммигрировать",
+  "transitive": false,
+  "object_case": null
+ },
+ "perwērbtun": {
+  "ru": "завернуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perwīdātwei": {
+  "ru": "завидовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "perwīlktun": {
+  "ru": "переодеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perwīlktun si": {
+  "ru": "переодеваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "perzūrgautun": {
+  "ru": "снабжать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perēitwei": {
+  "ru": "приходить",
+  "transitive": false,
+  "object_case": null
+ },
+ "perītun": {
+  "ru": "высиживать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "perōnintun": {
+  "ru": "разгласить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "peršlūzitun": {
+  "ru": "заслужить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "piltwei": {
+  "ru": "разливаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pintegaūtwei": {
+  "ru": "путешествовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "pintun": {
+  "ru": "растягивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pirmādiritwei": {
+  "ru": "просмотреть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pistun": {
+  "ru": "толочь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "piĺnintun": {
+  "ru": "наполнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pjaūtun": {
+  "ru": "резать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plakkautwei": {
+  "ru": "щелкать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plandītun si": {
+  "ru": "колыхаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "plandītwei": {
+  "ru": "порхать",
+  "transitive": false,
+  "object_case": null
+ },
+ "plannautun": {
+  "ru": "планировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plassintun": {
+  "ru": "сплющить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plastātun": {
+  "ru": "стелить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plattintun": {
+  "ru": "расширять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plattintun si": {
+  "ru": "расширяться",
+  "transitive": false,
+  "object_case": null
+ },
+ "platītwei": {
+  "ru": "платить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plaudīntun": {
+  "ru": "купать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plikkautwei": {
+  "ru": "бедствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "plunkintun si": {
+  "ru": "расплескиваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "plunkintwei": {
+  "ru": "плескаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pluškītwei": {
+  "ru": "болтать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plātwei": {
+  "ru": "плющить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plūstun": {
+  "ru": "затопить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "plūtwei": {
+  "ru": "плыть",
+  "transitive": false,
+  "object_case": null
+ },
+ "praapkintun": {
+  "ru": "обезьянничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "pradegtwei": {
+  "ru": "перегореть",
+  "transitive": false,
+  "object_case": null
+ },
+ "pradirītun": {
+  "ru": "просматривать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pragertun": {
+  "ru": "пожрать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prajustun": {
+  "ru": "предчувствовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prajātun": {
+  "ru": "сватать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prakabīntun": {
+  "ru": "перевесить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "praktikītun": {
+  "ru": "практиковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "praktikītwei": {
+  "ru": "практиковаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "prakāistwei": {
+  "ru": "вспотеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "prakāitautwei": {
+  "ru": "потеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "prakīrstun": {
+  "ru": "прорубить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "praleītun": {
+  "ru": "пролить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pralēztwei": {
+  "ru": "перелезть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pramadlitun": {
+  "ru": "заступаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pranaktautwei": {
+  "ru": "переночевать",
+  "transitive": false,
+  "object_case": null
+ },
+ "prankintun si": {
+  "ru": "гордиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "prapaltwei": {
+  "ru": "исчезать",
+  "transitive": false,
+  "object_case": null
+ },
+ "prapūtun": {
+  "ru": "пропить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "praskajjintun": {
+  "ru": "переселить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "praskatītwei": {
+  "ru": "продвигаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "praskīrstun": {
+  "ru": "прорубить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "praskītwei": {
+  "ru": "переселиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "praspīlitun": {
+  "ru": "проиграть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "praspītun": {
+  "ru": "упредить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prastintun": {
+  "ru": "упростить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prasītun": {
+  "ru": "спрашивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prasūtwei": {
+  "ru": "просочиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pratengīntun": {
+  "ru": "транслировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pratreptun": {
+  "ru": "переступить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pratārtwei": {
+  "ru": "проговорить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pratīntun": {
+  "ru": "тренировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pratīntun si": {
+  "ru": "тренироваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "prawestun": {
+  "ru": "провести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prawiltun": {
+  "ru": "предать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prawiltun si": {
+  "ru": "разочароваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "prawīdautun": {
+  "ru": "пророчествовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prawīdātun": {
+  "ru": "предвидеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "praìlgintun": {
+  "ru": "продлить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "praēitwei": {
+  "ru": "проходить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "praīmtun": {
+  "ru": "пронзить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preibilītun": {
+  "ru": "сулить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preidegtwei": {
+  "ru": "пригореть",
+  "transitive": false,
+  "object_case": null
+ },
+ "preidrūktintun": {
+  "ru": "прикрепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preidummintun": {
+  "ru": "наметать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preidātun": {
+  "ru": "присоединить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preidātun si": {
+  "ru": "присоединиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "preigardintun": {
+  "ru": "приправить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preiglabtun": {
+  "ru": "прижать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preiglabtun si": {
+  "ru": "прижаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "preignestun si": {
+  "ru": "опохмеляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "preigērdautun": {
+  "ru": "сулить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preigīrbautun": {
+  "ru": "насчитать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preiilginautwei": {
+  "ru": "скучать",
+  "transitive": false,
+  "object_case": null
+ },
+ "preiilgintwei": {
+  "ru": "надоесть",
+  "transitive": false,
+  "object_case": null
+ },
+ "preikabīntun": {
+  "ru": "прицепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preikakīntun si": {
+  "ru": "добраться",
+  "transitive": false,
+  "object_case": null
+ },
+ "preikaltun": {
+  "ru": "приковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preikanstun": {
+  "ru": "прикусить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preiklaūtun": {
+  "ru": "запереть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preikālsītun": {
+  "ru": "приспособить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preikālsītun si": {
+  "ru": "приспособиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "preikāusintun si": {
+  "ru": "прикоснуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "preilaikātun": {
+  "ru": "изложить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preilipīntun": {
+  "ru": "прилепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preilīgintun": {
+  "ru": "приравнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preimaisātun": {
+  "ru": "примешать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preimestun": {
+  "ru": "укорять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preiminītun": {
+  "ru": "напомнить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preimāslintun": {
+  "ru": "приклеить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preipaltwei": {
+  "ru": "случиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "preipeisātun": {
+  "ru": "прописать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preiplūtwei": {
+  "ru": "причалить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preipēstun": {
+  "ru": "поднести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preisegtun": {
+  "ru": "приколоть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preiskrāistwei": {
+  "ru": "подлететь",
+  "transitive": false,
+  "object_case": null
+ },
+ "preispārtautun": {
+  "ru": "насильничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "preispārtintun": {
+  "ru": "заставить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preistalīntun": {
+  "ru": "приостановить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preistalītwei": {
+  "ru": "подходить",
+  "transitive": false,
+  "object_case": null
+ },
+ "preistalīwingintun": {
+  "ru": "применить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preistatīntun": {
+  "ru": "доставить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preistatīntun si": {
+  "ru": "представиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "preitektwei": {
+  "ru": "впадать",
+  "transitive": false,
+  "object_case": null
+ },
+ "preiwakītun": {
+  "ru": "звать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preiwērbtun": {
+  "ru": "привинтить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preiwērptun": {
+  "ru": "разрешить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preiwīdātun": {
+  "ru": "воображать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preizentlitun": {
+  "ru": "намекать",
+  "transitive": false,
+  "object_case": null
+ },
+ "preiēitwei": {
+  "ru": "подойти",
+  "transitive": false,
+  "object_case": null
+ },
+ "preišūtun": {
+  "ru": "пришить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "preskītwei": {
+  "ru": "тарахтеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "prestun": {
+  "ru": "решать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pruppintun": {
+  "ru": "прививать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prusificītun": {
+  "ru": "пруссифицировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prālintun": {
+  "ru": "продырявить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prēipaus bēgtwei": {
+  "ru": "убежать",
+  "transitive": false,
+  "object_case": null
+ },
+ "prēipaus laīstun": {
+  "ru": "пропустить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prēipausintun": {
+  "ru": "удалять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prēitarītwei": {
+  "ru": "соглашаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "prēskintun": {
+  "ru": "освежать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prōjektitun": {
+  "ru": "проектировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "prōtestitun": {
+  "ru": "протестовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "publicītun": {
+  "ru": "публиковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pulīntun": {
+  "ru": "опылять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pulīntwei": {
+  "ru": "опыляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pusideinaūtwei": {
+  "ru": "обедать",
+  "transitive": false,
+  "object_case": null
+ },
+ "pādatun": {
+  "ru": "носить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pārautwei": {
+  "ru": "париться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pāstun": {
+  "ru": "пасти",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pāustautwei": {
+  "ru": "браконьерствовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pēstun": {
+  "ru": "нести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pīktwei": {
+  "ru": "пищать",
+  "transitive": false,
+  "object_case": null
+ },
+ "pīrstwei": {
+  "ru": "пердеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "pōlarizitun": {
+  "ru": "поляризовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pōmpitun": {
+  "ru": "качать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pūlautwei": {
+  "ru": "гноиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "pūstun": {
+  "ru": "раздувать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pūtun": {
+  "ru": "гноить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "pūtwei": {
+  "ru": "гнить",
+  "transitive": false,
+  "object_case": null
+ },
+ "pūwintun": {
+  "ru": "поить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rafinītun": {
+  "ru": "рафинировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "raudātwei": {
+  "ru": "плакать",
+  "transitive": false,
+  "object_case": null
+ },
+ "raugīntun": {
+  "ru": "заквасить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "razgītun": {
+  "ru": "спутывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "raūtun": {
+  "ru": "рвать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "redigītun": {
+  "ru": "редактировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "refōrmitun": {
+  "ru": "реформировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "registrītun": {
+  "ru": "регистрировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "regulītun": {
+  "ru": "регулировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "regītwei": {
+  "ru": "видеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rekkenautwei": {
+  "ru": "рассчитаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "reklāmautwei": {
+  "ru": "рекламировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rekōmenditun": {
+  "ru": "рекомендовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rekōnstruitun": {
+  "ru": "реконструировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "relaksautwei": {
+  "ru": "расслабляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "reparītun": {
+  "ru": "чинить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "reprezentītun": {
+  "ru": "представлять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "repītwei": {
+  "ru": "ползать",
+  "transitive": false,
+  "object_case": null
+ },
+ "rezerwītun": {
+  "ru": "резервировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rikaūtwei": {
+  "ru": "господствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "ristun": {
+  "ru": "связывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rundīlautwei": {
+  "ru": "пьянствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "rusītwei": {
+  "ru": "шуршать",
+  "transitive": false,
+  "object_case": null
+ },
+ "rāditwei": {
+  "ru": "советовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "rāikitun": {
+  "ru": "нарезать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rāmbitun": {
+  "ru": "зарубать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rāngtun": {
+  "ru": "красть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rēidintun": {
+  "ru": "поощрять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rēizintun": {
+  "ru": "умножать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rēktwei": {
+  "ru": "вздорить",
+  "transitive": false,
+  "object_case": null
+ },
+ "rīnkautwei": {
+  "ru": "привередничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "rīnktun": {
+  "ru": "собирать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "rīzikitwei": {
+  "ru": "рисковать",
+  "transitive": false,
+  "object_case": null
+ },
+ "rūgtwei": {
+  "ru": "киснуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "rūkautwei": {
+  "ru": "рыкать",
+  "transitive": false,
+  "object_case": null
+ },
+ "sadīntun": {
+  "ru": "ставить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sakātwei": {
+  "ru": "скакать",
+  "transitive": false,
+  "object_case": null
+ },
+ "sallintun": {
+  "ru": "охладить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "saltwei": {
+  "ru": "холодать",
+  "transitive": false,
+  "object_case": null
+ },
+ "sampistun": {
+  "ru": "толочь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sargātun": {
+  "ru": "хранить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "segtun": {
+  "ru": "застегнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "segtun si": {
+  "ru": "застегнуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "segītun": {
+  "ru": "делать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sektwei": {
+  "ru": "иссякать",
+  "transitive": false,
+  "object_case": null
+ },
+ "senanzitun si": {
+  "ru": "тесниться",
+  "transitive": false,
+  "object_case": null
+ },
+ "senaūgtwei": {
+  "ru": "срастаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "sendaīrintun": {
+  "ru": "помирить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sendelītun": {
+  "ru": "распределять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sendraugidēlatwei": {
+  "ru": "сотрудничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "sendrāugintun": {
+  "ru": "сплотить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sendātun": {
+  "ru": "соединить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sendētun": {
+  "ru": "сложить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sendīngtwei": {
+  "ru": "ладить",
+  "transitive": false,
+  "object_case": null
+ },
+ "sengrāmbintun": {
+  "ru": "наскрести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senjugtun": {
+  "ru": "сопрягать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senkabīntun": {
+  "ru": "сцепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senkaltātun": {
+  "ru": "сковать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senkālsītun": {
+  "ru": "согласовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senkālsītun si": {
+  "ru": "согласовываться",
+  "transitive": false,
+  "object_case": null
+ },
+ "senkīrstun": {
+  "ru": "изрубить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senlaukītun": {
+  "ru": "изобрести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senlīgintun": {
+  "ru": "уравнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senlīgintun si": {
+  "ru": "сравняться",
+  "transitive": false,
+  "object_case": null
+ },
+ "senlīnktwei": {
+  "ru": "согнуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "senmaisātun": {
+  "ru": "смешать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senpaltwei": {
+  "ru": "совпасть",
+  "transitive": false,
+  "object_case": null
+ },
+ "senperōnintun": {
+  "ru": "обобществить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senpistun": {
+  "ru": "растолочь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senpjaūtun si": {
+  "ru": "пересекаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "senrazgītun": {
+  "ru": "спутать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senristun": {
+  "ru": "связать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senrīnktun": {
+  "ru": "собирать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senrīnktun si": {
+  "ru": "собраться",
+  "transitive": false,
+  "object_case": null
+ },
+ "senskrāistwei": {
+  "ru": "слетаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "senskrīzintun": {
+  "ru": "скрестить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senskrīzintun si": {
+  "ru": "скреститься",
+  "transitive": false,
+  "object_case": null
+ },
+ "senskītwei": {
+  "ru": "восстать",
+  "transitive": false,
+  "object_case": null
+ },
+ "sensēitwei": {
+  "ru": "сообщаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "sensētun": {
+  "ru": "соединить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sentaūwintun": {
+  "ru": "сблизить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sentwei": {
+  "ru": "стареть",
+  "transitive": false,
+  "object_case": null
+ },
+ "sentēlktun": {
+  "ru": "столкнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sentēlktun si": {
+  "ru": "столкнуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "sentēnstun": {
+  "ru": "резюмировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senwaitjātun": {
+  "ru": "согласовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senwaitjātwei": {
+  "ru": "договориться",
+  "transitive": false,
+  "object_case": null
+ },
+ "senwakītun": {
+  "ru": "созвать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senwijātun": {
+  "ru": "свивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senwinztun": {
+  "ru": "вязать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "senwītun si": {
+  "ru": "спутываться",
+  "transitive": false,
+  "object_case": null
+ },
+ "sergītun": {
+  "ru": "стеречь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sergītun si": {
+  "ru": "беречься",
+  "transitive": false,
+  "object_case": null
+ },
+ "serēptun": {
+  "ru": "обнаружить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "seīlatun si": {
+  "ru": "волноваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "simbōlizītun": {
+  "ru": "символизировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "siwītwei": {
+  "ru": "седеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "skabtun": {
+  "ru": "долбить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skaitātun": {
+  "ru": "читать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skajjintun": {
+  "ru": "очистить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skalīntun": {
+  "ru": "обязать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skalīntun si": {
+  "ru": "обязаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "skanītun": {
+  "ru": "сканировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skastwei": {
+  "ru": "намереваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "skatītwei": {
+  "ru": "двигаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "skennitwei": {
+  "ru": "тявкать",
+  "transitive": false,
+  "object_case": null
+ },
+ "skistīntun": {
+  "ru": "чистить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skjaūdintwei": {
+  "ru": "чихать",
+  "transitive": false,
+  "object_case": null
+ },
+ "sklaitīntun": {
+  "ru": "разделить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sklaitīntun si": {
+  "ru": "отличаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "sklāitun": {
+  "ru": "рассеять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sklāitwei": {
+  "ru": "рассеяться",
+  "transitive": false,
+  "object_case": null
+ },
+ "skrabtwei": {
+  "ru": "шуршать",
+  "transitive": false,
+  "object_case": null
+ },
+ "skrāistwei": {
+  "ru": "лететь",
+  "transitive": false,
+  "object_case": null
+ },
+ "skrītwei": {
+  "ru": "кружиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "skrīzitun": {
+  "ru": "распять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skrūwintun": {
+  "ru": "нарезать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skulibēgautwei": {
+  "ru": "прогуливать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skustun": {
+  "ru": "чистить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skādintun": {
+  "ru": "вредить",
+  "transitive": false,
+  "object_case": null
+ },
+ "skēipintun": {
+  "ru": "щипаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "skēiptun": {
+  "ru": "щипать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skēnstwei": {
+  "ru": "тонуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "skērtun": {
+  "ru": "брить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skērtwei": {
+  "ru": "бриться",
+  "transitive": false,
+  "object_case": null
+ },
+ "skīpatun": {
+  "ru": "срывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "skītwei": {
+  "ru": "вставать",
+  "transitive": false,
+  "object_case": null
+ },
+ "skūrstun": {
+  "ru": "стричь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "slakkintun": {
+  "ru": "брызгать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sliktwei": {
+  "ru": "брызгать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "slīstwei": {
+  "ru": "смещаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "smeītun si": {
+  "ru": "смеяться",
+  "transitive": false,
+  "object_case": null
+ },
+ "smijātun si": {
+  "ru": "улыбаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "smittintwei": {
+  "ru": "шмыгнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "smīrdītwei": {
+  "ru": "пахнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "snigtwei": {
+  "ru": "идти",
+  "transitive": false,
+  "object_case": null
+ },
+ "snukstwei": {
+  "ru": "фыркать",
+  "transitive": false,
+  "object_case": null
+ },
+ "snākstwei": {
+  "ru": "сморкаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "spaktaūtwei": {
+  "ru": "купаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "spalīntun": {
+  "ru": "разбить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spalīntun si": {
+  "ru": "разбиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "spekēkintwei": {
+  "ru": "квакать",
+  "transitive": false,
+  "object_case": null
+ },
+ "spellautun": {
+  "ru": "колоть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spenstun": {
+  "ru": "прясть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spertun": {
+  "ru": "пнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spertwei": {
+  "ru": "упереться",
+  "transitive": false,
+  "object_case": null
+ },
+ "spjaūtwei": {
+  "ru": "рвать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spragīntun": {
+  "ru": "взорвать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sprakstintwei": {
+  "ru": "щёлкнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sprangtun": {
+  "ru": "натянуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sprangtun si": {
+  "ru": "напрячься",
+  "transitive": false,
+  "object_case": null
+ },
+ "sprangīntun": {
+  "ru": "душить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sprengtwei": {
+  "ru": "пружинить",
+  "transitive": false,
+  "object_case": null
+ },
+ "springtwei": {
+  "ru": "поперхнуться",
+  "transitive": false,
+  "object_case": null
+ },
+ "sprāgtwei": {
+  "ru": "взорваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "sprūtwei": {
+  "ru": "проникать",
+  "transitive": false,
+  "object_case": null
+ },
+ "spāinautwei": {
+  "ru": "пениться",
+  "transitive": false,
+  "object_case": null
+ },
+ "spāngintun": {
+  "ru": "ослепить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spārtintun": {
+  "ru": "усиливать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spēgtun": {
+  "ru": "обрызгивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spēgtwei": {
+  "ru": "брызжать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spējautwei": {
+  "ru": "соревноваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "spējintun": {
+  "ru": "торопить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spētwei": {
+  "ru": "спешить",
+  "transitive": false,
+  "object_case": null
+ },
+ "spīlitun": {
+  "ru": "играть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spīltun": {
+  "ru": "расколоть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "spīltun si": {
+  "ru": "расколоться",
+  "transitive": false,
+  "object_case": null
+ },
+ "spīltwei": {
+  "ru": "расколоться",
+  "transitive": false,
+  "object_case": null
+ },
+ "stabilizītun": {
+  "ru": "стабилизовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "stalīntun": {
+  "ru": "останавливать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "stalītwei": {
+  "ru": "стоять",
+  "transitive": false,
+  "object_case": null
+ },
+ "statīntun": {
+  "ru": "ставить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "stebtwei": {
+  "ru": "каменеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "stegtun": {
+  "ru": "крыть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "stengtun": {
+  "ru": "натягивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "stengtun si": {
+  "ru": "напрячься",
+  "transitive": false,
+  "object_case": null
+ },
+ "stiptwei": {
+  "ru": "застывать",
+  "transitive": false,
+  "object_case": null
+ },
+ "strigtwei": {
+  "ru": "застревать",
+  "transitive": false,
+  "object_case": null
+ },
+ "strēlautwei": {
+  "ru": "лучиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "strūtwei": {
+  "ru": "струиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "studītun": {
+  "ru": "изучать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "studītwei": {
+  "ru": "учиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "stātwei": {
+  "ru": "стать",
+  "transitive": false,
+  "object_case": null
+ },
+ "stēntwei": {
+  "ru": "страдать",
+  "transitive": false,
+  "object_case": null
+ },
+ "stīritun": {
+  "ru": "вести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sugerītun": {
+  "ru": "внушить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "suppintun": {
+  "ru": "качать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "suptun": {
+  "ru": "сыпать",
+  "transitive": false,
+  "object_case": null
+ },
+ "suptun si": {
+  "ru": "сыпаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "suptwei": {
+  "ru": "качаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "sustwei": {
+  "ru": "сохнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "swaigīntun": {
+  "ru": "опьянить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "swallintun": {
+  "ru": "жарить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "swentintun": {
+  "ru": "святить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "swigtwei": {
+  "ru": "пьянеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "swiltun": {
+  "ru": "опалять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "swiltwei": {
+  "ru": "опалиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "swirrintun": {
+  "ru": "шатать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "swirrintwei": {
+  "ru": "шатать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "swirtwei": {
+  "ru": "наклониться",
+  "transitive": false,
+  "object_case": null
+ },
+ "swāikstitwei": {
+  "ru": "светить",
+  "transitive": false,
+  "object_case": null
+ },
+ "swērtun": {
+  "ru": "взвесить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "swērtwei": {
+  "ru": "весить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "swīlptwei": {
+  "ru": "свистеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sāktwei": {
+  "ru": "прыгать",
+  "transitive": false,
+  "object_case": null
+ },
+ "sātautwei": {
+  "ru": "хватать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sātwintun": {
+  "ru": "насыщать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sāusintun": {
+  "ru": "сушить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sēitun": {
+  "ru": "связывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sēstwei": {
+  "ru": "сесть",
+  "transitive": false,
+  "object_case": null
+ },
+ "sētun": {
+  "ru": "сеять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sīndautwei": {
+  "ru": "заседать",
+  "transitive": false,
+  "object_case": null
+ },
+ "sīndītwei": {
+  "ru": "сидеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "sīrgtwei": {
+  "ru": "болеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "sīrptwei": {
+  "ru": "зреть",
+  "transitive": false,
+  "object_case": null
+ },
+ "sūitenikautwei": {
+  "ru": "скромничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "sūnditun": {
+  "ru": "наказывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sūrintun": {
+  "ru": "посолить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "sūtwei": {
+  "ru": "идти",
+  "transitive": false,
+  "object_case": null
+ },
+ "takītun": {
+  "ru": "точить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "talkautun": {
+  "ru": "перевести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "talpīntun": {
+  "ru": "уместить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "talītun": {
+  "ru": "умерять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tankintun": {
+  "ru": "дозаправить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tappintun": {
+  "ru": "топить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tapītun": {
+  "ru": "греть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tapītwei": {
+  "ru": "теплеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "tarītun": {
+  "ru": "высказаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "taukintun": {
+  "ru": "обещать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "taupītun": {
+  "ru": "экономить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "taūwintun": {
+  "ru": "сближать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "taūwintun si": {
+  "ru": "сближаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "teikātun": {
+  "ru": "творить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "telegrapītun": {
+  "ru": "телеграфировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tengtun": {
+  "ru": "перевозить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tengīntun": {
+  "ru": "слать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tensītun": {
+  "ru": "таскать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tenītwei": {
+  "ru": "длиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "tesātun": {
+  "ru": "тесать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "teīktun": {
+  "ru": "создать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "teīsintun": {
+  "ru": "уважать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tiktwei": {
+  "ru": "возникнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "tikīntun": {
+  "ru": "делать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tilptwei": {
+  "ru": "поместиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "tiltun": {
+  "ru": "класть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tilītwei": {
+  "ru": "тлеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "timrītwei": {
+  "ru": "потемнеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "tirtun": {
+  "ru": "тереть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tirtun si": {
+  "ru": "тереться",
+  "transitive": false,
+  "object_case": null
+ },
+ "tiḿrintun": {
+  "ru": "затемнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "traikītwei": {
+  "ru": "черстветь",
+  "transitive": false,
+  "object_case": null
+ },
+ "treptwei": {
+  "ru": "шагнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "trintautwei": {
+  "ru": "мстить",
+  "transitive": false,
+  "object_case": null
+ },
+ "trintwei": {
+  "ru": "грозить",
+  "transitive": false,
+  "object_case": null
+ },
+ "truptwei": {
+  "ru": "укорачиваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "trustwei": {
+  "ru": "крошиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "trēmptun": {
+  "ru": "топтать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "trīmptwei": {
+  "ru": "топтаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "trīnktun": {
+  "ru": "стукнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tuldītun si": {
+  "ru": "радоваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "turītun": {
+  "ru": "иметь",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tustwei": {
+  "ru": "замолчать",
+  "transitive": false,
+  "object_case": null
+ },
+ "tusītwei": {
+  "ru": "молчать",
+  "transitive": false,
+  "object_case": null
+ },
+ "twaktun": {
+  "ru": "парить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "twēnktun": {
+  "ru": "запруживать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tìkrintun": {
+  "ru": "исправлять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tùsnintun": {
+  "ru": "приглушить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tālintun": {
+  "ru": "отдалить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tālintun si": {
+  "ru": "отдалиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "tālkātun": {
+  "ru": "молотить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tālkātun pa pēdamans": {
+  "ru": "растоптать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tēlktun": {
+  "ru": "толкнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tēnstun": {
+  "ru": "тащить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tērpautun": {
+  "ru": "пользоваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "tērptwei": {
+  "ru": "процветать",
+  "transitive": false,
+  "object_case": null
+ },
+ "tīrintun": {
+  "ru": "вытереть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tīrpintun": {
+  "ru": "растворять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tīrptwei": {
+  "ru": "таять",
+  "transitive": false,
+  "object_case": null
+ },
+ "tōleritun": {
+  "ru": "терпеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tūlnintun": {
+  "ru": "множить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "tūlnintun si": {
+  "ru": "увеличиваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "uzurpītun": {
+  "ru": "узурпировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "waidilītwei": {
+  "ru": "колдовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "waidīntun": {
+  "ru": "показывать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wainikkatun": {
+  "ru": "венчать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "waisīntun": {
+  "ru": "угощать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "waisītwei": {
+  "ru": "гостить",
+  "transitive": false,
+  "object_case": null
+ },
+ "waitjātwei": {
+  "ru": "говорить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wakītun": {
+  "ru": "звать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "waldītun": {
+  "ru": "владеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "walgintun": {
+  "ru": "увлажнять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "walnintun": {
+  "ru": "улучшать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "waltīntun": {
+  "ru": "катить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "waltīntun si": {
+  "ru": "катиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wangīntun": {
+  "ru": "кончать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wanzātun": {
+  "ru": "вязать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wargaitērpautun": {
+  "ru": "злоупотреблять",
+  "transitive": false,
+  "object_case": null
+ },
+ "warmjautwei": {
+  "ru": "краснеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "warmītwei": {
+  "ru": "краснеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "wartīntun": {
+  "ru": "обращать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "waīstun": {
+  "ru": "знать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wedātun": {
+  "ru": "водить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wektwei": {
+  "ru": "кричать",
+  "transitive": false,
+  "object_case": null
+ },
+ "weldītun": {
+  "ru": "наследовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "weltun": {
+  "ru": "крутить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "weltun si": {
+  "ru": "крутиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wemtwei": {
+  "ru": "плевать",
+  "transitive": false,
+  "object_case": null
+ },
+ "wesselintun": {
+  "ru": "веселить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wesselintun si": {
+  "ru": "веселиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "westun": {
+  "ru": "вести",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "weztun": {
+  "ru": "везти",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "widdautun": {
+  "ru": "стегать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wijātun": {
+  "ru": "заворачивать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wilgtwei": {
+  "ru": "сыреть",
+  "transitive": false,
+  "object_case": null
+ },
+ "wiltun": {
+  "ru": "манить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wiltwei": {
+  "ru": "крутиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "winztun": {
+  "ru": "вязать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "winūtun": {
+  "ru": "обвинять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wiptwei": {
+  "ru": "дрожать",
+  "transitive": false,
+  "object_case": null
+ },
+ "wirtwei": {
+  "ru": "варить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wāisintun": {
+  "ru": "разводить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wākautun si": {
+  "ru": "аукаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wākautwei": {
+  "ru": "кликать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wālintwei": {
+  "ru": "бороться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wāndrautwei": {
+  "ru": "кочевать",
+  "transitive": false,
+  "object_case": null
+ },
+ "wāngrautwei": {
+  "ru": "извиваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wāpitun": {
+  "ru": "красить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wārgtwei": {
+  "ru": "бедствовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "wāuwautwei": {
+  "ru": "огрызаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wāzautun si": {
+  "ru": "упрямиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wāzelitwei": {
+  "ru": "кишеть",
+  "transitive": false,
+  "object_case": null
+ },
+ "wēlautwei": {
+  "ru": "опаздывать",
+  "transitive": false,
+  "object_case": null
+ },
+ "wēlintun": {
+  "ru": "задерживать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wērautwei": {
+  "ru": "продолжаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wērbtun": {
+  "ru": "винтить",
+  "transitive": false,
+  "object_case": null
+ },
+ "wērptun": {
+  "ru": "отпустить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wērptun si": {
+  "ru": "развязаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wērstun": {
+  "ru": "поносить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wētrintun": {
+  "ru": "проветривать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wīdikautun": {
+  "ru": "засвидетельствовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wīdikautwei": {
+  "ru": "свидетельствовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wīdātun": {
+  "ru": "видеть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wīlktun": {
+  "ru": "тянуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wīlktun si": {
+  "ru": "тащиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wīngrautwei": {
+  "ru": "жульничать",
+  "transitive": false,
+  "object_case": null
+ },
+ "wīngtwei": {
+  "ru": "изгибаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wīrstwei": {
+  "ru": "делаться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wīstwei": {
+  "ru": "вянуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "wītun": {
+  "ru": "вить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wītun si": {
+  "ru": "виться",
+  "transitive": false,
+  "object_case": null
+ },
+ "wōimenitwei": {
+  "ru": "причитать",
+  "transitive": false,
+  "object_case": null
+ },
+ "wōstun": {
+  "ru": "нюхать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "wūlakitwei": {
+  "ru": "лениться",
+  "transitive": false,
+  "object_case": null
+ },
+ "zabātun": {
+  "ru": "сдерживать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zarātwei": {
+  "ru": "сиять",
+  "transitive": false,
+  "object_case": null
+ },
+ "zemmai glāubtun": {
+  "ru": "подчеркнуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zemmai laīstun": {
+  "ru": "опустить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zemmai laīstun si": {
+  "ru": "приземляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "zentlitun": {
+  "ru": "пометить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zignātun": {
+  "ru": "перекрестить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zinātintun": {
+  "ru": "познакомить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zinātintun si": {
+  "ru": "познакомиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "zinātun": {
+  "ru": "познавать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zmānintun": {
+  "ru": "чтить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zukkautwei": {
+  "ru": "рыбачить",
+  "transitive": false,
+  "object_case": null
+ },
+ "zurgautwei": {
+  "ru": "заботиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "zwengtwei": {
+  "ru": "ржать",
+  "transitive": false,
+  "object_case": null
+ },
+ "zāgitun": {
+  "ru": "пилить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zārtun": {
+  "ru": "разгребать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zēimautwei": {
+  "ru": "зимовать",
+  "transitive": false,
+  "object_case": null
+ },
+ "zēistun": {
+  "ru": "строить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zōnditun": {
+  "ru": "зондировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zūrgintun": {
+  "ru": "озаботить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "zūtwei": {
+  "ru": "гибнуть",
+  "transitive": false,
+  "object_case": null
+ },
+ "āistwei": {
+  "ru": "нагреваться",
+  "transitive": false,
+  "object_case": null
+ },
+ "āngautwei": {
+  "ru": "скупиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "āngintwei": {
+  "ru": "скупиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "āngtun": {
+  "ru": "мазать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "āntrintun": {
+  "ru": "повторять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ārditun": {
+  "ru": "нарушать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "āudairatun": {
+  "ru": "обуславливать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "āudalbtun": {
+  "ru": "обжулить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "āupausintun": {
+  "ru": "устранять",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "āustabautwei": {
+  "ru": "удивляться",
+  "transitive": false,
+  "object_case": null
+ },
+ "āzautun si": {
+  "ru": "упрямиться",
+  "transitive": false,
+  "object_case": null
+ },
+ "ēitwei": {
+  "ru": "идти",
+  "transitive": false,
+  "object_case": null
+ },
+ "ēizwintun": {
+  "ru": "ранить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ēmpersergītun": {
+  "ru": "предупредить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ēmpersin gērdautun": {
+  "ru": "подсказать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ēmpersin sadīntun": {
+  "ru": "продолжать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ēmpersin tensītun": {
+  "ru": "предпочитать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ēmperssergītun": {
+  "ru": "предупредить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ēstun": {
+  "ru": "есть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ēwelintun": {
+  "ru": "строгать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "īmtun": {
+  "ru": "брать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "īnsintun": {
+  "ru": "сокращать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ōkupatun": {
+  "ru": "оккупировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "ōrganizītun": {
+  "ru": "организовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "šaūtun": {
+  "ru": "подсунуть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "šiššelitwei": {
+  "ru": "шептать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "šlamītwei": {
+  "ru": "шуршать",
+  "transitive": false,
+  "object_case": null
+ },
+ "šlapsintun": {
+  "ru": "жрать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "šlāuksintwei": {
+  "ru": "чавкать",
+  "transitive": false,
+  "object_case": null
+ },
+ "šlūzitwei": {
+  "ru": "служить",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "šnurgtwei": {
+  "ru": "хрюкать",
+  "transitive": false,
+  "object_case": null
+ },
+ "špiōnitwei": {
+  "ru": "шпионить",
+  "transitive": false,
+  "object_case": null
+ },
+ "špriccintun": {
+  "ru": "колоть",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "štūrmitun": {
+  "ru": "штурмовать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "šustintun": {
+  "ru": "пропаривать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "šōkintun": {
+  "ru": "шокировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "šōkitun": {
+  "ru": "шокировать",
+  "transitive": true,
+  "object_case": "akk"
+ },
+ "šūtun": {
+  "ru": "шить",
+  "transitive": true,
+  "object_case": "akk"
+ }
+}

@@ -70,6 +70,11 @@ _pr_phrasebook = {}      # прусская фраза (нормализован
 _pr_phrasebook_folded = {}  # то же без макронов - запасной вариант поиска
 _pr_phrasebook_max_words = 1
 _pr_to_ru_priority = {}
+_verb_frames = {}               # прусская лемма (lower) -> {ru, transitive, object_case}
+_sentence_memory = {}           # нормализованная RU-фраза -> готовый PR-перевод (полные предложения корпуса)
+_pr_sentence_memory = {}        # прусская фраза -> готовый русский перевод
+_pr_sentence_memory_folded = {} # то же без макронов
+_pr_sentence_memory_max_words = 1
 _ru_to_pr_priority = {}
 _ru_max_phrase_words = 1
 _pr_index = {}          # точная форма (в нижнем регистре) -> [(entry, label), ...]
@@ -470,8 +475,89 @@ def _synthesize_fresh_entries(dictionary, overrides):
     return fresh
 
 
-def load_data(dictionary_json_str, overrides_json_str, phrasebook_json_str=None, priorities_json_str=None, propernames_json_str=None):
-    global _ru_index, _override_by_id, _preposition_index, _pr_preposition_senses, _phrasebook, _pr_phrasebook, _pr_phrasebook_folded, _pr_phrasebook_max_words, _pr_to_ru_priority, _ru_to_pr_priority, _ru_max_phrase_words, _pr_index, _pr_index_folded, _pr_max_phrase_words, _entry_freq, _headword_index, _propernames, _propername_lemma_index, _propername_form_index
+def _load_verb_frames(verb_frames_json_str):
+    """Аудит, П.1.2: управление глаголов из verb_frames.json.
+
+    Формат: {"wīdātun": {"ru": "видеть", "transitive": true, "object_case": "akk"}}.
+    Используется как авторитетный источник переходности вместо pymorphy-тега
+    русского глагола (который может не совпадать у видовых пар).
+    """
+    if not verb_frames_json_str:
+        return {}
+    try:
+        data = json.loads(verb_frames_json_str)
+    except Exception:
+        return {}
+    if not isinstance(data, dict):
+        return {}
+    frames = {}
+    for word, fr in data.items():
+        if isinstance(fr, dict):
+            frames[str(word).lower()] = {
+                "ru": fr.get("ru", ""),
+                "transitive": bool(fr.get("transitive")),
+                "object_case": fr.get("object_case"),
+            }
+    return frames
+
+
+def _load_sentence_memory(sentence_memory_json_str):
+    """Аудит, П.2.1: полные проверенные предложения корпуса — отдельно от
+    фразбука. Применяются ТОЛЬКО при полном совпадении всей фразы и явно
+    помечаются в диагностике как «готовый перевод корпуса».
+
+    Возвращает (ru->pr, pr->ru, pr_folded, max_words).
+    """
+    if not sentence_memory_json_str:
+        return {}, {}, {}, 1
+    try:
+        data = json.loads(sentence_memory_json_str)
+    except Exception:
+        return {}, {}, {}, 1
+    if isinstance(data, dict):
+        data = data.get("sentences", [])
+    if not isinstance(data, list):
+        return {}, {}, {}, 1
+
+    ru_sm = {}
+    pr_sm = {}
+    max_words = 1
+    for item in data:
+        if not isinstance(item, dict):
+            continue
+        out = item.get("pr") or item.get("out") or item.get("to")
+        if isinstance(out, list):
+            out = out[0] if out else ""
+        out = str(out or "").strip()
+        ru_values = item.get("ru") or item.get("source") or item.get("from")
+        if isinstance(ru_values, str):
+            ru_values = [ru_values]
+        if not isinstance(ru_values, list):
+            ru_values = []
+        ru_out = item.get("ru_out")
+        if isinstance(ru_out, list):
+            ru_out = ru_out[0] if ru_out else ""
+        ru_out = str(ru_out or "").strip()
+        if ru_out and ru_out not in ru_values:
+            ru_values = ru_values + [ru_out]
+        # RU → PR: только полное совпадение фразы
+        for ru in ru_values:
+            key = _norm_ru_key(str(ru))
+            if key and out and key not in ru_sm:
+                ru_sm[key] = {"out": out, "note": "готовый перевод корпуса"}
+                max_words = max(max_words, len(key.split()))
+        # PR → RU
+        pr_key = _norm_pr_key(out) if out else ""
+        if pr_key and ru_out and pr_key not in pr_sm:
+            pr_sm[pr_key] = {"out": ru_out, "note": "готовый перевод корпуса"}
+    pr_sm_folded = {}
+    for k, v in pr_sm.items():
+        pr_sm_folded.setdefault(fold_diacritics(k), v)
+    return ru_sm, pr_sm, pr_sm_folded, max_words
+
+
+def load_data(dictionary_json_str, overrides_json_str, phrasebook_json_str=None, priorities_json_str=None, propernames_json_str=None, verb_frames_json_str=None, sentence_memory_json_str=None):
+    global _ru_index, _override_by_id, _preposition_index, _pr_preposition_senses, _phrasebook, _pr_phrasebook, _pr_phrasebook_folded, _pr_phrasebook_max_words, _pr_to_ru_priority, _ru_to_pr_priority, _ru_max_phrase_words, _pr_index, _pr_index_folded, _pr_max_phrase_words, _entry_freq, _headword_index, _propernames, _propername_lemma_index, _propername_form_index, _verb_frames, _sentence_memory, _pr_sentence_memory, _pr_sentence_memory_folded, _pr_sentence_memory_max_words
     dictionary = json.loads(dictionary_json_str)
     overrides = json.loads(overrides_json_str)
     (_phrasebook, _pr_phrasebook, phrasebook_max_words,
@@ -481,6 +567,21 @@ def load_data(dictionary_json_str, overrides_json_str, phrasebook_json_str=None,
         _pr_phrasebook_folded.setdefault(fold_diacritics(_pr_key), _pr_value)
     _pr_phrasebook_max_words = pr_phrasebook_max_words
     _pr_to_ru_priority, _ru_to_pr_priority = _load_priorities(priorities_json_str)
+    _verb_frames = _load_verb_frames(verb_frames_json_str)
+    (_sentence_memory, _pr_sentence_memory, _pr_sentence_memory_folded,
+     _pr_sentence_memory_max_words) = _load_sentence_memory(sentence_memory_json_str)
+    # Аудит, П.2.1: данные разделены по файлам, но предложения корпуса также
+    # участвуют в поиске подфраз внутри длинного текста (как раньше, когда они
+    # лежали в phrasebook) — с явной пометкой «готовый перевод корпуса».
+    # Это сохраняет перевод склеенных реплик и прозрачность диагностики.
+    for _sm_key, _sm_val in _sentence_memory.items():
+        _phrasebook.setdefault(_sm_key, _sm_val)
+    for _sm_key, _sm_val in _pr_sentence_memory.items():
+        _pr_phrasebook.setdefault(_sm_key, _sm_val)
+        _pr_phrasebook_folded.setdefault(fold_diacritics(_sm_key), _sm_val)
+    phrasebook_max_words = max(phrasebook_max_words, _pr_sentence_memory_max_words)
+    pr_phrasebook_max_words = max(pr_phrasebook_max_words, _pr_sentence_memory_max_words)
+    _pr_phrasebook_max_words = pr_phrasebook_max_words
     _build_propername_index(propernames_json_str)
 
     _override_by_id = {o["id"]: o for o in overrides if "id" in o}
@@ -620,7 +721,7 @@ def load_data(dictionary_json_str, overrides_json_str, phrasebook_json_str=None,
             entry_freq[entry.get("i")] = entry_freq.get(entry.get("i"), 0) + count
     _entry_freq = entry_freq
 
-    return {"words": len(dictionary), "overrides": len(_override_by_id), "prepositions": len(preposition_index), "phrases": len(_phrasebook) + len(_pr_phrasebook), "propernames": len(_propernames)}
+    return {"words": len(dictionary), "overrides": len(_override_by_id), "prepositions": len(preposition_index), "phrases": len(_phrasebook) + len(_pr_phrasebook), "propernames": len(_propernames), "verb_frames": len(_verb_frames), "sentence_memory": len(_sentence_memory) + len(_pr_sentence_memory)}
 
 
 def _derive_loc_from_gen(gen_form):
@@ -710,6 +811,11 @@ def pymorphy_pos_to_local(tag):
     return None
 
 
+# Аудит, П.1.5: причины последнего выбора кандидата — для режима диагностики.
+# Заполняется choose_candidate, читается _translate_word_info для note.
+_last_choose_reasons = []
+
+
 def choose_candidate(candidates, wanted_pos, ru_key=None):
     """Выбирает наиболее подходящую словарную статью.
 
@@ -717,7 +823,11 @@ def choose_candidate(candidates, wanted_pos, ru_key=None):
     часто выигрывали омонимы без парадигмы. Теперь при прочих равных
     предпочитаем точную часть речи, ручной приоритет и наличие override —
     такую статью можно склонять/спрягать.
+
+    Аудит, П.1.3: причины выбора (reasons) сохраняются в _last_choose_reasons
+    и показываются в диагностической таблице — видно, ПОЧЕМУ выбрана статья.
     """
+    global _last_choose_reasons
     preferred = _ru_to_pr_priority.get(_clean_ru_chunk(ru_key or ""), [])
     scored = []
     for order, e in enumerate(candidates):
@@ -746,7 +856,21 @@ def choose_candidate(candidates, wanted_pos, ru_key=None):
         )
         scored.append((score, e, override))
     scored.sort(key=lambda t: t[0])
-    return scored[0][1], scored[0][2]
+    # Аудит, П.1.5: цепочка решения для диагностики
+    best_score, best_e, best_override = scored[0]
+    reasons = []
+    if best_score[0] == 0:
+        reasons.append(f"pos={wanted_pos or 'any'}")
+    if best_score[1] < 10_000:
+        reasons.append("priority")
+    if best_score[2] == 0:
+        reasons.append("exact-gloss")
+    if best_score[3] < 0:
+        reasons.append(f"freq={-best_score[3]}")
+    if best_score[4] == 0:
+        reasons.append("has-paradigm")
+    _last_choose_reasons = reasons
+    return best_e, best_override
 
 
 def _preferred_gender_for_override(override, fallback_gender):
@@ -1128,11 +1252,15 @@ def _translate_word_info(token, forced_case=None, agreement=None, preposition_ch
 
     candidates = _ru_index.get(lemma) or _ru_index.get(clean)
     if not candidates:
-        return {"out": f"[{token}?]", "note": "нет в словаре", "gov_case": None, "pos": wanted_pos, "case_used": None, "consumes_case": wanted_pos in ("NOUN", "NPRO")}
+        # Аудит, П.3.1: для неизвестного слова выводим исходное слово без [?]
+        # в основном результате; техническая пометка — только в диагностике (П.3.2).
+        return {"out": token, "note": "слово отсутствует в словаре", "gov_case": None, "pos": wanted_pos, "case_used": None, "consumes_case": wanted_pos in ("NOUN", "NPRO")}
 
     entry, override = choose_candidate(candidates, wanted_pos, lemma)
     base_form = entry.get("w")
     entry_pos = classify_pos(entry, override)
+    # Аудит, П.1.5: цепочка решения в note — лемма + причины выбора кандидата.
+    _choose_reasons = list(_last_choose_reasons)
 
     if override:
         if wanted_pos == "VERB" or entry_pos == "VERB":
@@ -1145,14 +1273,22 @@ def _translate_word_info(token, forced_case=None, agreement=None, preposition_ch
             person = person or "3per"
             form = pick_verb_form(override, person, number, tense)
             if form:
+                # Аудит, П.1.2: переходность берём из verb_frames.json по
+                # прусской лемме (авторитетный источник), с фоллбэком на
+                # pymorphy-тег русского глагола.
+                frame = _verb_frames.get((base_form or "").lower())
+                if frame is not None:
+                    is_transitive = bool(frame.get("transitive"))
+                else:
+                    is_transitive = "tran" in tag
                 return {
                     "out": form,
-                    "note": f"{base_form}: {tense}/{person}/{number}",
+                    "note": f"{base_form}: {tense}/{person}/{number}" + (f" [{' '.join(_choose_reasons)}]" if _choose_reasons else ""),
                     "gov_case": None,
                     "pos": "VERB",
                     "case_used": None,
                     "consumes_case": False,
-                    "is_transitive": "tran" in tag,
+                    "is_transitive": is_transitive,
                 }
         elif wanted_pos in ("NOUN", "ADJF", "PRTF", "NPRO") or entry_pos in ("NOUN", "ADJF", "NPRO"):
             gender_guess, number, case = _grammemes_from_parse(parse, forced_case, agreement)
@@ -1172,7 +1308,7 @@ def _translate_word_info(token, forced_case=None, agreement=None, preposition_ch
                         tail = ""
                     return {
                         "out": form,
-                        "note": f"{base_form}: {case}/{number}{tail}",
+                        "note": f"{base_form}: {case}/{number}{tail}" + (f" [{' '.join(_choose_reasons)}]" if _choose_reasons else ""),
                         "gov_case": None,
                         "pos": entry_pos if entry_pos != "NOUN" else wanted_pos,
                         "case_used": case,
@@ -1292,6 +1428,14 @@ def translate_sentence_json(sentence):
     # Готовая статья корпуса важнее пословного разбора: длинная фраза с
     # запятыми иначе разваливается на куски и переводится «по словам».
     whole_key = _norm_ru_key(sentence)
+    # Аудит, П.2.1: сначала sentence_memory — полные проверенные предложения
+    # корпуса. Явно помечаем «готовый перевод корпуса» в диагностике.
+    sm_hit = _sentence_memory.get(whole_key) if whole_key else None
+    if sm_hit:
+        text = str(sm_hit["out"]).strip()
+        return json.dumps({"translation": text, "words": [
+            {"src": sentence.strip(), "out": text, "note": sm_hit["note"]}
+        ]}, ensure_ascii=False)
     whole_hit = _phrasebook.get(whole_key) if whole_key else None
     if whole_hit:
         text = str(whole_hit["out"]).strip()
@@ -2361,7 +2505,8 @@ def translate_pr_word(token):
         pn = _render_propername(token)
         if pn:
             return pn["out"], f"{pn['note']}"
-        return f"[{token}?]", "нет в словаря"
+        # Аудит, П.3.1 + П.3.4: исходное слово без [?], формулировка без опечатки
+        return token, "слово отсутствует в словаре"
 
     if len(tied) == 1:
         entry, label = tied[0]
@@ -2549,6 +2694,16 @@ def translate_pr_sentence_json(sentence):
     # Готовая пара из корпуса перекрывает пословный разбор: иначе длинная
     # прусская реплика собирается из отдельных глосс и читается как набор слов.
     whole_key = _norm_pr_key(sentence)
+    # Аудит, П.2.1: сначала sentence_memory — полные проверенные предложения.
+    sm_hit = None
+    if whole_key:
+        sm_hit = (_pr_sentence_memory.get(whole_key)
+                  or _pr_sentence_memory_folded.get(fold_diacritics(whole_key)))
+    if sm_hit:
+        text = str(sm_hit["out"]).strip()
+        return json.dumps({"translation": text, "words": [
+            {"src": sentence.strip(), "out": text, "note": sm_hit["note"]}
+        ]}, ensure_ascii=False)
     whole_hit = None
     if whole_key:
         whole_hit = (_pr_phrasebook.get(whole_key)
@@ -2745,17 +2900,19 @@ def translate_pr_sentence_json(sentence):
                 i += 1
                 continue
             # Собственные имена в словарь часто не внесены; лучше оставить их в
-            # тексте, чем превращать фразу в набор [слово?].
+            # тексте как есть (аудит, П.3.1).
             if tok[:1].isupper():
                 if held:
                     _flush_held(out_words, debug, held)
                 out_words.append(tok)
-                debug.append({"src": tok, "out": tok, "note": "вероятно имя; нет в словаре"})
+                debug.append({"src": tok, "out": tok, "note": "вероятно, имя собственное; слово отсутствует в словаре"})
                 if not pending_ru_case:
                     subject_agreement = {"person": "3per", "number": "sing", "gender": "masc"}
             else:
-                out_words.append(f"[{tok}?]")
-                debug.append({"src": tok, "out": f"[{tok}?]", "note": "нет в словаре"})
+                # Аудит, П.3.1 + П.3.2: исходное слово без [?] в переводе,
+                # пометка — только в диагностической таблице.
+                out_words.append(tok)
+                debug.append({"src": tok, "out": tok, "note": "слово отсутствует в словаре"})
             i += 1
             continue
 

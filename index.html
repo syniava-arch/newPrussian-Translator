@@ -55,9 +55,14 @@
 
     <div class="controls">
       <button id="translate-btn" type="button">Перевести</button>
+      <button id="reload-btn" type="button" class="ghost-btn hidden" title="Заново скачать данные словаря (сбрасывает кэш браузера)">Обновить данные</button>
       <span class="ready-note">Ctrl/⌘+Enter — тоже перевести</span>
     </div>
     <p id="ready-note" class="ready-note stats-note"></p>
+    <div id="progress-bar" class="progress-bar hidden" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+      <div id="progress-fill" class="progress-fill"></div>
+      <span id="progress-label" class="progress-label"></span>
+    </div>
 
     <section id="result-wrap" class="result-wrap hidden">
       <div class="result-card">
@@ -65,7 +70,14 @@
         <p id="result-text" class="result-text"></p>
       </div>
 
-      <details id="breakdown-details">
+      <!-- Аудит, П.3.5: переключатель «Перевод» / «Перевод с разбором».
+           По умолчанию — чистый перевод; таблица разбора — по запросу. -->
+      <div class="view-toggle" role="group" aria-label="Режим отображения">
+        <button type="button" class="view-btn active" id="view-plain" data-view="plain">Перевод</button>
+        <button type="button" class="view-btn" id="view-breakdown" data-view="breakdown">Перевод с разбором</button>
+      </div>
+
+      <details id="breakdown-details" class="hidden">
         <summary>Разбор по словам</summary>
         <table id="breakdown-table">
           <thead>
