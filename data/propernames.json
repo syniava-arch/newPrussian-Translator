@@ -1,31 +1,5 @@
 [
  {
-  "lemma": "Ebwarē",
-  "aliases": [],
-  "gender": "fem",
-  "priority": 1,
-  "pr": {
-   "sg": {
-    "nom": "Ebwarē",
-    "gen": "Ebwarēs",
-    "dat": "Ebwarēnai",
-    "akk": "Ebwarēm",
-    "ins": "Ebwarē",
-    "prl": "Ebwarē"
-   }
-  },
-  "ru": {
-   "sg": {
-    "nom": "Победа",
-    "gen": "Победы",
-    "dat": "Победе",
-    "acc": "Победу",
-    "ins": "Победой",
-    "prl": "Победе"
-   }
-  }
- },
- {
   "lemma": "Māntas",
   "aliases": [
    "Mānts"
