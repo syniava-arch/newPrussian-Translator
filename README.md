@@ -190,6 +190,43 @@ print(tc.translate_pr_sentence_json('aulaūwuns'))
 PY
 ```
 
+## Тесты
+
+В репозитории четыре теста, запускаются из корня:
+
+```bash
+# 1. Структурная проверка данных — БЫСТРЫЙ (~0.5с), без pymorphy.
+#    Ловит опечатки в JSON, дубликаты, битые ссылки, кривые типы полей.
+#    Запускать перед каждым обновление данных.
+python3 tests/test_data_integrity.py
+python3 tests/test_data_integrity.py --verbose   # показать INFO-проверки
+python3 tests/test_data_integrity.py --strict     # WARNING = ERROR
+
+# 2. Тест фразбука — двунаправленный перевод всех пар phrasebook + memory (требует pymorphy).
+python3 tests/test_phrasebook.py
+
+# 3. Тест собственных имён — прусская и русская парадигмы (требует pymorphy).
+python3 tests/test_names.py
+
+# 4. Golden-набор — 32 контрольных перевода из корпуса (требует pymorphy).
+python3 tests/test_golden.py
+python3 tests/test_golden.py --verbose
+```
+
+`test_data_integrity.py` проверяет ~1800 записей (verb_frames + sentence_memory
++ propernames) за полсекунды; `test_golden.py` проверяет 32 предложения за ~30с.
+Они дополняют друг друга: первый ловит структурные баги данных, второй —
+семантические баги перевода.
+
+Рекомендованный pre-commit hook:
+
+```bash
+# .git/hooks/pre-commit
+#!/bin/sh
+python3 tests/test_data_integrity.py --strict || exit 1
+```
+
+
 ## Известные ограничения
 
 - Перевод всё ещё rule-based и частично пословный: сложный синтаксис,
@@ -216,7 +253,7 @@ PY
 ## Развёртывание на GitHub Pages
 
 1. Создайте репозиторий на GitHub и загрузите содержимое этой папки.
-2. В настройках реPOSITORY (Settings → Pages) выберите источник:
+2. В настройках репозитория (Settings → Pages) выберите источник:
    - **Deploy from a branch** → ветка `gh-pages`, папка `/ (root)`
    - Или **GitHub Actions** (если нужна сборка)
 3. Подождите 1–2 минуты, пока GitHub опубликует сайт.
