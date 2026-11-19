@@ -449,5 +449,21 @@
   "pr": "swentintjai",
   "ru_out": "празднующий",
   "note": "причастие наст. вр. от swentintun (святить/праздновать)"
+ },
+ {
+  "ru": [
+   "ночью"
+  ],
+  "pr": "en naktin",
+  "ru_out": "ночью",
+  "note": "phrasebook: время суток; en + akk sg от nakts (форма из парадигмы)"
+ },
+ {
+  "ru": [
+   "зимой"
+  ],
+  "pr": "en zēiman",
+  "ru_out": "зимой",
+  "note": "phrasebook: время года; en + akk sg от zēimā (форма из парадигмы)"
  }
 ]

@@ -1,6 +1,6 @@
 {
- "version": 1,
- "comment": "Golden-набор: фразы вне корпуса. required — обязано работать, known-weak — известно, что пока плохо. Пополнение: python3 scripts/add_golden.py",
+ "version": 3,
+ "comment": "Golden-набор: фразы вне корпуса. required — обязано работать, known-weak — известно, что пока плохо. Пополнение: python3 scripts/add_golden.py v3: +25 кейсов (аудит Data 2.1, ru-строки спряжений, reverse фразбука).",
  "cases": [
   {
    "id": "erkus-pass",
@@ -289,6 +289,231 @@
    "mode": "exact",
    "status": "required",
    "source": "механизм: wīrstats = «будет», краткое причастие-предикатив"
+  },
+  {
+   "id": "ru-pr-zachem-word",
+   "dir": "ru->pr",
+   "in": "зачем",
+   "expect": "kasse paggan",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1: зачем = kasse paggan (почему), v9"
+  },
+  {
+   "id": "ru-pr-zachem-sentence",
+   "dir": "ru->pr",
+   "in": "Зачем ты идёшь?",
+   "expect": "kasse paggan tū ēisei?",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1, v9"
+  },
+  {
+   "id": "ru-pr-nochju-word",
+   "dir": "ru->pr",
+   "in": "ночью",
+   "expect": "en naktin",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1: en + akk sg от nakts, v9"
+  },
+  {
+   "id": "ru-pr-zimoj-word",
+   "dir": "ru->pr",
+   "in": "зимой",
+   "expect": "en zēiman",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1: en + akk sg от zēimā, v9"
+  },
+  {
+   "id": "ru-pr-nochju-cold",
+   "dir": "ru->pr",
+   "in": "Ночью холодно.",
+   "expect": "en naktin salts.",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1, v9"
+  },
+  {
+   "id": "ru-pr-zimoj-cold",
+   "dir": "ru->pr",
+   "in": "Зимой холодно.",
+   "expect": "en zēiman salts.",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1, v9"
+  },
+  {
+   "id": "ru-pr-terjat-word",
+   "dir": "ru->pr",
+   "in": "терять",
+   "expect": "aumetta",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1: глосс «терять» добавлен к aumestun, v9"
+  },
+  {
+   "id": "ru-pr-terjat-sentence",
+   "dir": "ru->pr",
+   "in": "Мы теряем время.",
+   "expect": "mes aumettamai kērdan.",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1, v9"
+  },
+  {
+   "id": "ru-pr-langus-house",
+   "dir": "ru->pr",
+   "in": "лёгкий дом",
+   "expect": "lāngu buttan",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1: lāngus = легкий (ё-нормализация), v9"
+  },
+  {
+   "id": "ru-pr-tappis-house",
+   "dir": "ru->pr",
+   "in": "тёплый дом",
+   "expect": "tappi buttan",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1: tappis = теплый, v9"
+  },
+  {
+   "id": "ru-pr-geltains-house",
+   "dir": "ru->pr",
+   "in": "жёлтый дом",
+   "expect": "geltāinan buttan",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1: geltāins = желтый, v9"
+  },
+  {
+   "id": "ru-pr-kirsns-katta",
+   "dir": "ru->pr",
+   "in": "чёрная кошка",
+   "expect": "kirsnā katta",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1: kīrsns = черный, женское согласование, v9"
+  },
+  {
+   "id": "ru-pr-zallis-house",
+   "dir": "ru->pr",
+   "in": "зелёный дом",
+   "expect": "zalljan buttan",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1: zallis = зеленый, v9"
+  },
+  {
+   "id": "ru-pr-timraigalimbs-house",
+   "dir": "ru->pr",
+   "in": "синий дом",
+   "expect": "timraigalīmban buttan",
+   "mode": "exact",
+   "status": "required",
+   "source": "аудит Data 2.1: timraigalīmbs = синий, v9"
+  },
+  {
+   "id": "pr-ru-conj-brawi-3sg",
+   "dir": "pr->ru",
+   "in": "Tāns brāwi.",
+   "expect": "Он варил.",
+   "mode": "exact",
+   "status": "required",
+   "source": "v9: ru-строки спряжений; brāwi = pres/past 3sg (вырожд.)"
+  },
+  {
+   "id": "pr-ru-conj-brawi-1sg",
+   "dir": "pr->ru",
+   "in": "As brāwi.",
+   "expect": "Я варю.",
+   "mode": "exact",
+   "status": "required",
+   "source": "v9: ru-строки спряжений; 1 sg презенс, составной глосс"
+  },
+  {
+   "id": "pr-ru-conj-brawi-2sg",
+   "dir": "pr->ru",
+   "in": "Tū brāwi.",
+   "expect": "Ты варишь.",
+   "mode": "exact",
+   "status": "required",
+   "source": "v9: ru-строки спряжений; 2 sg презенс, составной глосс"
+  },
+  {
+   "id": "pr-ru-conj-dalkawimai",
+   "dir": "pr->ru",
+   "in": "Mes dalkawimai.",
+   "expect": "Мы удим.",
+   "mode": "exact",
+   "status": "required",
+   "source": "v9: ru-строки спряжений; 1 pl презенс, глосс «удить рыбу»"
+  },
+  {
+   "id": "pr-ru-conj-widai-past",
+   "dir": "pr->ru",
+   "in": "Tāns widāi.",
+   "expect": "Он видел.",
+   "mode": "exact",
+   "status": "required",
+   "source": "v9: ru-строки past; wīda ≠ widāi (не вырожденный)"
+  },
+  {
+   "id": "pr-ru-conj-widaimai-past",
+   "dir": "pr->ru",
+   "in": "Mes widāimai.",
+   "expect": "Мы видели.",
+   "mode": "exact",
+   "status": "required",
+   "source": "v9: ru-строки past, 1 pl"
+  },
+  {
+   "id": "pr-ru-conj-wida-3pl-pres",
+   "dir": "pr->ru",
+   "in": "Tenēi wīda.",
+   "expect": "Они видят.",
+   "mode": "exact",
+   "status": "required",
+   "source": "v9: wīda при 3 pl — презенс (парадигма не вырожденная)"
+  },
+  {
+   "id": "pr-ru-conj-delina-past",
+   "dir": "pr->ru",
+   "in": "Tāns dēlina.",
+   "expect": "Он воздействовал.",
+   "mode": "exact",
+   "status": "required",
+   "source": "v9: вырожденная парадигма dēlintun → прошедшее время"
+  },
+  {
+   "id": "pr-ru-nochju-reverse",
+   "dir": "pr->ru",
+   "in": "en naktin",
+   "expect": "ночью",
+   "mode": "exact",
+   "status": "required",
+   "source": "v9: обратная сторона фразбука"
+  },
+  {
+   "id": "pr-ru-zimoj-reverse",
+   "dir": "pr->ru",
+   "in": "en zēiman",
+   "expect": "зимой",
+   "mode": "exact",
+   "status": "required",
+   "source": "v9: обратная сторона фразбука"
+  },
+  {
+   "id": "pr-ru-memory-saltan",
+   "dir": "pr->ru",
+   "in": "šin mettan saltan",
+   "expect": "В этом году холодно.",
+   "mode": "exact",
+   "status": "required",
+   "source": "v5 sentence_memory, теперь в golden как регресс-защита"
   }
  ]
 }

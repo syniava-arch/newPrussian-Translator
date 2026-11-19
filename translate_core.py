@@ -1838,6 +1838,16 @@ def _ru_gloss_for_entry(entry, label, forced_case=None, agreement=None, subject_
     if pronoun:
         return pronoun, note_form
 
+    # v9 (Data 2.3): составные глоссы («варить пиво», «граничить с») не
+    # склоняются через pymorphy и раньше уходили в «фразу не склоняем».
+    # Теперь у спряжений есть авторитетные ru-строки — для глаголов читаем
+    # их ДО этого выхода: «Tāns brāwi.» → «Он варит», а не «Он варить пиво».
+    if pos == "VERB" and override and " " in (gloss or "").strip():
+        verb_form = _ru_verb_form(gloss, label, subject_gender=subject_gender,
+                                  override=override, subject_number=subject_number)
+        if verb_form:
+            return verb_form, note_form
+
     if not gloss or " " in gloss.strip():
         return gloss or "?", note_form  # фразу не склоняем
 
@@ -2162,16 +2172,35 @@ def _select_pr_match(clean_key, prefer_pos=None, verb_agreement=None, next_pos_h
         # Если у past-строк автор указал русские формы, при подлежащем в 3-м
         # лице читаем форму как прошедшее время: «fōnds ... statinna» =
         # «фонд поставил», а не «фонд ставит».
+        # v9: ru-строки past теперь есть почти у всех глаголов (автозаполнение),
+        # поэтому одного их наличия мало — требуется настоящая вырожденность:
+        # форма present == форме past того же лица/числа. У нормальных глаголов
+        # (wīdimai ≠ wīda) презенс остаётся презенсом.
         degenerate_past = 0
         if (prefer_pos == "VERB" and verb_agreement
                 and verb_agreement.get("person") == "3per"
                 and (label or "").startswith("indicative.")
                 and "present" in label):
             ov = _override_by_id.get(entry.get("i"))
-            past_rows = (((ov or {}).get("conjugation") or {}).get("indicative") or {}).get("past") or []
+            indic_rows = (((ov or {}).get("conjugation") or {}).get("indicative") or {})
+            past_rows = indic_rows.get("past") or []
             if isinstance(past_rows, list) and any(
                     isinstance(r, dict) and r.get("ru") for r in past_rows):
-                degenerate_past = 1
+                pres_rows = indic_rows.get("present") or []
+                try:
+                    idx = PERSON_ORDER.index((verb_agreement.get("person"),
+                                              verb_agreement.get("number")))
+                except ValueError:
+                    idx = None
+                if idx is not None and idx < len(past_rows) and idx < len(pres_rows):
+                    pf = (past_rows[idx].get("f") if isinstance(past_rows[idx], dict)
+                          else past_rows[idx]) or ""
+                    rf = (pres_rows[idx].get("f") if isinstance(pres_rows[idx], dict)
+                          else pres_rows[idx]) or ""
+                    pf = str(pf).split("/")[0].strip().lower()
+                    rf = str(rf).split("/")[0].strip().lower()
+                    if pf and pf == rf:
+                        degenerate_past = 1
         # В словаре бывают дублеты: сначала cross-ref без русского gloss, затем
         # полноценная статья с переводом (например, aulaūwuns). Для обратного
         # перевода выбираем статью, из которой реально можно получить русский

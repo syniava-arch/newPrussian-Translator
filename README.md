@@ -208,13 +208,13 @@ python3 tests/test_phrasebook.py
 # 3. Тест собственных имён — прусская и русская парадигмы (требует pymorphy).
 python3 tests/test_names.py
 
-# 4. Golden-набор — 32 контрольных перевода из корпуса (требует pymorphy).
+# 4. Golden-набор — 57 контрольных переводов (требует pymorphy).
 python3 tests/test_golden.py
 python3 tests/test_golden.py --verbose
 ```
 
 `test_data_integrity.py` проверяет ~1800 записей (verb_frames + sentence_memory
-+ propernames) за полсекунды; `test_golden.py` проверяет 32 предложения за ~30с.
++ propernames) за полсекунды; `test_golden.py` проверяет 57 предложений за ~30с.
 Они дополняют друг друга: первый ловит структурные баги данных, второй —
 семантические баги перевода.
 
