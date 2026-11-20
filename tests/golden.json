@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "comment": "Golden-набор: фразы вне корпуса. required — обязано работать, known-weak — известно, что пока плохо. Пополнение: python3 scripts/add_golden.py v3: +25 кейсов (аудит Data 2.1, ru-строки спряжений, reverse фразбука).",
   "cases": [
     {
@@ -253,6 +253,15 @@
       "mode": "exact",
       "status": "required",
       "source": "пользователь: легенда о битве при Покарвисе 1273 и памятнике Эрку Мантасу, 2026-11-20"
+    },
+    {
+      "id": "pr-ru-erks-mants-inscription",
+      "dir": "pr->ru",
+      "in": "Ergalīnts Ērks Mānts. Mēri di ezze dwāi Ērkus Māntas gallas deīktans. Pirman gallas deīktan: Mantagārbs prei Nerwikketan (Nadrāuwa). Stwen na Mantagārbjas āugarbjan en 1993 m. sēmenjas 24 d. pastāi etwertan pamīntlan Ērku Māntu – „Senkīrsts angzdris“, architekts – Jōns Wasmans.",
+      "expect": "Убитый Эрк Мант. Считается, что есть два места гибели Геркуса Мантаса. Первое место гибели: Гора Мантаса возле Нервикке (Надрува). Там на склоне горы Мантаса 24 июня 1993 г. был открыт памятник Геркусу Мантасу — «Порубленный уж», архитектор — Йонс Васманс.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: надпись к гравюре про два места гибели Эрка Мантаса, 2026-11-20"
     },
     {
       "id": "pr-ru-gen-chain-reorder",

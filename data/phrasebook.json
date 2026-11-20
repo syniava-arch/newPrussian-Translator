@@ -513,5 +513,75 @@
     "pr": "Adder sta mazzi būtwei ast tēr Ordenas ermērisnas",
     "ru_out": "Но это возможно только выдумка Ордена",
     "note": "phrasebook: финальная реплика легенды; sta→это (контекстно), mazzi būtwei ast→возможно, реверс gen-attr"
+  },
+  {
+    "pr": "Ergalīnts Ērks Mānts. Mēri di ezze dwāi Ērkus Māntas gallas deīktans. Pirman gallas deīktan: Mantagārbs prei Nerwikketan (Nadrāuwa). Stwen na Mantagārbjas āugarbjan en 1993 m. sēmenjas 24 d. pastāi etwertan pamīntlan Ērku Māntu – „Senkīrsts angzdris“, architekts – Jōns Wasmans.",
+    "ru_out": "Убитый Эрк Мант. Считается, что есть два места гибели Геркуса Мантаса. Первое место гибели: Гора Мантаса возле Нервикке (Надрува). Там на склоне горы Мантаса 24 июня 1993 г. был открыт памятник Геркусу Мантасу — «Порубленный уж», архитектор — Йонс Васманс.",
+    "note": "phrasebook: корпус — надпись к гравюре про два места гибели Эрка Мантаса; пользователь 2026-11-20"
+  },
+  {
+    "pr": "Ergalīnts Ērks Mānts",
+    "ru_out": "Убитый Эрк Мант",
+    "note": "phrasebook: ergalīnts (perf. act. прич.) + Ērks Mānts nom → «Убитый Эрк Мант»; «Геркус» упрощено до «Эрк» по контексту надписи"
+  },
+  {
+    "pr": "Mēri di ezze dwāi",
+    "ru_out": "Считается, что есть два",
+    "note": "phrasebook: mēritun 3sg + di + ezze + dwāi → «считается, что есть два»; идиоматический оборот"
+  },
+  {
+    "pr": "Pirman gallas deīktan",
+    "ru_out": "Первое место гибели",
+    "note": "phrasebook: pirman (ord akk) + gallas (gen) + deīktan (akk) → «Первое место гибели»; neut согласование с «место»"
+  },
+  {
+    "pr": "Mantagārbs prei Nerwikketan",
+    "ru_out": "Гора Мантаса возле Нервикке",
+    "note": "phrasebook: Mantagārbs nom + prei Nerwikketan (akk) → «Гора Мантаса возле Нервикке»; prei+akk→возле+gen в русском"
+  },
+  {
+    "pr": "Stwen na Mantagārbjas āugarbjan",
+    "ru_out": "Там на склоне горы Мантаса",
+    "note": "phrasebook: stwen + na + Mantagārbjas (gen) + āugarbjan (akk→loc) → «Там на склоне горы Мантаса»; реверс gen-attr после головного"
+  },
+  {
+    "pr": "en 1993 m. sēmenjas 24 d.",
+    "ru_out": "24 июня 1993 г.",
+    "note": "phrasebook: формат даты — день перед месяцем в русском; sēmenjas gen от sīmenis «июнь»"
+  },
+  {
+    "pr": "Senkīrsts angzdris",
+    "ru_out": "Порубленный уж",
+    "note": "phrasebook: senkīrsts (pass. прич.) + angzdris → «Порубленный уж»; название скульптуры"
+  },
+  {
+    "pr": "architekts – Jōns Wasmans",
+    "ru_out": "архитектор — Йонс Васманс",
+    "note": "phrasebook: architekts + Jōns Wasmans → «архитектор — Йонс Васманс»; атрибуция"
+  },
+  {
+    "pr": "prei Nerwikketan",
+    "ru_out": "возле Нервикке",
+    "note": "phrasebook: prei+akk → возле+gen"
+  },
+  {
+    "pr": "pastāi etwertan pamīntlan Ērku Māntu",
+    "ru_out": "был открыт памятник Геркусу Мантасу",
+    "note": "phrasebook: pastāi + etwertan + pamīntlan + Ērku Māntu"
+  },
+  {
+    "pr": "Ērkus Māntas gallas deīktans",
+    "ru_out": "места гибели Геркуса Мантаса",
+    "note": "phrasebook: Ērkus Māntas + gallas + deīktans"
+  },
+  {
+    "pr": "pastāi etwertan pamīntlan",
+    "ru_out": "был открыт памятник",
+    "note": "phrasebook: pastāi + etwertan (pass. прич.) + pamīntlan → «был открыт памятник»; составное пассивное сказуемое"
+  },
+  {
+    "pr": "pamīntlan Ērku Māntu",
+    "ru_out": "памятник Геркусу Мантасу",
+    "note": "phrasebook: pamīntlan + Ērku (PN.ins→dat контекстно) + Māntu (PN.dat) → датив по русскому управлению"
   }
 ]

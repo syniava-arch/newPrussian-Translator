@@ -713,6 +713,17 @@ def load_data(dictionary_json_str, overrides_json_str, phrasebook_json_str=None,
     # Частоты статей по корпусу фразбука. Считаем по словоформам, а не по
     # заголовкам: «waīda» и «widāwuns» должны отдавать вес статье wīdātun,
     # хотя её инфинитива в тексте может не быть ни разу.
+    #
+    # Аудит v12 (фикс бага _lookup_pr_matches): одна словарная статья с
+    # парадигмой добавляется в pr_index[multiple] — по одной записи на
+    # каждую клетку парадигмы, даже если форма совпадает («dis» как
+    # masc.sg.nom и fem.sg.nom; «di» — 10 клеток для di + 8 клеток для
+    # dis через омонимию клитики). Раньше freq засчитывалась за КАЖДУЮ
+    # запись, поэтому один токен «di» в корпусе поднимал freq[dis]
+    # сразу на 8, и dis выигрывал у tāns для местоимения «Он». Дедуп по
+    # entry.i внутри токена чинит это, не трогая _lookup_pr_matches
+    # (дубликаты label нужны для _select_pr_match — там разные падежи
+    # = разные интерпретации одной и той же формы).
     corpus_tokens = {}
     for corpus_key in _pr_phrasebook:
         for token in corpus_key.split():
@@ -720,8 +731,13 @@ def load_data(dictionary_json_str, overrides_json_str, phrasebook_json_str=None,
                 corpus_tokens[token] = corpus_tokens.get(token, 0) + 1
     entry_freq = {}
     for token, count in corpus_tokens.items():
+        seen_ids = set()
         for entry, _label in _lookup_pr_matches(token):
-            entry_freq[entry.get("i")] = entry_freq.get(entry.get("i"), 0) + count
+            eid = entry.get("i")
+            if eid in seen_ids:
+                continue
+            seen_ids.add(eid)
+            entry_freq[eid] = entry_freq.get(eid, 0) + count
     _entry_freq = entry_freq
 
     return {"words": len(dictionary), "overrides": len(_override_by_id), "prepositions": len(preposition_index), "phrases": len(_phrasebook) + len(_pr_phrasebook), "propernames": len(_propernames), "verb_frames": len(_verb_frames), "sentence_memory": len(_sentence_memory) + len(_pr_sentence_memory)}
