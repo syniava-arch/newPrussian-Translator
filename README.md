@@ -214,7 +214,7 @@ python3 tests/test_golden.py --verbose
 ```
 
 `test_data_integrity.py` проверяет ~1800 записей (verb_frames + sentence_memory
-+ propernames) за полсекунды; `test_golden.py` проверяет 57 предложений за ~30с.
++ propernames) за полсекунды; `test_golden.py` проверяет 58 предложений за ~30с.
 Они дополняют друг друга: первый ловит структурные баги данных, второй —
 семантические баги перевода.
 

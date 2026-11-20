@@ -1,519 +1,528 @@
 {
- "version": 3,
- "comment": "Golden-набор: фразы вне корпуса. required — обязано работать, known-weak — известно, что пока плохо. Пополнение: python3 scripts/add_golden.py v3: +25 кейсов (аудит Data 2.1, ru-строки спряжений, reverse фразбука).",
- "cases": [
-  {
-   "id": "erkus-pass",
-   "dir": "ru->pr",
-   "in": "Прусский паспорт Эркуса Мантаса",
-   "expect": "Ērkus Māntas prūsisks pass",
-   "mode": "exact",
-   "status": "known-weak",
-   "source": "пользователь, tests/pru_ru_samples.json"
-  },
-  {
-   "id": "erkus-pass-short",
-   "dir": "ru->pr",
-   "in": "Паспорт Эркуса Мантаса",
-   "expect": "Ērkus Māntas pass",
-   "mode": "exact",
-   "status": "known-weak",
-   "source": "пользователь, tests/pru_ru_samples.json"
-  },
-  {
-   "id": "erks-legend",
-   "dir": "ru->pr",
-   "in": "По легендам тевтонского ордена Эркус Мантас умер в 1273 году",
-   "expect": "Pa Teutōtiskas ōrdenas legēndans Ērks Mānts aulaūwuns en 1273 mettan",
-   "mode": "exact",
-   "status": "known-weak",
-   "source": "пользователь, tests/pru_ru_samples.json"
-  },
-  {
-   "id": "750-years",
-   "dir": "ru->pr",
-   "in": "В этом году (2023 г.) уже 750 лет",
-   "expect": "Šin mettan (2023 m) ast jāu 750 mettans",
-   "mode": "exact",
-   "status": "known-weak",
-   "source": "пользователь, tests/pru_ru_samples.json"
-  },
-  {
-   "id": "have-passport",
-   "dir": "ru->pr",
-   "in": "Мы теперь имеем паспорт Эркуса Мантаса и несколько других страниц паспорта",
-   "expect": "Mes teinū turrimai Ērkus Māntas passan be delli kittans passas pāusans",
-   "mode": "exact",
-   "status": "known-weak",
-   "source": "пользователь, tests/pru_ru_samples.json"
-  },
-  {
-   "id": "freq-verb-wida",
-   "dir": "ru->pr",
-   "in": "Я вижу дом",
-   "expect": "as wīda buttan",
-   "mode": "exact",
-   "status": "required",
-   "source": "частота корпуса, 2026-11-02"
-  },
-  {
-   "id": "place-static-les",
-   "dir": "ru->pr",
-   "in": "Дом в лесу",
-   "expect": "buttan en meddju",
-   "mode": "exact",
-   "status": "required",
-   "source": "локатив, 2026-11-02"
-  },
-  {
-   "id": "place-motion-city",
-   "dir": "ru->pr",
-   "in": "Он идёт в город",
-   "expect": "tāns ēit en mēstan",
-   "mode": "exact",
-   "status": "required",
-   "source": "локатив, 2026-11-02"
-  },
-  {
-   "id": "place-static-lithuania",
-   "dir": "ru->pr",
-   "in": "Он живёт в Литве",
-   "expect": "tāns gīwa en Leītawai",
-   "mode": "exact",
-   "status": "required",
-   "source": "локатив, 2026-11-02"
-  },
-  {
-   "id": "name-erks-nom",
-   "dir": "ru->pr",
-   "in": "Эркс живёт в Литве",
-   "expect": "Ērks gīwa en Leītawai",
-   "mode": "exact",
-   "status": "required",
-   "source": "имена, 2026-11-02"
-  },
-  {
-   "id": "name-mantas-akk",
-   "dir": "ru->pr",
-   "in": "Я вижу Мантаса",
-   "expect": "as wīda Māntan",
-   "mode": "exact",
-   "status": "required",
-   "source": "имена, 2026-11-02"
-  },
-  {
-   "id": "name-erks-ru-alias",
-   "dir": "ru->pr",
-   "in": "Эркус живёт в Литве",
-   "expect": "Ērks gīwa en Leītawai",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: вариант написания Эркус"
-  },
-  {
-   "id": "name-pr-to-ru",
-   "dir": "pr->ru",
-   "in": "Abdāngan as wīda",
-   "expect": "Я Абдангса вижу",
-   "mode": "exact",
-   "status": "required",
-   "source": "имена, 2026-11-02"
-  },
-  {
-   "id": "name-pr-alias-herkus",
-   "dir": "pr->ru",
-   "in": "Hērkus ast mans brāti",
-   "expect": "Эркс есть мой брат",
-   "mode": "contains",
-   "status": "required",
-   "source": "пользователь: в текстах встречается Hērkus и Gērkus"
-  },
-  {
-   "id": "temporal-akk-year",
-   "dir": "ru->pr",
-   "in": "В этом году холодно",
-   "expect": "šin mettan saltan",
-   "mode": "exact",
-   "status": "required",
-   "source": "правило времени, 2026-11-03"
-  },
-  {
-   "id": "pr-ru-pakarwis-attributive",
-   "dir": "pr->ru",
-   "in": "Pakarwjas walinsnā.",
-   "expect": "Покарвское сражение.",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: топоним в родительном = определение, 2026-11-16"
-  },
-  {
-   "id": "pr-ru-giwa-adjective",
-   "dir": "pr->ru",
-   "in": "Giwā minisnā ezze Ērkun Māntan.",
-   "expect": "Живая память об Эркусе Мантасе.",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: giwā «живая» — прилагательное, не имя собственное, 2026-11-16"
-  },
-  {
-   "id": "pr-ru-pakarwis-giwa-combined",
-   "dir": "pr->ru",
-   "in": "Pakarwjas walinsnā. Giwā minisnā ezze Ērkun Māntan.",
-   "expect": "Покарвское сражение. Живая память об Эркусе Мантасе.",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: два предложения, состояние не должно протекать через точку"
-  },
-  {
-   "id": "ru-pr-pakarwis-attributive",
-   "dir": "ru->pr",
-   "in": "Покарвское сражение.",
-   "expect": "Pakarwjas walinsnā.",
-   "mode": "exact",
-   "status": "required",
-   "source": "обратная симметрия ru_adj (аудит), 2026-11-16"
-  },
-  {
-   "id": "pr-ru-possessive-maise",
-   "dir": "pr->ru",
-   "in": "Ērks ast māise brāti",
-   "expect": "Эркс есть мой брат",
-   "mode": "exact",
-   "status": "required",
-   "source": "притяжательный генитив māise перед существительным → «мой», 2026-11-16"
-  },
-  {
-   "id": "pr-ru-pakarwis-attributive-after-verb",
-   "dir": "pr->ru",
-   "in": "audāi si Pakarwjas walinsnā.",
-   "expect": "Произошло Покарвское сражение.",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: атрибутив топонима после глагольной фразы (audāi si), 2026-11-16"
-  },
-  {
-   "id": "pr-ru-miksjans-akk",
-   "dir": "pr->ru",
-   "in": "Prūsai sen Ērkun Māntan ebwarīwusis miksjans en Nātangai.",
-   "expect": "Прусы с Эркусом Мантасом победили немцев в Натангии.",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: miksjans → «немцев» (вин. мн.), Nātangai → «в Натангии», 2026-11-16"
-  },
-  {
-   "id": "pr-ru-pn-apposition-kaiman",
-   "dir": "pr->ru",
-   "in": "prei Pakarwjas kāiman.",
-   "expect": "Под деревней Покарвис.",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: родительный топонима при «деревня/город» — приложение после существительного, 2026-11-16"
-  },
-  {
-   "id": "pr-ru-participle-predicate",
-   "dir": "pr->ru",
-   "in": "Stesse paggan Debā Prūsiska Senskisnā spārtinusi si pa Pakarwjas wālinsnan, be wērau ērgi 1274 mettan.",
-   "expect": "Поэтому великое прусское восстание усилилось после Покарвского сражения, и продолжалось до 1274 года.",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: причастие-сказуемое (+si → -сь), pa+akk → «после»+род., род сказуемого по русскому подлежащему, «до 1274 года», 2026-11-16"
-  },
-  {
-   "id": "pr-ru-ebware-victory",
-   "dir": "pr->ru",
-   "in": "Pakarwjas warē, warewīngi Ebwarē!",
-   "expect": "Покарвская мощь, могучая Победа!",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: Ebwarē — словарное «победа», не имя собственное, 2026-11-16"
-  },
-  {
-   "id": "pr-ru-pakarwis-full-story",
-   "dir": "pr->ru",
-   "in": "Pakarwjas walinsnā: Pakarwjas warē, warewīngi Ebwarē! En 1261 m. raggas 22 d. audāi si Pakarwjas walinsnā. Prūsai sen Ērkun Māntan ebwarīwusis miksjans en Nātangai, prei Pakarwjas kāiman. Stesse paggan Debā Prūsiska Senskisnā spārtinusi si pa Pakarwjas wālinsnan, be wērau ērgi 1274 mettan.",
-   "expect": "Покарвское сражение : Покарвская мощь, могучая Победа! В 1261 г. Январь 22 д. Произошло Покарвское сражение. Прусы с Эркусом Мантасом победили немцев в Натангии, под деревней Покарвис. Поэтому великое прусское восстание усилилось после Покарвского сражения, и продолжалось до 1274 года.",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: полный текст про Pakarwjas walinsnā, 2026-11-16"
-  },
-  {
-   "id": "pr-ru-undinawa-monument",
-   "dir": "pr->ru",
-   "in": "En 2016 m. raggas 23 d. Undinawas (Brandenburgas) pillis etteikāsnas fōnds (swentintjai Undinawas pillis 755 m. gruntinsnan), en Pakarwjas wālinsnas laūku, statinna dēlin sen nōpeisan, kāi en stesmu deīktu wīrstats statīntan Ērkus Māntas pamīntlan (stabs sen nōpeisan). Adder stan pamīntlan ni pastāi statīntan ērgi teinū.",
-   "expect": "В 2016 г. Январь 23 д. фонд воссоздания замка Ундинавы (Бранденбург) (празднующий 755-летие основания замка Ундинавы), на поле Покарвского сражения, поставил доску с надписью, что в этом месте будет установлен памятник Эркусу Мантасу (камень с надписью). Но тот памятник не установлен до сих пор.",
-   "mode": "exact",
-   "status": "required",
-   "source": "пользователь: памятник Эркусу Мантасу у замка Ундинава, 2026-11-16"
-  },
-  {
-   "id": "pr-ru-gen-chain-reorder",
-   "dir": "pr->ru",
-   "in": "Undinawas pillis etteikāsnas fōnds",
-   "expect": "Фонд воссоздания замка Ундинавы",
-   "mode": "exact",
-   "status": "required",
-   "source": "механизм: генитивная цепочка [GEN…GEN] HEAD → HEAD GEN… (реверс групп)"
-  },
-  {
-   "id": "pr-ru-monument-dat",
-   "dir": "pr->ru",
-   "in": "Ērkus Māntas pamīntlan",
-   "expect": "Памятник Эркусу Мантасу",
-   "mode": "exact",
-   "status": "required",
-   "source": "механизм: памятник + род. имя → датив (русское управление)"
-  },
-  {
-   "id": "pr-ru-en-lauku-na",
-   "dir": "pr->ru",
-   "in": "en Pakarwjas wālinsnas laūku",
-   "expect": "На поле Покарвского сражения",
-   "mode": "exact",
-   "status": "required",
-   "source": "механизм: en + laūks → «на», атрибутив топонима в родительном"
-  },
-  {
-   "id": "pr-ru-ni-pastai-statintan",
-   "dir": "pr->ru",
-   "in": "Stan pamīntlan ni pastāi statīntan.",
-   "expect": "Тот памятник не установлен.",
-   "mode": "exact",
-   "status": "required",
-   "source": "механизм: pastāi + страд. причастие → краткое причастие, связка опущена"
-  },
-  {
-   "id": "pr-ru-wirstats-future",
-   "dir": "pr->ru",
-   "in": "wīrstats statīntan Ērkus Māntas pamīntlan",
-   "expect": "Будет установлен памятник Эркусу Мантасу",
-   "mode": "exact",
-   "status": "required",
-   "source": "механизм: wīrstats = «будет», краткое причастие-предикатив"
-  },
-  {
-   "id": "ru-pr-zachem-word",
-   "dir": "ru->pr",
-   "in": "зачем",
-   "expect": "kasse paggan",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1: зачем = kasse paggan (почему), v9"
-  },
-  {
-   "id": "ru-pr-zachem-sentence",
-   "dir": "ru->pr",
-   "in": "Зачем ты идёшь?",
-   "expect": "kasse paggan tū ēisei?",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1, v9"
-  },
-  {
-   "id": "ru-pr-nochju-word",
-   "dir": "ru->pr",
-   "in": "ночью",
-   "expect": "en naktin",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1: en + akk sg от nakts, v9"
-  },
-  {
-   "id": "ru-pr-zimoj-word",
-   "dir": "ru->pr",
-   "in": "зимой",
-   "expect": "en zēiman",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1: en + akk sg от zēimā, v9"
-  },
-  {
-   "id": "ru-pr-nochju-cold",
-   "dir": "ru->pr",
-   "in": "Ночью холодно.",
-   "expect": "en naktin salts.",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1, v9"
-  },
-  {
-   "id": "ru-pr-zimoj-cold",
-   "dir": "ru->pr",
-   "in": "Зимой холодно.",
-   "expect": "en zēiman salts.",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1, v9"
-  },
-  {
-   "id": "ru-pr-terjat-word",
-   "dir": "ru->pr",
-   "in": "терять",
-   "expect": "aumetta",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1: глосс «терять» добавлен к aumestun, v9"
-  },
-  {
-   "id": "ru-pr-terjat-sentence",
-   "dir": "ru->pr",
-   "in": "Мы теряем время.",
-   "expect": "mes aumettamai kērdan.",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1, v9"
-  },
-  {
-   "id": "ru-pr-langus-house",
-   "dir": "ru->pr",
-   "in": "лёгкий дом",
-   "expect": "lāngu buttan",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1: lāngus = легкий (ё-нормализация), v9"
-  },
-  {
-   "id": "ru-pr-tappis-house",
-   "dir": "ru->pr",
-   "in": "тёплый дом",
-   "expect": "tappi buttan",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1: tappis = теплый, v9"
-  },
-  {
-   "id": "ru-pr-geltains-house",
-   "dir": "ru->pr",
-   "in": "жёлтый дом",
-   "expect": "geltāinan buttan",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1: geltāins = желтый, v9"
-  },
-  {
-   "id": "ru-pr-kirsns-katta",
-   "dir": "ru->pr",
-   "in": "чёрная кошка",
-   "expect": "kirsnā katta",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1: kīrsns = черный, женское согласование, v9"
-  },
-  {
-   "id": "ru-pr-zallis-house",
-   "dir": "ru->pr",
-   "in": "зелёный дом",
-   "expect": "zalljan buttan",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1: zallis = зеленый, v9"
-  },
-  {
-   "id": "ru-pr-timraigalimbs-house",
-   "dir": "ru->pr",
-   "in": "синий дом",
-   "expect": "timraigalīmban buttan",
-   "mode": "exact",
-   "status": "required",
-   "source": "аудит Data 2.1: timraigalīmbs = синий, v9"
-  },
-  {
-   "id": "pr-ru-conj-brawi-3sg",
-   "dir": "pr->ru",
-   "in": "Tāns brāwi.",
-   "expect": "Он варил.",
-   "mode": "exact",
-   "status": "required",
-   "source": "v9: ru-строки спряжений; brāwi = pres/past 3sg (вырожд.)"
-  },
-  {
-   "id": "pr-ru-conj-brawi-1sg",
-   "dir": "pr->ru",
-   "in": "As brāwi.",
-   "expect": "Я варю.",
-   "mode": "exact",
-   "status": "required",
-   "source": "v9: ru-строки спряжений; 1 sg презенс, составной глосс"
-  },
-  {
-   "id": "pr-ru-conj-brawi-2sg",
-   "dir": "pr->ru",
-   "in": "Tū brāwi.",
-   "expect": "Ты варишь.",
-   "mode": "exact",
-   "status": "required",
-   "source": "v9: ru-строки спряжений; 2 sg презенс, составной глосс"
-  },
-  {
-   "id": "pr-ru-conj-dalkawimai",
-   "dir": "pr->ru",
-   "in": "Mes dalkawimai.",
-   "expect": "Мы удим.",
-   "mode": "exact",
-   "status": "required",
-   "source": "v9: ru-строки спряжений; 1 pl презенс, глосс «удить рыбу»"
-  },
-  {
-   "id": "pr-ru-conj-widai-past",
-   "dir": "pr->ru",
-   "in": "Tāns widāi.",
-   "expect": "Он видел.",
-   "mode": "exact",
-   "status": "required",
-   "source": "v9: ru-строки past; wīda ≠ widāi (не вырожденный)"
-  },
-  {
-   "id": "pr-ru-conj-widaimai-past",
-   "dir": "pr->ru",
-   "in": "Mes widāimai.",
-   "expect": "Мы видели.",
-   "mode": "exact",
-   "status": "required",
-   "source": "v9: ru-строки past, 1 pl"
-  },
-  {
-   "id": "pr-ru-conj-wida-3pl-pres",
-   "dir": "pr->ru",
-   "in": "Tenēi wīda.",
-   "expect": "Они видят.",
-   "mode": "exact",
-   "status": "required",
-   "source": "v9: wīda при 3 pl — презенс (парадигма не вырожденная)"
-  },
-  {
-   "id": "pr-ru-conj-delina-past",
-   "dir": "pr->ru",
-   "in": "Tāns dēlina.",
-   "expect": "Он воздействовал.",
-   "mode": "exact",
-   "status": "required",
-   "source": "v9: вырожденная парадигма dēlintun → прошедшее время"
-  },
-  {
-   "id": "pr-ru-nochju-reverse",
-   "dir": "pr->ru",
-   "in": "en naktin",
-   "expect": "ночью",
-   "mode": "exact",
-   "status": "required",
-   "source": "v9: обратная сторона фразбука"
-  },
-  {
-   "id": "pr-ru-zimoj-reverse",
-   "dir": "pr->ru",
-   "in": "en zēiman",
-   "expect": "зимой",
-   "mode": "exact",
-   "status": "required",
-   "source": "v9: обратная сторона фразбука"
-  },
-  {
-   "id": "pr-ru-memory-saltan",
-   "dir": "pr->ru",
-   "in": "šin mettan saltan",
-   "expect": "В этом году холодно.",
-   "mode": "exact",
-   "status": "required",
-   "source": "v5 sentence_memory, теперь в golden как регресс-защита"
-  }
- ]
+  "version": 4,
+  "comment": "Golden-набор: фразы вне корпуса. required — обязано работать, known-weak — известно, что пока плохо. Пополнение: python3 scripts/add_golden.py v3: +25 кейсов (аудит Data 2.1, ru-строки спряжений, reverse фразбука).",
+  "cases": [
+    {
+      "id": "erkus-pass",
+      "dir": "ru->pr",
+      "in": "Прусский паспорт Эркуса Мантаса",
+      "expect": "Ērkus Māntas prūsisks pass",
+      "mode": "exact",
+      "status": "known-weak",
+      "source": "пользователь, tests/pru_ru_samples.json"
+    },
+    {
+      "id": "erkus-pass-short",
+      "dir": "ru->pr",
+      "in": "Паспорт Эркуса Мантаса",
+      "expect": "Ērkus Māntas pass",
+      "mode": "exact",
+      "status": "known-weak",
+      "source": "пользователь, tests/pru_ru_samples.json"
+    },
+    {
+      "id": "erks-legend",
+      "dir": "ru->pr",
+      "in": "По легендам тевтонского ордена Эркус Мантас умер в 1273 году",
+      "expect": "Pa Teutōtiskas ōrdenas legēndans Ērks Mānts aulaūwuns en 1273 mettan",
+      "mode": "exact",
+      "status": "known-weak",
+      "source": "пользователь, tests/pru_ru_samples.json"
+    },
+    {
+      "id": "750-years",
+      "dir": "ru->pr",
+      "in": "В этом году (2023 г.) уже 750 лет",
+      "expect": "Šin mettan (2023 m) ast jāu 750 mettans",
+      "mode": "exact",
+      "status": "known-weak",
+      "source": "пользователь, tests/pru_ru_samples.json"
+    },
+    {
+      "id": "have-passport",
+      "dir": "ru->pr",
+      "in": "Мы теперь имеем паспорт Эркуса Мантаса и несколько других страниц паспорта",
+      "expect": "Mes teinū turrimai Ērkus Māntas passan be delli kittans passas pāusans",
+      "mode": "exact",
+      "status": "known-weak",
+      "source": "пользователь, tests/pru_ru_samples.json"
+    },
+    {
+      "id": "freq-verb-wida",
+      "dir": "ru->pr",
+      "in": "Я вижу дом",
+      "expect": "as wīda buttan",
+      "mode": "exact",
+      "status": "required",
+      "source": "частота корпуса, 2026-11-02"
+    },
+    {
+      "id": "place-static-les",
+      "dir": "ru->pr",
+      "in": "Дом в лесу",
+      "expect": "buttan en meddju",
+      "mode": "exact",
+      "status": "required",
+      "source": "локатив, 2026-11-02"
+    },
+    {
+      "id": "place-motion-city",
+      "dir": "ru->pr",
+      "in": "Он идёт в город",
+      "expect": "tāns ēit en mēstan",
+      "mode": "exact",
+      "status": "required",
+      "source": "локатив, 2026-11-02"
+    },
+    {
+      "id": "place-static-lithuania",
+      "dir": "ru->pr",
+      "in": "Он живёт в Литве",
+      "expect": "tāns gīwa en Leītawai",
+      "mode": "exact",
+      "status": "required",
+      "source": "локатив, 2026-11-02"
+    },
+    {
+      "id": "name-erks-nom",
+      "dir": "ru->pr",
+      "in": "Эркс живёт в Литве",
+      "expect": "Ērks gīwa en Leītawai",
+      "mode": "exact",
+      "status": "required",
+      "source": "имена, 2026-11-02"
+    },
+    {
+      "id": "name-mantas-akk",
+      "dir": "ru->pr",
+      "in": "Я вижу Мантаса",
+      "expect": "as wīda Māntan",
+      "mode": "exact",
+      "status": "required",
+      "source": "имена, 2026-11-02"
+    },
+    {
+      "id": "name-erks-ru-alias",
+      "dir": "ru->pr",
+      "in": "Эркус живёт в Литве",
+      "expect": "Ērks gīwa en Leītawai",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: вариант написания Эркус"
+    },
+    {
+      "id": "name-pr-to-ru",
+      "dir": "pr->ru",
+      "in": "Abdāngan as wīda",
+      "expect": "Я Абдангса вижу",
+      "mode": "exact",
+      "status": "required",
+      "source": "имена, 2026-11-02"
+    },
+    {
+      "id": "name-pr-alias-herkus",
+      "dir": "pr->ru",
+      "in": "Hērkus ast mans brāti",
+      "expect": "Эркс есть мой брат",
+      "mode": "contains",
+      "status": "required",
+      "source": "пользователь: в текстах встречается Hērkus и Gērkus"
+    },
+    {
+      "id": "temporal-akk-year",
+      "dir": "ru->pr",
+      "in": "В этом году холодно",
+      "expect": "šin mettan saltan",
+      "mode": "exact",
+      "status": "required",
+      "source": "правило времени, 2026-11-03"
+    },
+    {
+      "id": "pr-ru-pakarwis-attributive",
+      "dir": "pr->ru",
+      "in": "Pakarwjas walinsnā.",
+      "expect": "Покарвское сражение.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: топоним в родительном = определение, 2026-11-16"
+    },
+    {
+      "id": "pr-ru-giwa-adjective",
+      "dir": "pr->ru",
+      "in": "Giwā minisnā ezze Ērkun Māntan.",
+      "expect": "Живая память об Эркусе Мантасе.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: giwā «живая» — прилагательное, не имя собственное, 2026-11-16"
+    },
+    {
+      "id": "pr-ru-pakarwis-giwa-combined",
+      "dir": "pr->ru",
+      "in": "Pakarwjas walinsnā. Giwā minisnā ezze Ērkun Māntan.",
+      "expect": "Покарвское сражение. Живая память об Эркусе Мантасе.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: два предложения, состояние не должно протекать через точку"
+    },
+    {
+      "id": "ru-pr-pakarwis-attributive",
+      "dir": "ru->pr",
+      "in": "Покарвское сражение.",
+      "expect": "Pakarwjas walinsnā.",
+      "mode": "exact",
+      "status": "required",
+      "source": "обратная симметрия ru_adj (аудит), 2026-11-16"
+    },
+    {
+      "id": "pr-ru-possessive-maise",
+      "dir": "pr->ru",
+      "in": "Ērks ast māise brāti",
+      "expect": "Эркс есть мой брат",
+      "mode": "exact",
+      "status": "required",
+      "source": "притяжательный генитив māise перед существительным → «мой», 2026-11-16"
+    },
+    {
+      "id": "pr-ru-pakarwis-attributive-after-verb",
+      "dir": "pr->ru",
+      "in": "audāi si Pakarwjas walinsnā.",
+      "expect": "Произошло Покарвское сражение.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: атрибутив топонима после глагольной фразы (audāi si), 2026-11-16"
+    },
+    {
+      "id": "pr-ru-miksjans-akk",
+      "dir": "pr->ru",
+      "in": "Prūsai sen Ērkun Māntan ebwarīwusis miksjans en Nātangai.",
+      "expect": "Прусы с Эркусом Мантасом победили немцев в Натангии.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: miksjans → «немцев» (вин. мн.), Nātangai → «в Натангии», 2026-11-16"
+    },
+    {
+      "id": "pr-ru-pn-apposition-kaiman",
+      "dir": "pr->ru",
+      "in": "prei Pakarwjas kāiman.",
+      "expect": "Под деревней Покарвис.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: родительный топонима при «деревня/город» — приложение после существительного, 2026-11-16"
+    },
+    {
+      "id": "pr-ru-participle-predicate",
+      "dir": "pr->ru",
+      "in": "Stesse paggan Debā Prūsiska Senskisnā spārtinusi si pa Pakarwjas wālinsnan, be wērau ērgi 1274 mettan.",
+      "expect": "Поэтому великое прусское восстание усилилось после Покарвского сражения, и продолжалось до 1274 года.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: причастие-сказуемое (+si → -сь), pa+akk → «после»+род., род сказуемого по русскому подлежащему, «до 1274 года», 2026-11-16"
+    },
+    {
+      "id": "pr-ru-ebware-victory",
+      "dir": "pr->ru",
+      "in": "Pakarwjas warē, warewīngi Ebwarē!",
+      "expect": "Покарвская мощь, могучая Победа!",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: Ebwarē — словарное «победа», не имя собственное, 2026-11-16"
+    },
+    {
+      "id": "pr-ru-pakarwis-full-story",
+      "dir": "pr->ru",
+      "in": "Pakarwjas walinsnā: Pakarwjas warē, warewīngi Ebwarē! En 1261 m. raggas 22 d. audāi si Pakarwjas walinsnā. Prūsai sen Ērkun Māntan ebwarīwusis miksjans en Nātangai, prei Pakarwjas kāiman. Stesse paggan Debā Prūsiska Senskisnā spārtinusi si pa Pakarwjas wālinsnan, be wērau ērgi 1274 mettan.",
+      "expect": "Покарвское сражение : Покарвская мощь, могучая Победа! В 1261 г. Январь 22 д. Произошло Покарвское сражение. Прусы с Эркусом Мантасом победили немцев в Натангии, под деревней Покарвис. Поэтому великое прусское восстание усилилось после Покарвского сражения, и продолжалось до 1274 года.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: полный текст про Pakarwjas walinsnā, 2026-11-16"
+    },
+    {
+      "id": "pr-ru-undinawa-monument",
+      "dir": "pr->ru",
+      "in": "En 2016 m. raggas 23 d. Undinawas (Brandenburgas) pillis etteikāsnas fōnds (swentintjai Undinawas pillis 755 m. gruntinsnan), en Pakarwjas wālinsnas laūku, statinna dēlin sen nōpeisan, kāi en stesmu deīktu wīrstats statīntan Ērkus Māntas pamīntlan (stabs sen nōpeisan). Adder stan pamīntlan ni pastāi statīntan ērgi teinū.",
+      "expect": "В 2016 г. Январь 23 д. фонд воссоздания замка Ундинавы (Бранденбург) (празднующий 755-летие основания замка Ундинавы), на поле Покарвского сражения, поставил доску с надписью, что в этом месте будет установлен памятник Эркусу Мантасу (камень с надписью). Но тот памятник не установлен до сих пор.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: памятник Эркусу Мантасу у замка Ундинава, 2026-11-16"
+    },
+    {
+      "id": "pr-ru-pokarwis-2016-legend",
+      "dir": "pr->ru",
+      "in": "En Pakarwjas wālinsnas laūku 2016 m. raggas 23 d. Pamintlāi Ērku Māntu. Pa legēndan, Ōrdenas wāldwikas ergalīnusis Ērkun Māntan en 1273 mettan. Adder sta mazzi būtwei ast tēr Ordenas ermērisnas.",
+      "expect": "На поле Покарвского сражения 2016 г. Январь 23 д. Памятники Эркусу Мантсу. По легенде, рыцарь Ордена убил Эркуса Мантаса в 1273 году. Но это возможно только выдумка Ордена.",
+      "mode": "exact",
+      "status": "required",
+      "source": "пользователь: легенда о битве при Покарвисе 1273 и памятнике Эрку Мантасу, 2026-11-20"
+    },
+    {
+      "id": "pr-ru-gen-chain-reorder",
+      "dir": "pr->ru",
+      "in": "Undinawas pillis etteikāsnas fōnds",
+      "expect": "Фонд воссоздания замка Ундинавы",
+      "mode": "exact",
+      "status": "required",
+      "source": "механизм: генитивная цепочка [GEN…GEN] HEAD → HEAD GEN… (реверс групп)"
+    },
+    {
+      "id": "pr-ru-monument-dat",
+      "dir": "pr->ru",
+      "in": "Ērkus Māntas pamīntlan",
+      "expect": "Памятник Эркусу Мантасу",
+      "mode": "exact",
+      "status": "required",
+      "source": "механизм: памятник + род. имя → датив (русское управление)"
+    },
+    {
+      "id": "pr-ru-en-lauku-na",
+      "dir": "pr->ru",
+      "in": "en Pakarwjas wālinsnas laūku",
+      "expect": "На поле Покарвского сражения",
+      "mode": "exact",
+      "status": "required",
+      "source": "механизм: en + laūks → «на», атрибутив топонима в родительном"
+    },
+    {
+      "id": "pr-ru-ni-pastai-statintan",
+      "dir": "pr->ru",
+      "in": "Stan pamīntlan ni pastāi statīntan.",
+      "expect": "Тот памятник не установлен.",
+      "mode": "exact",
+      "status": "required",
+      "source": "механизм: pastāi + страд. причастие → краткое причастие, связка опущена"
+    },
+    {
+      "id": "pr-ru-wirstats-future",
+      "dir": "pr->ru",
+      "in": "wīrstats statīntan Ērkus Māntas pamīntlan",
+      "expect": "Будет установлен памятник Эркусу Мантасу",
+      "mode": "exact",
+      "status": "required",
+      "source": "механизм: wīrstats = «будет», краткое причастие-предикатив"
+    },
+    {
+      "id": "ru-pr-zachem-word",
+      "dir": "ru->pr",
+      "in": "зачем",
+      "expect": "kasse paggan",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1: зачем = kasse paggan (почему), v9"
+    },
+    {
+      "id": "ru-pr-zachem-sentence",
+      "dir": "ru->pr",
+      "in": "Зачем ты идёшь?",
+      "expect": "kasse paggan tū ēisei?",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1, v9"
+    },
+    {
+      "id": "ru-pr-nochju-word",
+      "dir": "ru->pr",
+      "in": "ночью",
+      "expect": "en naktin",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1: en + akk sg от nakts, v9"
+    },
+    {
+      "id": "ru-pr-zimoj-word",
+      "dir": "ru->pr",
+      "in": "зимой",
+      "expect": "en zēiman",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1: en + akk sg от zēimā, v9"
+    },
+    {
+      "id": "ru-pr-nochju-cold",
+      "dir": "ru->pr",
+      "in": "Ночью холодно.",
+      "expect": "en naktin salts.",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1, v9"
+    },
+    {
+      "id": "ru-pr-zimoj-cold",
+      "dir": "ru->pr",
+      "in": "Зимой холодно.",
+      "expect": "en zēiman salts.",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1, v9"
+    },
+    {
+      "id": "ru-pr-terjat-word",
+      "dir": "ru->pr",
+      "in": "терять",
+      "expect": "aumetta",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1: глосс «терять» добавлен к aumestun, v9"
+    },
+    {
+      "id": "ru-pr-terjat-sentence",
+      "dir": "ru->pr",
+      "in": "Мы теряем время.",
+      "expect": "mes aumettamai kērdan.",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1, v9"
+    },
+    {
+      "id": "ru-pr-langus-house",
+      "dir": "ru->pr",
+      "in": "лёгкий дом",
+      "expect": "lāngu buttan",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1: lāngus = легкий (ё-нормализация), v9"
+    },
+    {
+      "id": "ru-pr-tappis-house",
+      "dir": "ru->pr",
+      "in": "тёплый дом",
+      "expect": "tappi buttan",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1: tappis = теплый, v9"
+    },
+    {
+      "id": "ru-pr-geltains-house",
+      "dir": "ru->pr",
+      "in": "жёлтый дом",
+      "expect": "geltāinan buttan",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1: geltāins = желтый, v9"
+    },
+    {
+      "id": "ru-pr-kirsns-katta",
+      "dir": "ru->pr",
+      "in": "чёрная кошка",
+      "expect": "kirsnā katta",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1: kīrsns = черный, женское согласование, v9"
+    },
+    {
+      "id": "ru-pr-zallis-house",
+      "dir": "ru->pr",
+      "in": "зелёный дом",
+      "expect": "zalljan buttan",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1: zallis = зеленый, v9"
+    },
+    {
+      "id": "ru-pr-timraigalimbs-house",
+      "dir": "ru->pr",
+      "in": "синий дом",
+      "expect": "timraigalīmban buttan",
+      "mode": "exact",
+      "status": "required",
+      "source": "аудит Data 2.1: timraigalīmbs = синий, v9"
+    },
+    {
+      "id": "pr-ru-conj-brawi-3sg",
+      "dir": "pr->ru",
+      "in": "Tāns brāwi.",
+      "expect": "Он варил.",
+      "mode": "exact",
+      "status": "required",
+      "source": "v9: ru-строки спряжений; brāwi = pres/past 3sg (вырожд.)"
+    },
+    {
+      "id": "pr-ru-conj-brawi-1sg",
+      "dir": "pr->ru",
+      "in": "As brāwi.",
+      "expect": "Я варю.",
+      "mode": "exact",
+      "status": "required",
+      "source": "v9: ru-строки спряжений; 1 sg презенс, составной глосс"
+    },
+    {
+      "id": "pr-ru-conj-brawi-2sg",
+      "dir": "pr->ru",
+      "in": "Tū brāwi.",
+      "expect": "Ты варишь.",
+      "mode": "exact",
+      "status": "required",
+      "source": "v9: ru-строки спряжений; 2 sg презенс, составной глосс"
+    },
+    {
+      "id": "pr-ru-conj-dalkawimai",
+      "dir": "pr->ru",
+      "in": "Mes dalkawimai.",
+      "expect": "Мы удим.",
+      "mode": "exact",
+      "status": "required",
+      "source": "v9: ru-строки спряжений; 1 pl презенс, глосс «удить рыбу»"
+    },
+    {
+      "id": "pr-ru-conj-widai-past",
+      "dir": "pr->ru",
+      "in": "Tāns widāi.",
+      "expect": "Он видел.",
+      "mode": "exact",
+      "status": "required",
+      "source": "v9: ru-строки past; wīda ≠ widāi (не вырожденный)"
+    },
+    {
+      "id": "pr-ru-conj-widaimai-past",
+      "dir": "pr->ru",
+      "in": "Mes widāimai.",
+      "expect": "Мы видели.",
+      "mode": "exact",
+      "status": "required",
+      "source": "v9: ru-строки past, 1 pl"
+    },
+    {
+      "id": "pr-ru-conj-wida-3pl-pres",
+      "dir": "pr->ru",
+      "in": "Tenēi wīda.",
+      "expect": "Они видят.",
+      "mode": "exact",
+      "status": "required",
+      "source": "v9: wīda при 3 pl — презенс (парадигма не вырожденная)"
+    },
+    {
+      "id": "pr-ru-conj-delina-past",
+      "dir": "pr->ru",
+      "in": "Tāns dēlina.",
+      "expect": "Он воздействовал.",
+      "mode": "exact",
+      "status": "required",
+      "source": "v9: вырожденная парадигма dēlintun → прошедшее время"
+    },
+    {
+      "id": "pr-ru-nochju-reverse",
+      "dir": "pr->ru",
+      "in": "en naktin",
+      "expect": "ночью",
+      "mode": "exact",
+      "status": "required",
+      "source": "v9: обратная сторона фразбука"
+    },
+    {
+      "id": "pr-ru-zimoj-reverse",
+      "dir": "pr->ru",
+      "in": "en zēiman",
+      "expect": "зимой",
+      "mode": "exact",
+      "status": "required",
+      "source": "v9: обратная сторона фразбука"
+    },
+    {
+      "id": "pr-ru-memory-saltan",
+      "dir": "pr->ru",
+      "in": "šin mettan saltan",
+      "expect": "В этом году холодно.",
+      "mode": "exact",
+      "status": "required",
+      "source": "v5 sentence_memory, теперь в golden как регресс-защита"
+    }
+  ]
 }
